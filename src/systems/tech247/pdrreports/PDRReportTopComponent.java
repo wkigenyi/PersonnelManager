@@ -32,7 +32,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_PDRReportAction=PDRReport",
-    "CTL_PDRReportTopComponent=PDRReport Window",
+    "CTL_PDRReportTopComponent=Reports",
     "HINT_PDRReportTopComponent=This is a PDRReport window"
 })
 public final class PDRReportTopComponent extends TopComponent {

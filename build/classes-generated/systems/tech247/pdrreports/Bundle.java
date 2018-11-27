@@ -10,7 +10,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_PDRReportAction");
     }
     /**
-     * @return <i>PDRReport Window</i>
+     * @return <i>Reports</i>
      * @see PDRReportTopComponent
      */
     static String CTL_PDRReportTopComponent() {

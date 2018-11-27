@@ -7,6 +7,7 @@
             <folder name="PDRGroup">
                 <file name = "PDRsetupTopComponent.wstcgrp" url="groups/pdrgroup/PDRsetupTopComponentWstcgrp.xml"/>
                 <file name = "EmployeeListTopComponent.wstcgrp" url="groups/pdrgroup/EmployeeListTopComponentWstcgrp.xml"/>
+                <file name = "PDRReportTopComponent.wstcgrp" url="groups/pdrgroup/PDRReportTopComponentWstcgrp.xml"/>
             </folder>    
             
         </folder>
