@@ -5,8 +5,6 @@
  */
 package systems.tech247.pdreditors;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.beans.PropertyChangeEvent;
@@ -36,6 +34,7 @@ import systems.tech247.hr.Employees;
 import systems.tech247.hr.JobPositions;
 import systems.tech247.hr.Locations;
 import systems.tech247.hr.OrganizationUnits;
+import systems.tech247.view.CategorySelectable;
 
 /**
  * Top component which displays something.
@@ -91,7 +90,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     TopComponent locationTc = WindowManager.getDefault().findTopComponent("LocationsTopComponent");
     Lookup.Result<Locations> locationRslt = locationTc.getLookup().lookupResult(Locations.class);
     TopComponent categoryTc = WindowManager.getDefault().findTopComponent("CategoriesTopComponent");
-    Lookup.Result<EmployeeCategories> categoryRslt = categoryTc.getLookup().lookupResult(EmployeeCategories.class);
+    Lookup.Result<CategorySelectable> categoryRslt = categoryTc.getLookup().lookupResult(CategorySelectable.class);
     
     
     
@@ -676,9 +675,9 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 modify();
             }
             
-            if(e instanceof EmployeeCategories){
+            if(e instanceof CategorySelectable){
                 
-                catID = (EmployeeCategories)e;
+                catID = ((CategorySelectable)e).getCat();
                 jtCategory.setText(catID.getCategoryName());
                 updatable.setCategoryID(catID);
                 modify();

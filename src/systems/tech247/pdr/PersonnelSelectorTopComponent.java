@@ -15,6 +15,8 @@ import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
+import org.openide.nodes.AbstractNode;
+import org.openide.nodes.Children;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
@@ -23,7 +25,7 @@ import org.openide.util.NbBundle.Messages;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.EmployeeCategories;
 import systems.tech247.hr.OrganizationUnits;
-import systems.tech247.util.CetusUTL;
+import systems.tech247.util.FactorySelectableEmployee;
 import systems.tech247.util.QueryEmployee;
 
 
@@ -66,7 +68,7 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
     Lookup.Result<OrganizationUnits> departmentResult;
     Lookup.Result<EmployeeCategories> categoryResult;
     
-    ExplorerManager em = CetusUTL.emSelectableEmployees;
+    ExplorerManager em = new ExplorerManager();
     public PersonnelSelectorTopComponent() {
         initComponents();
         setName(Bundle.CTL_PersonnelSelectorTopComponent());
@@ -100,7 +102,7 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
                 searchString = jtEmployeeName.getText();
                 
                 String sqlString = "SELECT e FROM Employees e WHERE (e.surName LIKE  '%"+searchString+"%' OR e.otherNames LIKE  '%"+searchString+"%' OR e.empCode LIKE  '%"+searchString+"%') AND e.isDisengaged =  '"+disengaged+"'  " ;
-                CetusUTL.loadSelectableEmployees(sqlString,false);
+                loadEmployees(sqlString,false);
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
         });
@@ -161,11 +163,11 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(26, 26, 26)
                         .addComponent(jtEmployeeName, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jcbSelectAll)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 4, Short.MAX_VALUE))
                     .addComponent(viewHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -193,11 +195,11 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
             DataAccess.selectAllEmployees();
             String sql = "SELECT e FROM Employees e WHERE e.isDisengaged = 0";
             
-            CetusUTL.loadSelectableEmployees(sql,true);
+            loadEmployees(sql,true);
         }else{
             DataAccess.resetSelectedEmployees();
             String sql = "SELECT e FROM Employees e WHERE e.isDisengaged = 0";
-            CetusUTL.loadSelectableEmployees(sql,false);
+            loadEmployees(sql, false);
         }
         
     }//GEN-LAST:event_jcbSelectAllActionPerformed
@@ -256,5 +258,8 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    void loadEmployees(String sql,Boolean select){
+        em.setRootContext(new AbstractNode(Children.create(new FactorySelectableEmployee(sql, select), true)));
+    }
     
 }

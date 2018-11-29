@@ -12,10 +12,6 @@
                 <!--systems.tech247.pdr.BanksTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-BanksTopComponent.instance"/>
             </file>
-            <file name="systems-tech247-pdr-CategoriesTopComponent.shadow">
-                <!--systems.tech247.pdr.CategoriesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CategoriesTopComponent.instance"/>
-            </file>
             <file name="systems-tech247-pdr-CompanyTopComponent.shadow">
                 <!--systems.tech247.pdr.CompanyTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CompanyTopComponent.instance"/>
@@ -219,16 +215,6 @@
                     <!--systems.tech247.pdr.BanksTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//Banks//EN"/>
                 </file>
-                <file name="Categories" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
-                    <!--systems.tech247.pdr.CategoriesTopComponent-->
-                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//Categories//EN"/>
-                </file>
-                <file name="PositionEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
-                    <!--systems.tech247.pdr.CategoryEditorTopComponent-->
-                    <!--systems.tech247.pdr.JobPositionEditorTopComponent-->
-                    <!--systems.tech247.pdr.NationalityEditorTopComponent-->
-                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//PositionEditor//EN"/>
-                </file>
                 <file name="CategoryTypeEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.CategoryTypeEditorTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//CategoryTypeEditor//EN"/>
@@ -331,6 +317,11 @@
                 <file name="JDCategory" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.JDCategoryTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//JDCategory//EN"/>
+                </file>
+                <file name="PositionEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdr.JobPositionEditorTopComponent-->
+                    <!--systems.tech247.pdr.NationalityEditorTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//PositionEditor//EN"/>
                 </file>
                 <file name="Locations" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.LocationsTopComponent-->
@@ -461,14 +452,6 @@
                         <file name="BanksTopComponent">
                             <!--systems.tech247.pdr.BanksTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/Banks.instance"/>
-                        </file>
-                        <file name="CategoriesTopComponent">
-                            <!--systems.tech247.pdr.CategoriesTopComponent-->
-                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/Categories.instance"/>
-                        </file>
-                        <file name="CategoryEditorTopComponent">
-                            <!--systems.tech247.pdr.CategoryEditorTopComponent-->
-                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/PositionEditor.instance"/>
                         </file>
                         <file name="CategoryTypeEditorTopComponent">
                             <!--systems.tech247.pdr.CategoryTypeEditorTopComponent-->
@@ -738,28 +721,6 @@
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.BanksTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
-                <file name="Categories.instance">
-                    <!--systems.tech247.pdr.CategoriesTopComponent-->
-                    <attr
-                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
-                    <attr
-                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
-                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.CategoriesTopComponent"/>
-                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.CategoriesTopComponent"/>
-                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
-                </file>
-                <file name="PositionEditor.instance">
-                    <!--systems.tech247.pdr.CategoryEditorTopComponent-->
-                    <!--systems.tech247.pdr.JobPositionEditorTopComponent-->
-                    <!--systems.tech247.pdr.NationalityEditorTopComponent-->
-                    <attr
-                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
-                    <attr
-                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
-                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.NationalityEditorTopComponent"/>
-                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.NationalityEditorTopComponent"/>
-                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
-                </file>
                 <file name="CategoryTypeEditor.instance">
                     <!--systems.tech247.pdr.CategoryTypeEditorTopComponent-->
                     <attr
@@ -1011,6 +972,17 @@
                         methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
                     <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.JDCategoryTopComponent"/>
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.JDCategoryTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="PositionEditor.instance">
+                    <!--systems.tech247.pdr.JobPositionEditorTopComponent-->
+                    <!--systems.tech247.pdr.NationalityEditorTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.NationalityEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.NationalityEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
                 <file name="Locations.instance">
@@ -1308,13 +1280,6 @@
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
 <settings version="1.0">
   <instance class="systems.tech247.pdr.BanksTopComponent"/>
-</settings>
-]]></file>
-            <file name="CategoriesTopComponent.settings">
-                <!--systems.tech247.pdr.CategoriesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CategoriesTopComponent"/>
 </settings>
 ]]></file>
             <file name="CompanyTopComponent.settings">
@@ -1671,14 +1636,6 @@
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
 <tc-ref version="2.0">
   <tc-id id="BanksTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="CategoriesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CategoriesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CategoriesTopComponent"/>
   <state opened="false"/>
 </tc-ref>
 ]]></file>
@@ -2121,16 +2078,6 @@
                 <attr
                     bundlevalue="systems.tech247.pdr.Bundle#CTL_BanksAction" name="displayName"/>
                 <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-CategoriesTopComponent.instance">
-                <!--systems.tech247.pdr.CategoriesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CategoriesTopComponent"/>
-                <attr name="preferredID" stringvalue="CategoriesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CategoriesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/EmpCategory.png"/>
             </file>
             <file name="systems-tech247-pdr-CompanyTopComponent.instance">
                 <!--systems.tech247.pdr.CompanyTopComponent-->

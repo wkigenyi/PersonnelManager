@@ -5,9 +5,14 @@
  */
 package systems.tech247.pdrreports;
 
+import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
+import org.openide.explorer.ExplorerManager;
+import org.openide.explorer.view.BeanTreeView;
+import org.openide.nodes.AbstractNode;
+import org.openide.nodes.Children;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 
@@ -35,13 +40,16 @@ import org.openide.util.NbBundle.Messages;
     "CTL_PDRReportTopComponent=Reports",
     "HINT_PDRReportTopComponent=This is a PDRReport window"
 })
-public final class PDRReportTopComponent extends TopComponent {
-
+public final class PDRReportTopComponent extends TopComponent implements ExplorerManager.Provider {
+    ExplorerManager em = new ExplorerManager();
     public PDRReportTopComponent() {
         initComponents();
         setName(Bundle.CTL_PDRReportTopComponent());
         setToolTipText(Bundle.HINT_PDRReportTopComponent());
-
+        BeanTreeView btv = new BeanTreeView();
+        btv.setRootVisible(false);
+        setLayout(new BorderLayout());
+        add(btv);
     }
 
     /**
@@ -68,7 +76,7 @@ public final class PDRReportTopComponent extends TopComponent {
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
-        // TODO add custom code on component opening
+        em.setRootContext(new AbstractNode(Children.create(new FactoryPDRReports(), true)));
     }
 
     @Override
@@ -87,4 +95,10 @@ public final class PDRReportTopComponent extends TopComponent {
         String version = p.getProperty("version");
         // TODO read your settings according to their version
     }
+
+    @Override
+    public ExplorerManager getExplorerManager() {
+        return em;
+    }
+    
 }

@@ -31,27 +31,6 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BanksTopComponent");
     }
     /**
-     * @return <i>Employee Categories</i>
-     * @see CategoriesTopComponent
-     */
-    static String CTL_CategoriesAction() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoriesAction");
-    }
-    /**
-     * @return <i>Employee Categories</i>
-     * @see CategoriesTopComponent
-     */
-    static String CTL_CategoriesTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoriesTopComponent");
-    }
-    /**
-     * @return <i>New Category</i>
-     * @see CategoryEditorTopComponent
-     */
-    static String CTL_CategoryEditorTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoryEditorTopComponent");
-    }
-    /**
      * @return <i>New Category Type</i>
      * @see CategoryTypeEditorTopComponent
      */
@@ -568,20 +547,6 @@ class Bundle {
      */
     static String HINT_BanksTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_BanksTopComponent");
-    }
-    /**
-     * @return <i> </i>
-     * @see CategoriesTopComponent
-     */
-    static String HINT_CategoriesTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CategoriesTopComponent");
-    }
-    /**
-     * @return <i>Category Editor</i>
-     * @see CategoryEditorTopComponent
-     */
-    static String HINT_CategoryEditorTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CategoryEditorTopComponent");
     }
     /**
      * @return <i>Category Type Editor</i>

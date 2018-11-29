@@ -5,6 +5,7 @@
  */
 package systems.tech247.pdr;
 
+import systems.tech247.view.QueryCategory;
 import systems.tech247.util.QueryDepartment;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
