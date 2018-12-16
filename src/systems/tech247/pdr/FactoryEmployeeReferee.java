@@ -5,22 +5,18 @@
  */
 package systems.tech247.pdr;
 
-import java.awt.event.ActionEvent;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.swing.AbstractAction;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Lookup;
 import org.openide.util.Lookup.Result;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
-import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.Employees;
 import systems.tech247.hr.Ref;
-import systems.tech247.pdreditors.RefereeEditorTopComponent;
 import systems.tech247.util.AddTool;
 import systems.tech247.util.NodeAddTool;
 

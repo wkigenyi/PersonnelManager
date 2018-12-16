@@ -34,6 +34,7 @@ import systems.tech247.hr.Employees;
 import systems.tech247.hr.JobPositions;
 import systems.tech247.hr.Locations;
 import systems.tech247.hr.OrganizationUnits;
+import systems.tech247.hr.TblPayroll;
 import systems.tech247.view.CategorySelectable;
 
 /**
@@ -69,6 +70,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     OrganizationUnits ouID = null;
     Locations stationID = null;
     Currencies currencyID = null;
+    TblPayroll payrollID = null;
     BigDecimal basicPay = null;
     BigDecimal housing = null;
     String housingString = null;
@@ -91,7 +93,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     Lookup.Result<Locations> locationRslt = locationTc.getLookup().lookupResult(Locations.class);
     TopComponent categoryTc = WindowManager.getDefault().findTopComponent("CategoriesTopComponent");
     Lookup.Result<CategorySelectable> categoryRslt = categoryTc.getLookup().lookupResult(CategorySelectable.class);
-    
+    TopComponent payrollTc = WindowManager.getDefault().findTopComponent("PayrollsTopComponent");
+    Lookup.Result<TblPayroll> payrollRslt = payrollTc.getLookup().lookupResult(TblPayroll.class);
     
     
     
@@ -128,12 +131,42 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         categoryRslt.addLookupListener(this);
         resultChanged(new LookupEvent(categoryRslt));
         
+        payrollRslt.addLookupListener(this);
+        resultChanged(new LookupEvent(payrollRslt));
         
         jtPosition.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Object[] options = {new JButton("Close")};
                 DialogDisplayer.getDefault().notify(new DialogDescriptor(positionTc, "Select A Position",true, options,null,DialogDescriptor.DEFAULT_ALIGN,null,null));
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
+        
+        jtPayroll.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Object[] options = {new JButton("Close")};
+                DialogDisplayer.getDefault().notify(new DialogDescriptor(payrollTc, "Select A Payroll",true, options,null,DialogDescriptor.DEFAULT_ALIGN,null,null));
             }
 
             @Override
@@ -439,6 +472,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         jLabel11 = new javax.swing.JLabel();
         jftHousing = new javax.swing.JFormattedTextField();
         jcbExpertriate = new javax.swing.JCheckBox();
+        jLabel12 = new javax.swing.JLabel();
+        jtPayroll = new javax.swing.JTextField();
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jLabel1.text")); // NOI18N
 
@@ -487,6 +522,10 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
             }
         });
 
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel12, org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jLabel12.text")); // NOI18N
+
+        jtPayroll.setText(org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jtPayroll.text")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -503,7 +542,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jcbExpertriate)
@@ -517,7 +557,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                         .addComponent(jtCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
                         .addComponent(jftBasic, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                         .addComponent(jtCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jftHousing)))
+                        .addComponent(jftHousing)
+                        .addComponent(jtPayroll)))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
@@ -552,6 +593,10 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                     .addComponent(jtCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jtPayroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jtLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -568,7 +613,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                     .addComponent(jftHousing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jcbExpertriate)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -582,6 +627,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -599,6 +645,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     private javax.swing.JTextField jtDepartment;
     private javax.swing.JTextField jtEmployeeID;
     private javax.swing.JTextField jtLocation;
+    private javax.swing.JTextField jtPayroll;
     private javax.swing.JTextField jtPosition;
     // End of variables declaration//GEN-END:variables
     @Override
@@ -621,8 +668,11 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         departmentRslt.removeLookupListener(this);
         departmentRslt = null;
         
-        categoryRslt.addLookupListener(this);
+        categoryRslt.removeLookupListener(this);
         categoryRslt = null;
+        
+        payrollRslt.removeLookupListener(this);
+        payrollRslt = null;
     }
 
     void writeProperties(java.util.Properties p) {
@@ -667,6 +717,15 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 modify();
             }
             
+            if(e instanceof TblPayroll){
+                
+                payrollID = (TblPayroll)e;
+                jtPayroll.setText(payrollID.getPayrollName());
+                
+                updatable.setPayrollid(payrollID);
+                modify();
+            }
+            
             if(e instanceof Locations){
                 
                 stationID = (Locations)e;
@@ -696,6 +755,13 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 }catch(Exception ex){
                     
                 }
+                
+                try{
+                jtPayroll.setText( e.getPayrollid().getPayrollName());
+                }catch(Exception ex){
+                    
+                }
+                
                 try{
                 jtCurrency.setText(e.getCurrencyID().getCurrencyName());
                 }catch(Exception ex){

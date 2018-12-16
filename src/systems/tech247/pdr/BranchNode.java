@@ -5,11 +5,14 @@
  */
 package systems.tech247.pdr;
 
+import java.lang.reflect.InvocationTargetException;
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
 import org.openide.awt.StatusDisplayer;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.nodes.PropertySupport;
+import org.openide.nodes.Sheet;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
 import systems.tech247.hr.BankBranches;
@@ -57,5 +60,27 @@ public class BranchNode extends AbstractNode{
             setIconBaseWithExtension("systems/tech247/util/icons/bankBranch.png");
             setDisplayName(emp.getBranchName());
         }
+        
+            @Override
+    protected Sheet createSheet() {
+        Sheet sheet = Sheet.createDefault();
+        Sheet.Set set = Sheet.createPropertiesSet();
+        final BankBranches branch = getLookup().lookup(BankBranches.class);
+        
+        Property number = new PropertySupport("number", String.class, "Employee Number", "Number", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return branch.getEmployeeBankAccountsCollection().size();
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        set.put(number);
+        sheet.put(set);
+        return sheet; //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -68,7 +68,6 @@ import systems.tech247.pdreditors.PDRCompanyAssetEditor;
 import systems.tech247.pdreditors.PDRContactTypeEditor;
 import systems.tech247.pdreditors.PDRContractTypeEditor;
 import systems.tech247.pdreditors.PDRCountryEditor;
-import systems.tech247.pdreditors.PDRCurrencyEditor;
 import systems.tech247.pdreditors.PDRDeparmentEditor;
 import systems.tech247.pdreditors.PDRJDCategoryEditor;
 import systems.tech247.pdreditors.PDRJDEditor;
@@ -1783,10 +1782,10 @@ public class UtilityPDR implements Lookup.Provider {
             instanceContent.add(new CapCreatable() {
                 @Override
                 public void create() {     
-                    NotifyDescriptor nd = new NotifyDescriptor(new PDRCurrencyEditor(), "New Currency", NotifyDescriptor.OK_CANCEL_OPTION,
-                    NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
+                    //NotifyDescriptor nd = new NotifyDescriptor(new PDRCurrencyEditor(), "New Currency", NotifyDescriptor.OK_CANCEL_OPTION,
+                    //NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                     //nd.setNoDefaultClose(true);  
-                    DialogDisplayer.getDefault().notifyLater(nd);
+                    //DialogDisplayer.getDefault().notifyLater(nd);
                 }
             });
             setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
@@ -1840,10 +1839,10 @@ public class UtilityPDR implements Lookup.Provider {
                     instanceContent.add(new CapEditable() {
                         @Override
                         public void edit() {
-                            NotifyDescriptor nd = new NotifyDescriptor(new PDRCurrencyEditor(emp), "Edit Currency", NotifyDescriptor.OK_CANCEL_OPTION,
-                            NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
+                            //NotifyDescriptor nd = new NotifyDescriptor(new PDRCurrencyEditor(emp), "Edit Currency", NotifyDescriptor.OK_CANCEL_OPTION,
+                            //NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                             //nd.setNoDefaultClose(true);  
-                            DialogDisplayer.getDefault().notifyLater(nd);
+                            //DialogDisplayer.getDefault().notifyLater(nd);
                             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                         }
                     });           

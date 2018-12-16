@@ -47,7 +47,12 @@ public final class LocationsTopComponent extends TopComponent implements Explore
     
     String searchString = "";
     QueryLocation query = new QueryLocation();
-    public LocationsTopComponent() {
+    
+    public LocationsTopComponent(){
+        this("");
+    }
+    
+    public LocationsTopComponent(String view) {
         initComponents();
         setName(Bundle.CTL_NationsTopComponent());
         setToolTipText(Bundle.HINT_ReligionsTopComponent());
@@ -58,6 +63,9 @@ public final class LocationsTopComponent extends TopComponent implements Explore
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         

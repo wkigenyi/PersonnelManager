@@ -46,7 +46,9 @@ public final class PDRReportTopComponent extends TopComponent implements Explore
         initComponents();
         setName(Bundle.CTL_PDRReportTopComponent());
         setToolTipText(Bundle.HINT_PDRReportTopComponent());
+        putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
         BeanTreeView btv = new BeanTreeView();
+        
         btv.setRootVisible(false);
         setLayout(new BorderLayout());
         add(btv);

@@ -77,7 +77,7 @@ public class FactoryCountry extends ChildFactory<Object>{
     protected Node createNodeForKey(Object key){
         Node node = null;
         if(key instanceof Countries){
-            node = new NationNode((Countries)key);
+            node = new NodeCountry((Countries)key);
         }else if(key instanceof AddTool){
             node = new NodeAddTool((AddTool)key);
         }
@@ -86,22 +86,6 @@ public class FactoryCountry extends ChildFactory<Object>{
         return node;
     }
     
-    private class NationNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public NationNode(Countries emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private NationNode (InstanceContent ic, Countries emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/nation.png");
-            setDisplayName(emp.getCountryName());
-        }
-    
-}
+
     
 }

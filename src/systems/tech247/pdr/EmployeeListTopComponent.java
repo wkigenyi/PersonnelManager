@@ -76,6 +76,7 @@ public final class EmployeeListTopComponent extends TopComponent implements Expl
         setName(Bundle.CTL_EmployeeListTopComponent());
         setToolTipText(Bundle.HINT_EmployeeListTopComponent());
         vPanel.setLayout(new BorderLayout());
+        putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
         BeanTreeView btv = new BeanTreeView();
         btv.setRootVisible(false);
         vPanel.add(btv);

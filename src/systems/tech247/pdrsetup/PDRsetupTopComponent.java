@@ -46,6 +46,7 @@ public final class PDRsetupTopComponent extends TopComponent implements Explorer
     BeanTreeView btv = new BeanTreeView();
     public PDRsetupTopComponent() {
         initComponents();
+        putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
         setName(Bundle.CTL_PDRsetupTopComponent());
         setToolTipText(Bundle.HINT_PDRsetupTopComponent());
         setLayout(new BorderLayout());

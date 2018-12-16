@@ -14,8 +14,14 @@ import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.pdreditors.PDRCurrencyEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -26,10 +32,10 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "CurrenciesTopComponent",
-        iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        iconBase = "systems/tech247/util/icons/Currency.png",
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
-@TopComponent.Registration(mode = "explorer", openAtStartup = false)
+@TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.CurrenciesTopComponent")
 @ActionReference(path = "Menu/PDR" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
@@ -47,20 +53,45 @@ public final class CurrenciesTopComponent extends TopComponent implements Explor
     
     String searchString = "";
     QueryCurrency query = new QueryCurrency();
-    public CurrenciesTopComponent() {
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
+    
+    public CurrenciesTopComponent(){
+        this("");
+    }
+    
+    
+    
+    public CurrenciesTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_NationsTopComponent());
+        setName(Bundle.CTL_CurrenciesTopComponent());
         setToolTipText(Bundle.HINT_CurrenciesTopComponent());
-        OutlineView ov = new OutlineView("Currencies");
+        OutlineView ov = new OutlineView("Currency");
         ov.getOutline().setRootVisible(false);
         searchString ="SELECT r from Currencies r";
         query.setSqlString(searchString);
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        if(!view.equals("")){
+            ov.addPropertyColumn("code", "Currency Code");
+            ov.addPropertyColumn("base", "Base Currency");
+            ov.addPropertyColumn("rate", "Exchange Rate");
+            ov.addPropertyColumn("number", "Employee Number");
+        }
         
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new PDRCurrencyEditorTopComponent();
+                tc.open();
+                tc.requestActive();
+                        
+            }
+        });
         
+        Lookup merged = new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp);
+        associateLookup(merged);
 
     }
 
@@ -136,7 +167,7 @@ public final class CurrenciesTopComponent extends TopComponent implements Explor
     }
     
     void loadItems(){
-        em.setRootContext(new AbstractNode(Children.create(new FactoryCurrency(query), true)));
+        em.setRootContext(new AbstractNode(Children.create(new FactoryCurrency(), true)));
     }
     
     

@@ -16,8 +16,13 @@ import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -28,8 +33,8 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "BanksTopComponent",
-        iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        iconBase = "systems/tech247/util/icons/bank.png",
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.BanksTopComponent")
@@ -40,7 +45,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_BanksAction=Banks",
-    "CTL_BanksTopComponent=Banks Window",
+    "CTL_BanksTopComponent=Banks",
     "HINT_BanksTopComponent= "
 })
 public final class BanksTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -50,7 +55,13 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
     String sqlString = "";
     String searchString;
     QueryBanks query = new QueryBanks();
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     public BanksTopComponent() {
+        this("");
+    }
+    
+    public BanksTopComponent(String view) {
         initComponents();
         setName(Bundle.CTL_BanksTopComponent());
         setToolTipText(Bundle.CTL_BanksTopComponent());
@@ -61,7 +72,16 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
         
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                //TopComponent tc = new 
+            }
+        });
+        associateLookup( new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         
         jtBankSearch.addKeyListener(new KeyListener() {
             @Override
@@ -151,6 +171,9 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
+        sqlString ="SELECT r FROM Banks r ";
+               query.setSqlString(sqlString);
+               loadItems();
        
     }
 

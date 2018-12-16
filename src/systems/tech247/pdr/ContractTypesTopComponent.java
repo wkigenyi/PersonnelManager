@@ -27,7 +27,7 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "ContractTypesTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.ContractTypesTopComponent")
@@ -47,10 +47,15 @@ public final class ContractTypesTopComponent extends TopComponent implements Exp
     
     String searchString = "";
     QueryContractTypes query = new QueryContractTypes();
-    public ContractTypesTopComponent() {
+    
+    public ContractTypesTopComponent(){
+        this("");
+    }
+    
+    public ContractTypesTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_CtypesTopComponent());
-        setToolTipText(Bundle.HINT_CtypesTopComponent());
+        setName(Bundle.CTL_ContractTypesTopComponent());
+        setToolTipText(Bundle.HINT_ContractTypesTopComponent());
         OutlineView ov = new OutlineView("Contract Types");
         ov.getOutline().setRootVisible(false);
         searchString ="SELECT r from PdContractTypes r";
@@ -58,6 +63,10 @@ public final class ContractTypesTopComponent extends TopComponent implements Exp
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("period", "Period");
+            ov.addPropertyColumn("length", "Length");
+        }
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         

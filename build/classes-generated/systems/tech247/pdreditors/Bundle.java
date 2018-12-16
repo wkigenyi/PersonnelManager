@@ -185,6 +185,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_NextOfKinEditorTopComponent");
     }
     /**
+     * @return <i>PDRCurrencyEditor</i>
+     * @see PDRCurrencyEditorTopComponent
+     */
+    static String CTL_PDRCurrencyEditorAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_PDRCurrencyEditorAction");
+    }
+    /**
+     * @return <i>Currency Editor</i>
+     * @see PDRCurrencyEditorTopComponent
+     */
+    static String CTL_PDRCurrencyEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_PDRCurrencyEditorTopComponent");
+    }
+    /**
      * @return <i>Probation</i>
      * @see ProbationEditorTopComponent
      */
@@ -330,6 +344,13 @@ class Bundle {
      */
     static String HINT_NextOfKinEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_NextOfKinEditorTopComponent");
+    }
+    /**
+     * @return <i>This is a PDRCurrencyEditor window</i>
+     * @see PDRCurrencyEditorTopComponent
+     */
+    static String HINT_PDRCurrencyEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_PDRCurrencyEditorTopComponent");
     }
     /**
      * @return 
