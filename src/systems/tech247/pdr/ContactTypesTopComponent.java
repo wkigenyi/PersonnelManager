@@ -38,7 +38,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_ContactTypesAction=Contact Types",
-    "CTL_ContactTypesTopComponent=Contact Types Window",
+    "CTL_ContactTypesTopComponent=Contact Types",
     "HINT_ContactTypesTopComponent= "
 })
 public final class ContactTypesTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -47,10 +47,16 @@ public final class ContactTypesTopComponent extends TopComponent implements Expl
     
     
     QueryContactTypes query = new QueryContactTypes();
-    public ContactTypesTopComponent() {
+    
+    public ContactTypesTopComponent(){
+        this("");
+    }
+    
+    
+    public ContactTypesTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_CtypesTopComponent());
-        setToolTipText(Bundle.HINT_CtypesTopComponent());
+        setName(Bundle.CTL_ContactTypesTopComponent());
+        setToolTipText(Bundle.HINT_ContactTypesTopComponent());
         OutlineView ov = new OutlineView("Contact Types");
         ov.getOutline().setRootVisible(false);
         
@@ -58,6 +64,9 @@ public final class ContactTypesTopComponent extends TopComponent implements Expl
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("desc", "Description");
+        }
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         

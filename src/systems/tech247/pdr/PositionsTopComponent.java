@@ -16,8 +16,13 @@ import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -28,8 +33,8 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "PositionsTopComponent",
-        iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        iconBase = "systems/tech247/util/icons/position.png",
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.PositionsTopComponent")
@@ -40,7 +45,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_PositionsAction=Positions",
-    "CTL_PositionsTopComponent=Positions Window",
+    "CTL_PositionsTopComponent=Positions",
     "HINT_PositionsTopComponent= "
 })
 public final class PositionsTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -50,10 +55,17 @@ public final class PositionsTopComponent extends TopComponent implements Explore
     String sqlString = "";
     String searchString;
     QueryPosition query = new QueryPosition();
-    public PositionsTopComponent() {
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
+    
+    public PositionsTopComponent(){
+        this("");
+    }
+    
+    public PositionsTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_NationsTopComponent());
-        setToolTipText(Bundle.HINT_ReligionsTopComponent());
+        setName(Bundle.CTL_PositionsTopComponent());
+        setToolTipText(Bundle.HINT_PositionsTopComponent());
         OutlineView ov = new OutlineView("Job Positions");
         ov.getOutline().setRootVisible(false);
         sqlString ="SELECT r from JobPositions r";
@@ -61,7 +73,18 @@ public final class PositionsTopComponent extends TopComponent implements Explore
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new JobPositionEditorTopComponent();
+                tc.open();
+                tc.requestActive();
+            }
+        });
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         
         jtPositionSearch.addKeyListener(new KeyListener() {
             @Override
@@ -157,7 +180,9 @@ public final class PositionsTopComponent extends TopComponent implements Explore
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
-       
+       sqlString ="SELECT r FROM JobPositions r";
+               query.setSqlString(sqlString);
+               loadItems();
     }
 
     @Override

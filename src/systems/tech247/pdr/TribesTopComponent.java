@@ -29,7 +29,7 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "TribesTopComponent",
         iconBase = "systems/tech247/util/icons/tribe.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.TribesTopComponent")
@@ -49,7 +49,13 @@ public final class TribesTopComponent extends TopComponent implements ExplorerMa
     
     String searchString = "";
     QueryTribe query = new QueryTribe();
-    public TribesTopComponent() {
+    
+    public TribesTopComponent(){
+        this("");
+    }    
+    
+    
+    public TribesTopComponent(String view) {
         initComponents();
         setName(Bundle.CTL_TribesTopComponent());
         setToolTipText(Bundle.HINT_TribesTopComponent());
@@ -57,6 +63,15 @@ public final class TribesTopComponent extends TopComponent implements ExplorerMa
         ov.getOutline().setRootVisible(false);
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
+        
+        
+        
+        
+        
+        
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         jtSearchTribe.addKeyListener(new KeyListener() {
@@ -156,7 +171,10 @@ public final class TribesTopComponent extends TopComponent implements ExplorerMa
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
-        // TODO add custom code on component opening
+        //load
+        String sqlString = "SELECT e FROM Tribes e " ;
+                query.setSqlString(sqlString);
+                loadItems(query);
     }
 
     @Override

@@ -6,14 +6,14 @@
 package systems.tech247.pdr;
 
 import java.awt.event.ActionEvent;
+import java.util.Collection;
 import java.util.List;
 import javax.swing.AbstractAction;
-import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
-import org.openide.util.lookup.AbstractLookup;
-import org.openide.util.lookup.InstanceContent;
+import org.openide.util.Lookup;
+import org.openide.util.LookupEvent;
+import org.openide.util.LookupListener;
 import systems.tech247.hr.Currencies;
 import systems.tech247.util.AddTool;
 import systems.tech247.util.NodeAddTool;
@@ -24,8 +24,9 @@ import systems.tech247.api.ReloadableQueryCapability;
  *
  * @author Wilfred
  */
-public class FactoryCurrency extends ChildFactory<Object>{
-
+public class FactoryCurrency extends ChildFactory<Object> implements LookupListener{
+    
+    Lookup.Result<NodeRefreshCurrencyEvent> result;
     QueryCurrency query;
     boolean add = false;
     
@@ -35,9 +36,11 @@ public class FactoryCurrency extends ChildFactory<Object>{
     
     public FactoryCurrency(){
         this.query = new QueryCurrency();
+        
         String sql = "SELECT c FROM Currencies c";
         query.setSqlString(sql);
-        this.add = true;
+        this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeRefreshCurrencyEvent.class);
+        result.addLookupListener(this);
     }
     
     @Override
@@ -52,15 +55,7 @@ public class FactoryCurrency extends ChildFactory<Object>{
                 
             }
         }
-        //Add Tool
-        if(add){
-            list.add(new AddTool(new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-            }));
-        }
+
         //Populate the list of child entries
         list.addAll(query.getList());
         
@@ -71,7 +66,7 @@ public class FactoryCurrency extends ChildFactory<Object>{
     @Override
     protected Node createNodeForKey(Object key){
         if(key instanceof Currencies){
-            return new CurrencyNode((Currencies)key);
+            return new NodeCurrency((Currencies)key);
         }else{
             return new NodeAddTool((AddTool)key);
         }
@@ -80,22 +75,18 @@ public class FactoryCurrency extends ChildFactory<Object>{
        
     }
     
-    private class CurrencyNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public CurrencyNode(Currencies emp){
-            this(new InstanceContent(),emp);
+    @Override
+    public void resultChanged(LookupEvent le) {
+        Lookup.Result r = (Lookup.Result) le.getSource();
+        Collection c = r.allInstances();
+        for (Object object : c){
+            if (object instanceof NodeRefreshCurrencyEvent){
+                refresh(true);
+            }
+            
         }
-        
-        private CurrencyNode (InstanceContent ic, Currencies emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/Currency.png");
-            setDisplayName(emp.getCurrencyName());
-        }
+    }
     
-}
+    
     
 }

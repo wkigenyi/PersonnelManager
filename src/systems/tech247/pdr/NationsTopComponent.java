@@ -30,7 +30,7 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "NationsTopComponent",
         iconBase = "systems/tech247/util/icons/nation.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.NationsTopComponent")
@@ -41,7 +41,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_NationsAction=Nations",
-    "CTL_NationsTopComponent=Nations Window",
+    "CTL_NationsTopComponent=Nationalities",
     "HINT_NationsTopComponent= "
 })
 public final class NationsTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -50,14 +50,23 @@ public final class NationsTopComponent extends TopComponent implements ExplorerM
     
     String searchString = "";
     QueryNation query = new QueryNation();
-    public NationsTopComponent() {
+    
+    public NationsTopComponent(){
+        this("");
+    }
+    
+    
+    public NationsTopComponent(String view) {
         initComponents();
         setName(Bundle.CTL_NationsTopComponent());
         setToolTipText(Bundle.HINT_NationsTopComponent());
-        OutlineView ov = new OutlineView("Nations");
+        OutlineView ov = new OutlineView("Nationalities");
         ov.getOutline().setRootVisible(false);
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         jtSearchNation.addKeyListener(new KeyListener() {
@@ -156,32 +165,25 @@ public final class NationsTopComponent extends TopComponent implements ExplorerM
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
-        
         String sqlString = "SELECT e FROM Nationalities e " ;
-                query.setSqlString(sqlString);
-                loadItems(query);
+        query.setSqlString(sqlString);
+        loadItems(query);
         
     }
 
     @Override
     protected void componentShowing() {
-        String sqlString = "SELECT e FROM Nationalities e " ;
-                query.setSqlString(sqlString);
-                loadItems(query);
-                associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        
     }
 
     @Override
     protected void componentActivated() {
-        String sqlString = "SELECT e FROM Nationalities e " ;
-                query.setSqlString(sqlString);
-                loadItems(query);
-                associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        
     }
 
     @Override
     protected void componentDeactivated() {
-        associateLookup(Lookup.EMPTY);
+       
     }
     
     
@@ -193,7 +195,7 @@ public final class NationsTopComponent extends TopComponent implements ExplorerM
 
     @Override
     public void componentClosed() {
-        associateLookup(Lookup.EMPTY);
+        
     }
 
     void writeProperties(java.util.Properties p) {

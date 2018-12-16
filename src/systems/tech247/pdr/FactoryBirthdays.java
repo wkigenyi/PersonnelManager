@@ -5,6 +5,7 @@
  */
 package systems.tech247.pdr;
 
+import systems.tech247.view.CategoryEditorTopComponent;
 import java.awt.event.ActionEvent;
 import java.util.List;
 import javax.swing.AbstractAction;

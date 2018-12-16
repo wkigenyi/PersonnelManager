@@ -5,24 +5,12 @@
  */
 package systems.tech247.pdr;
 
-import java.awt.event.ActionEvent;
 import java.util.List;
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import org.openide.awt.StatusDisplayer;
-import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
-import org.openide.util.lookup.AbstractLookup;
-import org.openide.util.lookup.InstanceContent;
-import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.CSSSCategories;
 import systems.tech247.util.AddTool;
-import systems.tech247.util.CapCreatable;
-import systems.tech247.util.CapDeletable;
-import systems.tech247.util.CapEditable;
 import systems.tech247.util.NodeAddTool;
 
 

@@ -18,6 +18,8 @@ import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.InstanceContent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -29,7 +31,7 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "CountryTopComponent",
         iconBase = "systems/tech247/util/icons/nation.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.CountryTopComponent")
@@ -40,7 +42,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_CountryAction=Country",
-    "CTL_CountryTopComponent=Country Window",
+    "CTL_CountryTopComponent=Countries",
     "HINT_CountryTopComponent= "
 })
 public final class CountryTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -49,7 +51,13 @@ public final class CountryTopComponent extends TopComponent implements ExplorerM
     
     String searchString = "";
     QueryCountry query = new QueryCountry();
+    InstanceContent content = new InstanceContent();
     public CountryTopComponent() {
+        this("");
+    }
+    
+    
+    public CountryTopComponent(String view) {
         initComponents();
         setName(Bundle.CTL_CountryTopComponent());
         setToolTipText(Bundle.HINT_CountryTopComponent());
@@ -57,6 +65,10 @@ public final class CountryTopComponent extends TopComponent implements ExplorerM
         ov.getOutline().setRootVisible(false);
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Locations");
+        }
+
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         String sqlString = "SELECT e FROM Countries e ";
@@ -160,6 +172,7 @@ public final class CountryTopComponent extends TopComponent implements ExplorerM
     @Override
     public void componentOpened() {
         // TODO add custom code on component opening
+
     }
 
     @Override

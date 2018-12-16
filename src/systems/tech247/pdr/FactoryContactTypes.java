@@ -52,16 +52,7 @@ public class FactoryContactTypes extends ChildFactory<Object> implements LookupL
             }
         }
         //Allow add 
-        if(add){
-            list.add(
-                    new AddTool(
-                            new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //We add a contact type
-                }
-            } ));
-        }
+
         
         
         //Populate the list of child entries
@@ -75,7 +66,7 @@ public class FactoryContactTypes extends ChildFactory<Object> implements LookupL
     protected Node createNodeForKey(Object key){
         Node node = null;
         if(key instanceof Ctypes){
-            node = new CtypeNode((Ctypes)key);
+            node = new NodeCtype((Ctypes)key);
         }else if(key instanceof AddTool){
             node = new NodeAddTool((AddTool)key);
         }
@@ -89,22 +80,6 @@ public class FactoryContactTypes extends ChildFactory<Object> implements LookupL
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    private class CtypeNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public CtypeNode(Ctypes emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private CtypeNode (InstanceContent ic, Ctypes emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
-            setDisplayName(emp.getDescription());
-        }
-    
-}
+
     
 }

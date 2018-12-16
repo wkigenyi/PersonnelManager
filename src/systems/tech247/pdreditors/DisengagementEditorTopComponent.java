@@ -389,7 +389,17 @@ public final class DisengagementEditorTopComponent extends TopComponent{
     }// </editor-fold>//GEN-END:initComponents
 
     private void jcbDisengagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDisengagementActionPerformed
-        updateable.setIsDisengaged(jcbDisengagement.isSelected());
+        boolean disengage = jcbDisengagement.isSelected();
+        updateable.setIsDisengaged(disengage);
+        if(disengage){
+            
+            updateable.setCategoryID(null);
+            updateable.setPayrollid(null);
+            updateable.setOrganizationUnitID(null);
+            //updateable.setCurrencyID(null);
+        }else{
+            
+        }
         modify();
     }//GEN-LAST:event_jcbDisengagementActionPerformed
 

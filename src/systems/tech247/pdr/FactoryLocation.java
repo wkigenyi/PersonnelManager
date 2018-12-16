@@ -54,15 +54,7 @@ public class FactoryLocation extends ChildFactory<Object>{
                 
             }
         }
-        //Add Tool
-        if(add){
-            list.add(new AddTool(new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-            }));
-        }
+        
         //Populate the list of child entries
         list.addAll(query.getList());
         
@@ -73,7 +65,7 @@ public class FactoryLocation extends ChildFactory<Object>{
     @Override
     protected Node createNodeForKey(Object key){
         if(key instanceof Locations){
-            return new LocationNode((Locations)key);
+            return new NodeLocation((Locations)key);
         }else{
             return new NodeAddTool((AddTool)key);
         }
@@ -82,22 +74,6 @@ public class FactoryLocation extends ChildFactory<Object>{
         
     }
     
-    private class LocationNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public LocationNode(Locations emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private LocationNode (InstanceContent ic, Locations emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
-            setDisplayName(emp.getLocationName());
-        }
-    
-}
+
     
 }

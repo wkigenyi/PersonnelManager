@@ -52,14 +52,7 @@ public class FactoryTribes extends ChildFactory<Object>{
             }
         }
         //Add Add Tool
-        if(add){
-            list.add(new AddTool(new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-            }));
-        }
+        
         
         //Populate the list of child entries
         list.addAll(query.getList());
@@ -71,7 +64,7 @@ public class FactoryTribes extends ChildFactory<Object>{
     @Override
     protected Node createNodeForKey(Object key){
         if(key instanceof Tribes){
-            return new TribeNode((Tribes)key);
+            return new NodeTribe((Tribes)key);
         }else{
             return new NodeAddTool((AddTool)key);
         }
@@ -81,22 +74,6 @@ public class FactoryTribes extends ChildFactory<Object>{
         
     }
     
-    private class TribeNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public TribeNode(Tribes emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private TribeNode (InstanceContent ic, Tribes emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/tribe.png");
-            setDisplayName(emp.getTribe());
-        }
-    
-}
+ 
     
 }

@@ -27,7 +27,7 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "ReligionsTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.ReligionsTopComponent")
@@ -47,9 +47,14 @@ public final class ReligionsTopComponent extends TopComponent implements Explore
     
     String searchString = "";
     QueryReligions query = new QueryReligions();
+    
     public ReligionsTopComponent() {
+        this("");
+    }
+    
+    public ReligionsTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_NationsTopComponent());
+        setName(Bundle.CTL_ReligionsTopComponent());
         setToolTipText(Bundle.HINT_ReligionsTopComponent());
         OutlineView ov = new OutlineView("Religions");
         ov.getOutline().setRootVisible(false);
@@ -58,6 +63,9 @@ public final class ReligionsTopComponent extends TopComponent implements Explore
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
         
         

@@ -11,14 +11,18 @@ import java.awt.event.KeyListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
-import org.openide.awt.StatusDisplayer;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -29,8 +33,8 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "DepartmentsTopComponent",
-        iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        iconBase = "systems/tech247/util/icons/department.png",
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.DepartmentsTopComponent")
@@ -41,23 +45,29 @@ import org.openide.util.NbBundle.Messages;
 )
 @Messages({
     "CTL_DepartmentsAction=Departments",
-    "CTL_DepartmentsTopComponent=Departments Window",
+    "CTL_DepartmentsTopComponent=Departments",
     "HINT_DepartmentsTopComponent= "
 })
 public final class DepartmentsTopComponent extends TopComponent implements ExplorerManager.Provider {
     
     ExplorerManager em = new ExplorerManager();
-    
-        
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     String searchString;
         
     
     
     String sql="SELECT r from OrganizationUnits r";
-    public DepartmentsTopComponent() {
+    
+    public DepartmentsTopComponent(){
+        this("");
+    }
+    
+    
+    public DepartmentsTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_NationsTopComponent());
-        setToolTipText(Bundle.HINT_ReligionsTopComponent());
+        setName(Bundle.CTL_DepartmentsTopComponent());
+        setToolTipText(Bundle.HINT_DepartmentsTopComponent());
         OutlineView ov = new OutlineView("Departments");
         ov.getOutline().setRootVisible(false);
         
@@ -65,7 +75,23 @@ public final class DepartmentsTopComponent extends TopComponent implements Explo
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
+        
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new OUEditorTopComponent();
+                tc.open();
+                tc.requestActive();
+                        
+            }
+        });
+        
+        Lookup merged = new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp);
+        associateLookup(merged);
         
         jtDepartment.addKeyListener(new KeyListener() {
             @Override
@@ -120,7 +146,7 @@ public final class DepartmentsTopComponent extends TopComponent implements Explo
         );
         viewPanelLayout.setVerticalGroup(
             viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 265, Short.MAX_VALUE)
+            .addGap(0, 322, Short.MAX_VALUE)
         );
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(DepartmentsTopComponent.class, "DepartmentsTopComponent.jLabel1.text")); // NOI18N
@@ -148,8 +174,8 @@ public final class DepartmentsTopComponent extends TopComponent implements Explo
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jtDepartment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(viewPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(viewPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -161,7 +187,10 @@ public final class DepartmentsTopComponent extends TopComponent implements Explo
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {
-       
+               searchString = jtDepartment.getText();
+               sql ="SELECT r FROM OrganizationUnits r ";
+               
+               loadItems();
     }
 
     @Override

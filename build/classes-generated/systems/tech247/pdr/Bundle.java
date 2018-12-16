@@ -24,32 +24,11 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BanksAction");
     }
     /**
-     * @return <i>Banks Window</i>
+     * @return <i>Banks</i>
      * @see BanksTopComponent
      */
     static String CTL_BanksTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BanksTopComponent");
-    }
-    /**
-     * @return <i>Employee Categories</i>
-     * @see CategoriesTopComponent
-     */
-    static String CTL_CategoriesAction() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoriesAction");
-    }
-    /**
-     * @return <i>Employee Categories</i>
-     * @see CategoriesTopComponent
-     */
-    static String CTL_CategoriesTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoriesTopComponent");
-    }
-    /**
-     * @return <i>New Category</i>
-     * @see CategoryEditorTopComponent
-     */
-    static String CTL_CategoryEditorTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CategoryEditorTopComponent");
     }
     /**
      * @return <i>New Category Type</i>
@@ -80,6 +59,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CompanyEditorTopComponent");
     }
     /**
+     * @return <i>CompanyStructure</i>
+     * @see CompanyStructureTopComponent
+     */
+    static String CTL_CompanyStructureAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CompanyStructureAction");
+    }
+    /**
+     * @return <i>Company Structures</i>
+     * @see CompanyStructureTopComponent
+     */
+    static String CTL_CompanyStructureTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CompanyStructureTopComponent");
+    }
+    /**
      * @return <i>Company Window</i>
      * @see CompanyTopComponent
      */
@@ -94,7 +87,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_ContactTypesAction");
     }
     /**
-     * @return <i>Contact Types Window</i>
+     * @return <i>Contact Types</i>
      * @see ContactTypesTopComponent
      */
     static String CTL_ContactTypesTopComponent() {
@@ -129,7 +122,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CountryAction");
     }
     /**
-     * @return <i>Country Window</i>
+     * @return <i>Countries</i>
      * @see CountryTopComponent
      */
     static String CTL_CountryTopComponent() {
@@ -171,7 +164,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_DepartmentsAction");
     }
     /**
-     * @return <i>Departments Window</i>
+     * @return <i>Departments</i>
      * @see DepartmentsTopComponent
      */
     static String CTL_DepartmentsTopComponent() {
@@ -367,6 +360,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeRefereesTopComponent");
     }
     /**
+     * @return <i>EmployeeType</i>
+     * @see EmployeeTypeTopComponent
+     */
+    static String CTL_EmployeeTypeAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeTypeAction");
+    }
+    /**
+     * @return <i>EmployeeType Window</i>
+     * @see EmployeeTypeTopComponent
+     */
+    static String CTL_EmployeeTypeTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeTypeTopComponent");
+    }
+    /**
      * @return <i>Employee Visas</i>
      * @see EmployeeVisaTopComponent
      */
@@ -437,7 +444,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_NationsAction");
     }
     /**
-     * @return <i>Nations Window</i>
+     * @return <i>Nationalities</i>
      * @see NationsTopComponent
      */
     static String CTL_NationsTopComponent() {
@@ -514,7 +521,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_PositionsAction");
     }
     /**
-     * @return <i>Positions Window</i>
+     * @return <i>Positions</i>
      * @see PositionsTopComponent
      */
     static String CTL_PositionsTopComponent() {
@@ -570,20 +577,6 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_BanksTopComponent");
     }
     /**
-     * @return <i> </i>
-     * @see CategoriesTopComponent
-     */
-    static String HINT_CategoriesTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CategoriesTopComponent");
-    }
-    /**
-     * @return <i>Category Editor</i>
-     * @see CategoryEditorTopComponent
-     */
-    static String HINT_CategoryEditorTopComponent() {
-        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CategoryEditorTopComponent");
-    }
-    /**
      * @return <i>Category Type Editor</i>
      * @see CategoryTypeEditorTopComponent
      */
@@ -596,6 +589,13 @@ class Bundle {
      */
     static String HINT_CompanyEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CompanyEditorTopComponent");
+    }
+    /**
+     * @return <i>This is a CompanyStructure window</i>
+     * @see CompanyStructureTopComponent
+     */
+    static String HINT_CompanyStructureTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_CompanyStructureTopComponent");
     }
     /**
      * @return <i> </i>
@@ -750,6 +750,13 @@ class Bundle {
      */
     static String HINT_EmployeeRefereesTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EmployeeRefereesTopComponent");
+    }
+    /**
+     * @return <i>This is a EmployeeType window</i>
+     * @see EmployeeTypeTopComponent
+     */
+    static String HINT_EmployeeTypeTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EmployeeTypeTopComponent");
     }
     /**
      * @return 

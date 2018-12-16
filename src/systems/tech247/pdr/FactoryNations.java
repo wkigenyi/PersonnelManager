@@ -76,7 +76,7 @@ public class FactoryNations extends ChildFactory<Object>{
     protected Node createNodeForKey(Object key){
         Node node = null;
         if(key instanceof Nationalities){
-            return new NationNode((Nationalities)key);
+            return new NodeNation((Nationalities)key);
         }else if(key instanceof AddTool){
             return new NodeAddTool((AddTool)key);
         }
@@ -86,38 +86,6 @@ public class FactoryNations extends ChildFactory<Object>{
         return node;
     }
     
-    private class NationNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        Nationalities emp;
-        
-        public NationNode(Nationalities emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private NationNode (InstanceContent ic, Nationalities emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            this.emp = emp;
-            setIconBaseWithExtension("systems/tech247/util/icons/nation.png");
-            setDisplayName(emp.getNationality()+" ("+emp.getEmployeesCollection().size()+")");
-        }
-
-        @Override
-        public Action getPreferredAction() {
-            return new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    TopComponent tc = new NationalityEditorTopComponent(emp);
-                    tc.open();
-                    tc.requestActive();
-                }
-            };
-        }
-        
-        
     
-}
     
 }

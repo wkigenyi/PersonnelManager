@@ -145,6 +145,7 @@ public final class RefereeEditorTopComponent extends TopComponent {
                 }catch(NullPointerException ex){
                     
                 }
+                modify();
             }
 
             @Override
@@ -155,11 +156,18 @@ public final class RefereeEditorTopComponent extends TopComponent {
                 }catch(NullPointerException ex){
                     
                 }
+                modify();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                 otherNames = jtOthernames.getText();
+                try{
+                    updateable.setOtherNames(otherNames);
+                }catch(NullPointerException ex){
+                    
+                }
+                modify();
             }
         });
         

@@ -51,14 +51,7 @@ public class FactoryReligions extends ChildFactory<Object>{
                 
             }
         }
-        if(add){
-            list.add(new AddTool(new AbstractAction() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                }
-            }));
-        }
+        
         //Populate the list of child entries
         list.addAll(query.getList());
         
@@ -69,28 +62,12 @@ public class FactoryReligions extends ChildFactory<Object>{
     @Override
     protected Node createNodeForKey(Object key){
         if(key instanceof Religions){
-            return new ReligionNode((Religions)key);
+            return new NodeReligion((Religions)key);
         }else{
             return new NodeAddTool((AddTool)key);
         }
     }
     
-    private class ReligionNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public ReligionNode(Religions emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private ReligionNode (InstanceContent ic, Religions emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
-            setDisplayName(emp.getReligion());
-        }
-    
-}
+
     
 }
