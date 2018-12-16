@@ -14,9 +14,15 @@ import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
 import systems.tech247.hr.Employees;
+import systems.tech247.pdreditors.AccountEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -45,17 +51,33 @@ import systems.tech247.hr.Employees;
 public final class EmployeeBankAccountsTopComponent extends TopComponent implements ExplorerManager.Provider  {
     ExplorerManager em = new ExplorerManager();
     Employees emp;
+    InstanceContent content = new InstanceContent();
+    Lookup lookup = new AbstractLookup(content);
     public EmployeeBankAccountsTopComponent(){
         this(null);
     }
     
-    public EmployeeBankAccountsTopComponent(Employees emp) {
+    public EmployeeBankAccountsTopComponent(final Employees emp) {
         initComponents();
-        setName(Bundle.CTL_EmployeeBankAccountsTopComponent()+" "+emp.getSurName()+" "+emp.getOtherNames());
+        setName(Bundle.CTL_EmployeeBankAccountsTopComponent()+" -> "+emp.getSurName()+" "+emp.getOtherNames());
         setToolTipText(Bundle.HINT_EmployeeBankAccountsTopComponent());
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new AccountEditorTopComponent(emp);
+                tc.open();
+                tc.requestActive();
+            }
+        });
+        
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lookup));
         this.emp = emp;
         OutlineView ov = new OutlineView("Account");
+        ov.addPropertyColumn("number", "A/C Number");
+        ov.addPropertyColumn("bank", "Bank");
+        ov.addPropertyColumn("branch", "Branch");
+        ov.addPropertyColumn("main", "Main Account");
         ov.getOutline().setRootVisible(false);
         setLayout(new BorderLayout());
         add(ov);
