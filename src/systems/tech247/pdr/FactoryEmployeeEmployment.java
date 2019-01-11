@@ -22,7 +22,6 @@ import org.openide.util.LookupListener;
 import org.openide.util.lookup.InstanceContent;
 import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
-import systems.tech247.hr.Contacts;
 import systems.tech247.hr.Employees;
 import systems.tech247.hr.Employment;
 import systems.tech247.pdreditors.EmploymentEditorTopComponent;
@@ -49,14 +48,14 @@ public class FactoryEmployeeEmployment extends ChildFactory<Object> implements L
 
     @Override
     protected boolean createKeys(List<Object> list) {
-        list.add(new AddTool(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TopComponent tc  = new EmploymentEditorTopComponent(emp);
-                tc.open();
-                tc.requestActive();
-            }
-        }));
+//        list.add(new AddTool(new AbstractAction() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TopComponent tc  = new EmploymentEditorTopComponent(emp);
+//                tc.open();
+//                tc.requestActive();
+//            }
+//        }));
         list.addAll(new DataAccess().searchEmployment(emp));
         
         

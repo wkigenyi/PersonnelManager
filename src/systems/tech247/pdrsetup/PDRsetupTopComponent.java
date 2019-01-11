@@ -26,16 +26,16 @@ import systems.tech247.pdr.UtilityPDR;
 )
 @TopComponent.Description(
         preferredID = "PDRsetupTopComponent",
-        //iconBase="SET/PATH/TO/ICON/HERE", 
+        iconBase = "systems/tech247/util/icons/settings.png",
         persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false /*, roles = {"Personnel"}*/)
 @ActionID(category = "Window", id = "systems.tech247.pdrsetup.PDRsetupTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_PDRsetupAction",
-        preferredID = "PDRsetupTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_PDRsetupAction",
+//        preferredID = "PDRsetupTopComponent"
+//)
 @Messages({
     "CTL_PDRsetupAction=PDRsetup",
     "CTL_PDRsetupTopComponent=PDR Setup",

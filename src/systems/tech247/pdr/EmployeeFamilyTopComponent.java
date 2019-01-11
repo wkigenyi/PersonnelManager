@@ -8,15 +8,20 @@ package systems.tech247.pdr;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
 import systems.tech247.hr.Employees;
+import systems.tech247.pdreditors.FamilyEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -32,11 +37,11 @@ import systems.tech247.hr.Employees;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeFamilyTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeFamilyAction",
-        preferredID = "EmployeeFamilyTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeFamilyAction",
+//        preferredID = "EmployeeFamilyTopComponent"
+//)
 @Messages({
     "CTL_EmployeeFamilyAction=Family",
     "CTL_EmployeeFamilyTopComponent=Employee Family",
@@ -44,21 +49,38 @@ import systems.tech247.hr.Employees;
 })
 public final class EmployeeFamilyTopComponent extends TopComponent implements ExplorerManager.Provider  {
     ExplorerManager em = new ExplorerManager();
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     Employees emp;
     public EmployeeFamilyTopComponent(){
         this(null);
     }
     
-    public EmployeeFamilyTopComponent(Employees emp) {
+    public EmployeeFamilyTopComponent(final Employees emp) {
         initComponents();
         setName(Bundle.CTL_EmployeeFamilyTopComponent()+"->"+emp.getSurName()+" "+emp.getOtherNames());
         setToolTipText(Bundle.HINT_EmployeeFamilyTopComponent());
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new FamilyEditorTopComponent(emp);
+                tc.open();
+                tc.requestActive();
+            }
+        });
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         this.emp = emp;
         OutlineView ov = new OutlineView("Family");
         ov.getOutline().setRootVisible(false);
         setLayout(new BorderLayout());
         add(ov);
+        //ov.addPropertyColumn("surname", "Sur-Name");
+        ov.addPropertyColumn("othername", "Other-Name(s)");
+        ov.addPropertyColumn("relation", "Relationship");
+        ov.addPropertyColumn("mobile", "Mobile");
+        ov.addPropertyColumn("tel", "Telephone");
+        ov.addPropertyColumn("email", "Email");
+        ov.addPropertyColumn("address", "Address");
     }
 
     /**

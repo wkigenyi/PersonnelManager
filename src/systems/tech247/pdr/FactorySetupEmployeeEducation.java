@@ -5,13 +5,11 @@
  */
 package systems.tech247.pdr;
 
-import java.awt.event.ActionEvent;
 import java.beans.IntrospectionException;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.AbstractAction;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
@@ -20,11 +18,9 @@ import org.openide.util.Lookup.Result;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
 import org.openide.util.lookup.InstanceContent;
-import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.Edu;
 import systems.tech247.hr.Employees;
-import systems.tech247.pdreditors.EducationEditorTopComponent;
 import systems.tech247.util.AddTool;
 import systems.tech247.util.NodeAddTool;
 
@@ -48,14 +44,14 @@ public class FactorySetupEmployeeEducation extends ChildFactory<Object> implemen
 
     @Override
     protected boolean createKeys(List<Object> list) {
-        list.add(new AddTool(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TopComponent tc  = new EducationEditorTopComponent(emp);
-                tc.open();
-                tc.requestActive();
-            }
-        }));
+//        list.add(new AddTool(new AbstractAction() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TopComponent tc  = new EducationEditorTopComponent(emp);
+//                tc.open();
+//                tc.requestActive();
+//            }
+//        }));
         list.addAll(new DataAccess().searchEducation(emp));
         
         

@@ -6,12 +6,8 @@
 package systems.tech247.pdr;
 
 import java.util.List;
-import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
-import org.openide.util.lookup.AbstractLookup;
-import org.openide.util.lookup.InstanceContent;
 import systems.tech247.util.Gender;
 
 
@@ -41,28 +37,12 @@ public class FactoryGender extends ChildFactory<Gender>{
     
     @Override
     protected Node createNodeForKey(Gender key){
-        Node node = new GenderNode(key);
+        Node node = new NodeGender(key);
        
         
         return node;
     }
     
-    private class GenderNode extends AbstractNode{
-        
-        private final InstanceContent instanceContent;
-        
-        public GenderNode(Gender emp){
-            this(new InstanceContent(),emp);
-        }
-        
-        private GenderNode (InstanceContent ic, Gender emp){
-            super(Children.LEAF, new AbstractLookup(ic));
-            instanceContent = ic;
-            instanceContent.add(emp);
-            setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
-            setDisplayName(emp.toString());
-        }
-    
-}
+
     
 }

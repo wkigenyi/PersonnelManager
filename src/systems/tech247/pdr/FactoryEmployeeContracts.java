@@ -23,7 +23,6 @@ import org.openide.util.lookup.InstanceContent;
 import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.Contracts;
-import systems.tech247.hr.Edu;
 import systems.tech247.hr.Employees;
 import systems.tech247.pdreditors.ContractEditorTopComponent;
 import systems.tech247.util.AddTool;
@@ -49,14 +48,14 @@ public class FactoryEmployeeContracts extends ChildFactory<Object> implements Lo
 
     @Override
     protected boolean createKeys(List<Object> list) {
-        list.add(new AddTool(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TopComponent tc  = new ContractEditorTopComponent(emp);
-                tc.open();
-                tc.requestActive();
-            }
-        }));
+//        list.add(new AddTool(new AbstractAction() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TopComponent tc  = new ContractEditorTopComponent(emp);
+//                tc.open();
+//                tc.requestActive();
+//            }
+//        }));
         list.addAll(new DataAccess().searchContracts(emp));
         
         

@@ -8,7 +8,6 @@ package systems.tech247.pdr;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
@@ -38,11 +37,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeContactsTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeContactsAction",
-        preferredID = "EmployeeContactsTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeContactsAction",
+//        preferredID = "EmployeeContactsTopComponent"
+//)
 @Messages({
     "CTL_EmployeeContactsAction= Contacts",
     "CTL_EmployeeContactsTopComponent= Contacts",

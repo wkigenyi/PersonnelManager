@@ -304,6 +304,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeListTopComponent");
     }
     /**
+     * @return <i>EmployeeManifest</i>
+     * @see EmployeeManifestTopComponent
+     */
+    static String CTL_EmployeeManifestAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeManifestAction");
+    }
+    /**
+     * @return <i>Employee Manifest</i>
+     * @see EmployeeManifestTopComponent
+     */
+    static String CTL_EmployeeManifestTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeManifestTopComponent");
+    }
+    /**
      * @return <i>Next Of Kin</i>
      * @see EmployeeNOKTopComponent
      */
@@ -416,7 +430,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_LocationsAction");
     }
     /**
-     * @return <i>Locations Window</i>
+     * @return <i>Locations</i>
      * @see LocationsTopComponent
      */
     static String CTL_LocationsTopComponent() {
@@ -722,6 +736,13 @@ class Bundle {
      */
     static String HINT_EmployeeListTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EmployeeListTopComponent");
+    }
+    /**
+     * @return <i>This is a EmployeeManifest</i>
+     * @see EmployeeManifestTopComponent
+     */
+    static String HINT_EmployeeManifestTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EmployeeManifestTopComponent");
     }
     /**
      * @return 

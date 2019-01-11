@@ -37,11 +37,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeNOKTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeNOKAction",
-        preferredID = "EmployeeNOKTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeNOKAction",
+//        preferredID = "EmployeeNOKTopComponent"
+//)
 @Messages({
     "CTL_EmployeeNOKAction=Next Of Kin",
     "CTL_EmployeeNOKTopComponent= Next Of Kin",

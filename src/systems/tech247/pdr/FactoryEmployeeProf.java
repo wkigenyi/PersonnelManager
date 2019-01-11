@@ -49,14 +49,14 @@ public class FactoryEmployeeProf extends ChildFactory<Object> implements LookupL
 
     @Override
     protected boolean createKeys(List<Object> list) {
-        list.add(new AddTool(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TopComponent tc  = new ProfEditorTopComponent(emp);
-                tc.open();
-                tc.requestActive();
-            }
-        }));
+//        list.add(new AddTool(new AbstractAction() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TopComponent tc  = new ProfEditorTopComponent(emp);
+//                tc.open();
+//                tc.requestActive();
+//            }
+//        }));
         list.addAll(new DataAccess().searchProf(emp));
         
         

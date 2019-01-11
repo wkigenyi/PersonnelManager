@@ -31,11 +31,11 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.ReligionsTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ReligionsAction",
-        preferredID = "ReligionsTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_ReligionsAction",
+//        preferredID = "ReligionsTopComponent"
+//)
 @Messages({
     "CTL_ReligionsAction=Religions",
     "CTL_ReligionsTopComponent=Religions Window",

@@ -3,153 +3,7 @@
                             "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
     <folder name="Menu">
-        <folder name="PDR">
-            <file name="systems-tech247-pdr-AssetsTopComponent.shadow">
-                <!--systems.tech247.pdr.AssetsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-AssetsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-BanksTopComponent.shadow">
-                <!--systems.tech247.pdr.BanksTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-BanksTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-CompanyTopComponent.shadow">
-                <!--systems.tech247.pdr.CompanyTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CompanyTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-ContractTypesTopComponent.shadow">
-                <!--systems.tech247.pdr.ContractTypesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-ContractTypesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-CountryTopComponent.shadow">
-                <!--systems.tech247.pdr.CountryTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CountryTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-CtypesTopComponent.shadow">
-                <!--systems.tech247.pdr.CtypesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CtypesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-CurrenciesTopComponent.shadow">
-                <!--systems.tech247.pdr.CurrenciesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-CurrenciesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-DepartmentsTopComponent.shadow">
-                <!--systems.tech247.pdr.DepartmentsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-DepartmentsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-GenderTopComponent.shadow">
-                <!--systems.tech247.pdr.GenderTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-GenderTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-JDCategoryTopComponent.shadow">
-                <!--systems.tech247.pdr.JDCategoryTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-JDCategoryTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-LocationsTopComponent.shadow">
-                <!--systems.tech247.pdr.LocationsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-LocationsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-MaritalTopComponent.shadow">
-                <!--systems.tech247.pdr.MaritalTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-MaritalTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-NationsTopComponent.shadow">
-                <!--systems.tech247.pdr.NationsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-NationsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-OUTypesTopComponent.shadow">
-                <!--systems.tech247.pdr.OUTypesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-OUTypesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-PositionsTopComponent.shadow">
-                <!--systems.tech247.pdr.PositionsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-PositionsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-ReligionsTopComponent.shadow">
-                <!--systems.tech247.pdr.ReligionsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-ReligionsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-TribesTopComponent.shadow">
-                <!--systems.tech247.pdr.TribesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-pdr-TribesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-setup-SetupTopComponent.shadow">
-                <!--systems.tech247.pdrsetup.SetupTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/PDR/systems-tech247-setup-SetupTopComponent.instance"/>
-            </file>
-        </folder>
         <folder name="Window">
-            <file name="systems-tech247-pdr-CompanyStructureTopComponent.shadow">
-                <!--systems.tech247.pdr.CompanyStructureTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-CompanyStructureTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-ContactTypesTopComponent.shadow">
-                <!--systems.tech247.pdr.ContactTypesTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-ContactTypesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeAwardsTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeAwardsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeAwardsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeBankAccountsTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeBankAccountsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeContactsTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeContactsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeContactsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeContractsTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeContractsTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeContractsTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeEducationTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeEducationTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeEducationTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeEmploymentHistoryTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeEmploymentHistoryTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeFamilyTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeFamilyTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeFamilyTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeListTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeListTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeListTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeNOKTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeNOKTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeNOKTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeProfTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeProfTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeProfTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeRefereesTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeRefereeTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeRefereesTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeTypeTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeTypeTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeTypeTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeVisaTopComponent.shadow">
-                <!--systems.tech247.pdr.EmployeeVisaTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-EmployeeVisaTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-PersonnelDashboardTopComponent.shadow">
-                <!--systems.tech247.pdr.PersonnelDashboardTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-PersonnelDashboardTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdr-PersonnelSelectorTopComponent.shadow">
-                <!--systems.tech247.pdr.PersonnelSelectorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdr-PersonnelSelectorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-AccountEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.AccountEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-AccountEditorTopComponent.instance"/>
-            </file>
             <file name="systems-tech247-pdreditors-AwardEditorTopComponent.shadow">
                 <!--systems.tech247.pdreditors.AwardEditorTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-AwardEditorTopComponent.instance"/>
@@ -178,6 +32,10 @@
                 <!--systems.tech247.pdreditors.FamilyEditorTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-FamilyEditorTopComponent.instance"/>
             </file>
+            <file name="systems-tech247-pdreditors-LocationEditorTopComponent.shadow">
+                <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-LocationEditorTopComponent.instance"/>
+            </file>
             <file name="systems-tech247-pdreditors-NOKEditorTopComponent.shadow">
                 <!--systems.tech247.pdreditors.NOKEditorTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-NOKEditorTopComponent.instance"/>
@@ -205,14 +63,6 @@
             <file name="systems-tech247-pdreditors-VisaEditorTopComponent.shadow">
                 <!--systems.tech247.pdreditors.VisaEditorTopComponent-->
                 <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-VisaEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdrreports-PDRReportTopComponent.shadow">
-                <!--systems.tech247.pdrreports.PDRReportTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdrreports-PDRReportTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdrsetup-PDRsetupTopComponent.shadow">
-                <!--systems.tech247.pdrsetup.PDRsetupTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdrsetup-PDRsetupTopComponent.instance"/>
             </file>
         </folder>
     </folder>
@@ -309,6 +159,10 @@
                 <file name="EmployeeList" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.EmployeeListTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//EmployeeList//EN"/>
+                </file>
+                <file name="EmlployeeManafest" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdr.EmployeeManifestTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//EmlployeeManafest//EN"/>
                 </file>
                 <file name="EmployeeNOK" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.EmployeeNOKTopComponent-->
@@ -426,6 +280,10 @@
                 <file name="FamilyEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdreditors.FamilyEditorTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdreditors//FamilyEditor//EN"/>
+                </file>
+                <file name="LocationEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdreditors//LocationEditor//EN"/>
                 </file>
                 <file name="NextOfKinEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent-->
@@ -561,6 +419,10 @@
                             <!--systems.tech247.pdr.EmployeeListTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/EmployeeList.instance"/>
                         </file>
+                        <file name="EmployeeManifestTopComponent">
+                            <!--systems.tech247.pdr.EmployeeManifestTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/EmlployeeManafest.instance"/>
+                        </file>
                         <file name="EmployeeNOKTopComponent">
                             <!--systems.tech247.pdr.EmployeeNOKTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/EmployeeNOK.instance"/>
@@ -686,6 +548,10 @@
                         <file name="FamilyEditorTopComponent">
                             <!--systems.tech247.pdreditors.FamilyEditorTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/FamilyEditor.instance"/>
+                        </file>
+                        <file name="LocationEditorTopComponent">
+                            <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/LocationEditor.instance"/>
                         </file>
                         <file name="NOKEditorTopComponent">
                             <!--systems.tech247.pdreditors.NOKEditorTopComponent-->
@@ -958,6 +824,16 @@
                         methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
                     <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.EmployeeListTopComponent"/>
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.EmployeeListTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="EmlployeeManafest.instance">
+                    <!--systems.tech247.pdr.EmployeeManifestTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.EmployeeManifestTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.EmployeeManifestTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
                 <file name="EmployeeNOK.instance">
@@ -1245,6 +1121,16 @@
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdreditors.FamilyEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
+                <file name="LocationEditor.instance">
+                    <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdreditors.LocationEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdreditors.LocationEditorTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
                 <file name="NextOfKinEditor.instance">
                     <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent-->
                     <attr
@@ -1460,6 +1346,13 @@
   <instance class="systems.tech247.pdr.EmployeeListTopComponent"/>
 </settings>
 ]]></file>
+            <file name="EmlployeeManafestTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeManifestTopComponent"/>
+</settings>
+]]></file>
             <file name="EmployeeNOKTopComponent.settings">
                 <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
@@ -1644,6 +1537,13 @@
   <instance class="systems.tech247.pdreditors.FamilyEditorTopComponent"/>
 </settings>
 ]]></file>
+            <file name="LocationEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.LocationEditorTopComponent"/>
+</settings>
+]]></file>
             <file name="NextOfKinEditorTopComponent.settings">
                 <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
@@ -1779,14 +1679,6 @@
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
 <tc-ref version="2.0">
   <tc-id id="EmployeeListTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="GenderTopComponent.wstcref">
-                    <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="GenderTopComponent"/>
   <state opened="false"/>
 </tc-ref>
 ]]></file>
@@ -1944,6 +1836,14 @@
   <state opened="false"/>
 </tc-ref>
 ]]></file>
+                <file name="EmlployeeManafestTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmlployeeManafestTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
                 <file name="EmployeeNOKTopComponent.wstcref">
                     <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
@@ -1981,6 +1881,14 @@
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
 <tc-ref version="2.0">
   <tc-id id="EmployeeVisaTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="GenderTopComponent.wstcref">
+                    <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="GenderTopComponent"/>
   <state opened="false"/>
 </tc-ref>
 ]]></file>
@@ -2071,6 +1979,14 @@
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
 <tc-ref version="2.0">
   <tc-id id="FamilyEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="LocationEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="LocationEditorTopComponent"/>
   <state opened="false"/>
 </tc-ref>
 ]]></file>
@@ -2169,352 +2085,7 @@
         </folder>
     </folder>
     <folder name="Actions">
-        <folder name="PDR">
-            <file name="systems-tech247-pdr-AssetsTopComponent.instance">
-                <!--systems.tech247.pdr.AssetsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.AssetsTopComponent"/>
-                <attr name="preferredID" stringvalue="AssetsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_AssetsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-BanksTopComponent.instance">
-                <!--systems.tech247.pdr.BanksTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.BanksTopComponent"/>
-                <attr name="preferredID" stringvalue="BanksTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_BanksAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/bank.png"/>
-            </file>
-            <file name="systems-tech247-pdr-CompanyTopComponent.instance">
-                <!--systems.tech247.pdr.CompanyTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CompanyTopComponent"/>
-                <attr name="preferredID" stringvalue="CompanyTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CompanyAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/company.png"/>
-            </file>
-            <file name="systems-tech247-pdr-ContractTypesTopComponent.instance">
-                <!--systems.tech247.pdr.ContractTypesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.ContractTypesTopComponent"/>
-                <attr name="preferredID" stringvalue="ContractTypesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_ContractTypesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-CountryTopComponent.instance">
-                <!--systems.tech247.pdr.CountryTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CountryTopComponent"/>
-                <attr name="preferredID" stringvalue="CountryTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CountryAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/nation.png"/>
-            </file>
-            <file name="systems-tech247-pdr-CtypesTopComponent.instance">
-                <!--systems.tech247.pdr.CtypesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CtypesTopComponent"/>
-                <attr name="preferredID" stringvalue="CtypesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CtypesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-CurrenciesTopComponent.instance">
-                <!--systems.tech247.pdr.CurrenciesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CurrenciesTopComponent"/>
-                <attr name="preferredID" stringvalue="CurrenciesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CurrenciesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/Currency.png"/>
-            </file>
-            <file name="systems-tech247-pdr-DepartmentsTopComponent.instance">
-                <!--systems.tech247.pdr.DepartmentsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.DepartmentsTopComponent"/>
-                <attr name="preferredID" stringvalue="DepartmentsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_DepartmentsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/department.png"/>
-            </file>
-            <file name="systems-tech247-pdr-GenderTopComponent.instance">
-                <!--systems.tech247.pdr.GenderTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.GenderTopComponent"/>
-                <attr name="preferredID" stringvalue="GenderTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_GenderAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-JDCategoryTopComponent.instance">
-                <!--systems.tech247.pdr.JDCategoryTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.JDCategoryTopComponent"/>
-                <attr name="preferredID" stringvalue="JDCategoryTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_JDCategoriesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-LocationsTopComponent.instance">
-                <!--systems.tech247.pdr.LocationsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.LocationsTopComponent"/>
-                <attr name="preferredID" stringvalue="LocationsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_LocationsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-MaritalTopComponent.instance">
-                <!--systems.tech247.pdr.MaritalTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.MaritalTopComponent"/>
-                <attr name="preferredID" stringvalue="MaritalTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_MaritalAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-NationsTopComponent.instance">
-                <!--systems.tech247.pdr.NationsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.NationsTopComponent"/>
-                <attr name="preferredID" stringvalue="NationsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_NationsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/nation.png"/>
-            </file>
-            <file name="systems-tech247-pdr-OUTypesTopComponent.instance">
-                <!--systems.tech247.pdr.OUTypesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.OUTypesTopComponent"/>
-                <attr name="preferredID" stringvalue="OUTypesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_OUTypesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-PositionsTopComponent.instance">
-                <!--systems.tech247.pdr.PositionsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.PositionsTopComponent"/>
-                <attr name="preferredID" stringvalue="PositionsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_PositionsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/position.png"/>
-            </file>
-            <file name="systems-tech247-pdr-ReligionsTopComponent.instance">
-                <!--systems.tech247.pdr.ReligionsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.ReligionsTopComponent"/>
-                <attr name="preferredID" stringvalue="ReligionsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_ReligionsAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-TribesTopComponent.instance">
-                <!--systems.tech247.pdr.TribesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.TribesTopComponent"/>
-                <attr name="preferredID" stringvalue="TribesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_TribesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/tribe.png"/>
-            </file>
-            <file name="systems-tech247-setup-SetupTopComponent.instance">
-                <!--systems.tech247.pdrsetup.SetupTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdrsetup.SetupTopComponent"/>
-                <attr name="preferredID" stringvalue="SetupTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdrsetup.Bundle#CTL_SetupAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-        </folder>
         <folder name="Window">
-            <file name="systems-tech247-pdr-CompanyStructureTopComponent.instance">
-                <!--systems.tech247.pdr.CompanyStructureTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.CompanyStructureTopComponent"/>
-                <attr name="preferredID" stringvalue="CompanyStructureTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_CompanyStructureAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-ContactTypesTopComponent.instance">
-                <!--systems.tech247.pdr.ContactTypesTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.ContactTypesTopComponent"/>
-                <attr name="preferredID" stringvalue="ContactTypesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_ContactTypesAction" name="displayName"/>
-                <attr name="iconBase" stringvalue="systems/tech247/util/icons/settings.png"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeAwardsTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeAwardsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeAwardsTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeAwardsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeAwardsAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeBankAccountsTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeBankAccountsTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeBankAccountsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeBankAccountsAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeContactsTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeContactsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeContactsTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeContactsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeContactsAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeContractsTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeContractsTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeContractsTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeContractsTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeContractsAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeEducationTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeEducationTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeEducationTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeEducationTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeEducationAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeEmploymentHistoryTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeEmploymentHistoryTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeEmploymentHistoryAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeFamilyTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeFamilyTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeFamilyTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeFamilyTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeFamilyAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeListTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeListTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeListTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeListTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeListAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeNOKTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeNOKTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeNOKTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeNOKTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeNOKAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeProfTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeProfTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeProfTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeProfTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeProfAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeRefereesTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeRefereeTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeRefereeTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeRefereesTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeRefereesAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeTypeTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeTypeTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeTypeTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeTypeTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeTypeAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-EmployeeVisaTopComponent.instance">
-                <!--systems.tech247.pdr.EmployeeVisaTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.EmployeeVisaTopComponent"/>
-                <attr name="preferredID" stringvalue="EmployeeVisaTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_EmployeeVisaAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-PersonnelDashboardTopComponent.instance">
-                <!--systems.tech247.pdr.PersonnelDashboardTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.PersonnelDashboardTopComponent"/>
-                <attr name="preferredID" stringvalue="PersonnelDashboardTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_PersonnelDashboardAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdr-PersonnelSelectorTopComponent.instance">
-                <!--systems.tech247.pdr.PersonnelSelectorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdr.PersonnelSelectorTopComponent"/>
-                <attr name="preferredID" stringvalue="PersonnelSelectorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdr.Bundle#CTL_PersonnelSelectorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-AccountEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.AccountEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.AccountEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="AccountEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_AccountEditorAction" name="displayName"/>
-            </file>
             <file name="systems-tech247-pdreditors-AwardEditorTopComponent.instance">
                 <!--systems.tech247.pdreditors.AwardEditorTopComponent-->
                 <attr
@@ -2578,6 +2149,15 @@
                 <attr
                     bundlevalue="systems.tech247.pdreditors.Bundle#CTL_FamilyEditorAction" name="displayName"/>
             </file>
+            <file name="systems-tech247-pdreditors-LocationEditorTopComponent.instance">
+                <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="systems.tech247.pdreditors.LocationEditorTopComponent"/>
+                <attr name="preferredID" stringvalue="LocationEditorTopComponent"/>
+                <attr
+                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_LocationEditorAction" name="displayName"/>
+            </file>
             <file name="systems-tech247-pdreditors-NOKEditorTopComponent.instance">
                 <!--systems.tech247.pdreditors.NOKEditorTopComponent-->
                 <attr
@@ -2640,24 +2220,6 @@
                 <attr name="preferredID" stringvalue="VisaEditorTopComponent"/>
                 <attr
                     bundlevalue="systems.tech247.pdreditors.Bundle#CTL_VisaEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdrreports-PDRReportTopComponent.instance">
-                <!--systems.tech247.pdrreports.PDRReportTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdrreports.PDRReportTopComponent"/>
-                <attr name="preferredID" stringvalue="PDRReportTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdrreports.Bundle#CTL_PDRReportAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdrsetup-PDRsetupTopComponent.instance">
-                <!--systems.tech247.pdrsetup.PDRsetupTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdrsetup.PDRsetupTopComponent"/>
-                <attr name="preferredID" stringvalue="PDRsetupTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdrsetup.Bundle#CTL_PDRsetupAction" name="displayName"/>
             </file>
         </folder>
     </folder>

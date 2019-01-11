@@ -35,11 +35,11 @@ import org.openide.util.lookup.ProxyLookup;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeTypeTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeTypeAction",
-        preferredID = "EmployeeTypeTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeTypeAction",
+//        preferredID = "EmployeeTypeTopComponent"
+//)
 @Messages({
     "CTL_EmployeeTypeAction=EmployeeType",
     "CTL_EmployeeTypeTopComponent=EmployeeType Window",

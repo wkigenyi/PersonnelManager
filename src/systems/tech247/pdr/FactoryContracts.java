@@ -5,12 +5,14 @@
  */
 package systems.tech247.pdr;
 
+import java.beans.IntrospectionException;
 import java.util.List;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import systems.tech247.hr.Contracts;
 import systems.tech247.util.AddTool;
 import systems.tech247.util.NodeAddTool;
+import systems.tech247.util.NotifyUtil;
 
 
 
@@ -46,7 +48,11 @@ public class FactoryContracts extends ChildFactory<Object>{
     protected Node createNodeForKey(Object key){
         Node node = null;
         if(key instanceof Contracts){
-            node = new NodeEmployeeContract((Contracts)key);
+            try{
+                node = new NodeEmployeeContract((Contracts)key);
+            }catch(IntrospectionException ex){
+                NotifyUtil.error("Introspection Exception", "Introspection", ex, false);
+            }    
         }else if(key instanceof AddTool){
             node = new NodeAddTool((AddTool)key);
         }

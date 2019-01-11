@@ -34,11 +34,11 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.NationsTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_NationsAction",
-        preferredID = "NationsTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_NationsAction",
+//        preferredID = "NationsTopComponent"
+//)
 @Messages({
     "CTL_NationsAction=Nations",
     "CTL_NationsTopComponent=Nationalities",
@@ -142,7 +142,8 @@ public final class NationsTopComponent extends TopComponent implements ExplorerM
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtSearchNation, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)))
+                        .addComponent(jtSearchNation, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 137, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

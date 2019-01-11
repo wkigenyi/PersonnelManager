@@ -5,6 +5,8 @@
  */
 package systems.tech247.pdreditors;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
@@ -64,9 +66,9 @@ import systems.tech247.pdr.NodeContractRefreshEvent;
 public final class ContractEditorTopComponent extends TopComponent implements LookupListener {
     
     
-    
+    TopComponent tc = WindowManager.getDefault().findTopComponent("ContractTypesTopComponent");
     //Lookup for the Contact Type
-    Lookup.Result<PdContractTypes> rslt = WindowManager.getDefault().findTopComponent("ContractTypesTopComponent").getLookup().lookupResult(PdContractTypes.class);
+    Lookup.Result<PdContractTypes> rslt = tc.getLookup().lookupResult(PdContractTypes.class);
     
     
     
@@ -121,7 +123,32 @@ public final class ContractEditorTopComponent extends TopComponent implements Lo
         }
         fillTheFields();
         
-        
+        jtContactType.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DialogDisplayer.getDefault().notify(new DialogDescriptor(tc, "Select A Contract Type"));
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        });
         jtContact.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
@@ -157,6 +184,8 @@ public final class ContractEditorTopComponent extends TopComponent implements Lo
                 modify();
             }
         });
+        
+        
         
         jtref.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -312,11 +341,14 @@ public final class ContractEditorTopComponent extends TopComponent implements Lo
             try{
                 //get the original values
                 CtypeTypeID = application.getContractTypeID().getId();
-                
+                contractType = application.getContractTypeID();
                 contacts = application.getDescription();
                 jtref.setText(application.getRef());
                 comment = application.getComments();
-                
+                from = application.getCFrom();
+                to = application.getCTo();
+                jdcFrom.setDate(from);
+                jdcTo.setDate(to);
                 jtContactType.setText(application.getContractTypeID().getDescription());
                 jtContact.setText(contacts);
                 jtComments.setText(comment);
@@ -377,7 +409,7 @@ public final class ContractEditorTopComponent extends TopComponent implements Lo
             
             tc().ic.remove(this);
             unregister();
-            //New Employee
+            //New Contract
             if(null==application){
                
                 
@@ -591,7 +623,7 @@ public final class ContractEditorTopComponent extends TopComponent implements Lo
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtContactTypeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtContactTypeKeyPressed
-        TopComponent tc = WindowManager.getDefault().findTopComponent("ContractTypesTopComponent");
+        
         DialogDisplayer.getDefault().notify(new DialogDescriptor(tc, "Select A Contract Type"));
     }//GEN-LAST:event_jtContactTypeKeyPressed
 

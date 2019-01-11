@@ -37,11 +37,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.CurrenciesTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_CurrenciesAction",
-        preferredID = "CurrenciesTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_CurrenciesAction",
+//        preferredID = "CurrenciesTopComponent"
+//)
 @Messages({
     "CTL_CurrenciesAction=Currencies",
     "CTL_CurrenciesTopComponent=Currencies Window",

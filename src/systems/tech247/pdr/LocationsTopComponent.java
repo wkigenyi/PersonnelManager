@@ -14,8 +14,14 @@ import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.pdreditors.LocationEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -26,19 +32,19 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "LocationsTopComponent",
-        iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        iconBase = "systems/tech247/util/icons/company.png",
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.LocationsTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_LocationsAction",
-        preferredID = "LocationsTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_LocationsAction",
+//        preferredID = "LocationsTopComponent"
+//)
 @Messages({
     "CTL_LocationsAction=Locations",
-    "CTL_LocationsTopComponent=Locations Window",
+    "CTL_LocationsTopComponent=Locations",
     "HINT_LocationsTopComponent= "
 })
 public final class LocationsTopComponent extends TopComponent implements ExplorerManager.Provider {
@@ -47,15 +53,16 @@ public final class LocationsTopComponent extends TopComponent implements Explore
     
     String searchString = "";
     QueryLocation query = new QueryLocation();
-    
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     public LocationsTopComponent(){
         this("");
     }
     
     public LocationsTopComponent(String view) {
         initComponents();
-        setName(Bundle.CTL_NationsTopComponent());
-        setToolTipText(Bundle.HINT_ReligionsTopComponent());
+        setName(Bundle.CTL_LocationsTopComponent());
+        setToolTipText(Bundle.HINT_LocationsTopComponent());
         OutlineView ov = new OutlineView("Locations");
         ov.getOutline().setRootVisible(false);
         searchString ="SELECT r from Locations r";
@@ -63,10 +70,18 @@ public final class LocationsTopComponent extends TopComponent implements Explore
         loadItems();
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new LocationEditorTopComponent();
+                tc.open();
+                tc.requestActive();
+            }
+        });
         if(!view.equals("")){
             ov.addPropertyColumn("number", "Number Of Employees");
         }
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         
         
 

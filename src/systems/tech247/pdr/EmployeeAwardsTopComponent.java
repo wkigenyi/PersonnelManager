@@ -8,15 +8,20 @@ package systems.tech247.pdr;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
 import systems.tech247.hr.Employees;
+import systems.tech247.pdreditors.AwardEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -32,11 +37,11 @@ import systems.tech247.hr.Employees;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeAwardsTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeAwardsAction",
-        preferredID = "EmployeeAwardsTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeAwardsAction",
+//        preferredID = "EmployeeAwardsTopComponent"
+//)
 @Messages({
     "CTL_EmployeeAwardsAction= Awards",
     "CTL_EmployeeAwardsTopComponent= Awards",
@@ -45,20 +50,34 @@ import systems.tech247.hr.Employees;
 public final class EmployeeAwardsTopComponent extends TopComponent implements ExplorerManager.Provider  {
     ExplorerManager em = new ExplorerManager();
     Employees emp;
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     public EmployeeAwardsTopComponent(){
         this(null);
     }
     
-    public EmployeeAwardsTopComponent(Employees emp) {
+    public EmployeeAwardsTopComponent(final Employees emp) {
         initComponents();
         setName(Bundle.CTL_EmployeeAwardsTopComponent()+"->"+emp.getSurName()+" "+emp.getOtherNames());
         setToolTipText(Bundle.HINT_EmployeeAwardsTopComponent());
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        associateLookup( new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         this.emp = emp;
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new AwardEditorTopComponent(emp);
+                tc.open();
+                tc.requestActive();
+            }
+        });
         OutlineView ov = new OutlineView("Awards");
         ov.getOutline().setRootVisible(false);
         setLayout(new BorderLayout());
         add(ov);
+        
+        ov.addPropertyColumn("date", "Date");
+        ov.addPropertyColumn("cash", "Cash");
+        ov.addPropertyColumn("currency", "Currency");
     }
 
     /**

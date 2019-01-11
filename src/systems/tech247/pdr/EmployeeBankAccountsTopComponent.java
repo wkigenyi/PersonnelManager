@@ -38,11 +38,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeBankAccountsTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeBankAccountsAction",
-        preferredID = "EmployeeBankAccountsTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeBankAccountsAction",
+//        preferredID = "EmployeeBankAccountsTopComponent"
+//)
 @Messages({
     "CTL_EmployeeBankAccountsAction= Bank Accounts",
     "CTL_EmployeeBankAccountsTopComponent= Bank Accounts",

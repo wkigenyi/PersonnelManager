@@ -40,15 +40,15 @@ import systems.tech247.util.QueryEmployee;
 @TopComponent.Description(
         preferredID = "PersonnelSelectorTopComponent",
         //iconBase="SET/PATH/TO/ICON/HERE", 
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.PersonnelSelectorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_PersonnelSelectorAction",
-        preferredID = "PersonnelSelectorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_PersonnelSelectorAction",
+//        preferredID = "PersonnelSelectorTopComponent"
+//)
 @Messages({
     "CTL_PersonnelSelectorAction=PersonnelSelector",
     "CTL_PersonnelSelectorTopComponent=PersonnelSelector Window",

@@ -50,11 +50,11 @@ import systems.tech247.pdr.NodeRefreshBankAccountEvent;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.AccountEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_AccountEditorAction",
-        preferredID = "AccountEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_AccountEditorAction",
+//        preferredID = "AccountEditorTopComponent"
+//)
 @Messages({
     "CTL_AccountEditorAction=Account Editor",
     "CTL_AccountEditorTopComponent=Account Editor",

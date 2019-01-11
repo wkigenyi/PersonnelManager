@@ -6,6 +6,10 @@
 package systems.tech247.pdr;
 
 import java.beans.IntrospectionException;
+import java.lang.reflect.InvocationTargetException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -13,6 +17,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.nodes.PropertySupport;
+import org.openide.nodes.Sheet;
+import org.openide.nodes.Sheet.Set;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
@@ -47,7 +54,7 @@ List<Integer> rights = new ArrayList();
         this.contact = contact;
         rslt = UtilityPDR.getInstance().getLookup().lookupResult(String.class);
         rslt.addLookupListener(this);
-        
+        ic.add(contact);
         //add the capabilities to the instance content
         ic.add(new CapDeletable() {
             @Override
@@ -92,6 +99,58 @@ List<Integer> rights = new ArrayList();
             }
             
         }
+    }
+
+    @Override
+    protected Sheet createSheet() {
+        Sheet sheet = Sheet.createDefault();
+        Set set = Sheet.createPropertiesSet();
+        final Awards award = getLookup().lookup(Awards.class);
+        final NumberFormat nf = new DecimalFormat("#,###.00");
+        final SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
+        
+        Property date = new PropertySupport("date", String.class, "DATE", "DATE", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return sdf.format(award.getCFrom());
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        
+        Property cash = new PropertySupport("cash", String.class, "DATE", "DATE", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return nf.format(award.getCAward());
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        Property currency = new PropertySupport("currency", String.class, "DATE", "DATE", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return award.getCurrencyId().getCurrencyName();
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        set.put(cash);
+        set.put(currency);
+        set.put(date);
+        
+        sheet.put(set);
+        return sheet; //To change body of generated methods, choose Tools | Templates.
     }
 
     

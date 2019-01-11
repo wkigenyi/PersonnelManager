@@ -22,7 +22,9 @@ import systems.tech247.pdr.ContractTypesTopComponent;
 import systems.tech247.pdr.CountryTopComponent;
 import systems.tech247.pdr.CurrenciesTopComponent;
 import systems.tech247.pdr.DepartmentsTopComponent;
+import systems.tech247.pdr.EmployeeManifestTopComponent;
 import systems.tech247.pdr.EmployeeTypeTopComponent;
+import systems.tech247.pdr.GenderTopComponent;
 import systems.tech247.pdr.LocationsTopComponent;
 import systems.tech247.pdr.NationsTopComponent;
 import systems.tech247.pdr.PositionsTopComponent;
@@ -161,6 +163,24 @@ public class FactoryPDRSetup extends ChildFactory<SetupItem> {
             @Override
             public void actionPerformed(ActionEvent e) {
                 TopComponent tc = new ContractTypesTopComponent("view");
+                tc.open();
+                tc.requestActive();
+            }
+        }));
+        
+        toPopulate.add(new SetupItem("Gender",new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TopComponent tc = new GenderTopComponent("view");
+                tc.open();
+                tc.requestActive();
+            }
+        }));
+        
+        toPopulate.add(new SetupItem("Employee Manifest",new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TopComponent tc = new EmployeeManifestTopComponent();
                 tc.open();
                 tc.requestActive();
             }

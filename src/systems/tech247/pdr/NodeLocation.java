@@ -12,7 +12,10 @@ import org.openide.nodes.PropertySupport;
 import org.openide.nodes.Sheet;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
+import org.openide.windows.TopComponent;
 import systems.tech247.hr.Locations;
+import systems.tech247.pdreditors.LocationEditorTopComponent;
+import systems.tech247.util.CapEditable;
 
 /**
  *
@@ -25,11 +28,20 @@ public class NodeLocation extends AbstractNode {
         this(new InstanceContent(),emp);
     }
         
-    private NodeLocation (InstanceContent ic, Locations emp){
+    private NodeLocation (InstanceContent ic, final Locations emp){
         super(Children.LEAF, new AbstractLookup(ic));
         instanceContent = ic;
         instanceContent.add(emp);
-        setIconBaseWithExtension("systems/tech247/util/icons/settings.png");
+        ic.add(new CapEditable() {
+            @Override
+            public void edit() {
+                TopComponent tc = new LocationEditorTopComponent(emp);
+                tc.open();
+                tc.requestActive();
+                        
+            }
+        });
+        setIconBaseWithExtension("systems/tech247/util/icons/company.png");
         setDisplayName(emp.getLocationName());
     }
         

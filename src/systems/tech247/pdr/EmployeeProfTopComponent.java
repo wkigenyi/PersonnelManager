@@ -8,15 +8,20 @@ package systems.tech247.pdr;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
 import systems.tech247.hr.Employees;
+import systems.tech247.pdreditors.ProfEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -32,11 +37,11 @@ import systems.tech247.hr.Employees;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeProfTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeProfAction",
-        preferredID = "EmployeeProfTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeProfAction",
+//        preferredID = "EmployeeProfTopComponent"
+//)
 @Messages({
     "CTL_EmployeeProfAction=Professional Qualifications",
     "CTL_EmployeeProfTopComponent=Professionak Qualifications",
@@ -45,6 +50,8 @@ import systems.tech247.hr.Employees;
 public final class EmployeeProfTopComponent extends TopComponent implements ExplorerManager.Provider  {
     ExplorerManager em = new ExplorerManager();
     Employees emp;
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     public EmployeeProfTopComponent(){
         this(null);
     }
@@ -53,12 +60,24 @@ public final class EmployeeProfTopComponent extends TopComponent implements Expl
         initComponents();
         setName(Bundle.CTL_EmployeeProfTopComponent()+"->"+emp.getSurName()+" "+emp.getOtherNames());
         setToolTipText(Bundle.HINT_EmployeeProfTopComponent());
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new ProfEditorTopComponent();
+                tc.open();
+                tc.requestActive();
+            }
+        });
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         this.emp = emp;
-        OutlineView ov = new OutlineView("Qualification");
+        OutlineView ov = new OutlineView("Institute");
         ov.getOutline().setRootVisible(false);
         setLayout(new BorderLayout());
         add(ov);
+        ov.addPropertyColumn("from", "FROM");
+        ov.addPropertyColumn("to", "TO");
+        //ov.addPropertyColumn("designation", "DESIGNATION");
+        ov.addPropertyColumn("award", "Award");
     }
 
     /**

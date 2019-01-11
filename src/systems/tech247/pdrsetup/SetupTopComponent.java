@@ -45,16 +45,16 @@ import systems.tech247.pdreditors.PDRWorkHoursEditorPanel;
 @TopComponent.Description(
         preferredID = "SetupTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png", 
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.setup.SetupTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_SetupAction",
-        
-        preferredID = "SetupTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_SetupAction",
+//        
+//        preferredID = "SetupTopComponent"
+//)
 @Messages({
     "CTL_SetupAction=PDR Setup",
     "CTL_SetupTopComponent=PDR Setup",

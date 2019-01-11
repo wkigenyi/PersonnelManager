@@ -36,11 +36,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.CompanyStructureTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_CompanyStructureAction",
-        preferredID = "CompanyStructureTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_CompanyStructureAction",
+//        preferredID = "CompanyStructureTopComponent"
+//)
 @Messages({
     "CTL_CompanyStructureAction=CompanyStructure",
     "CTL_CompanyStructureTopComponent=Company Structures",

@@ -143,18 +143,32 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmploymentEditorTopComponent");
     }
     /**
-     * @return <i>Next Of Kin Editor</i>
+     * @return <i>Family Editor</i>
      * @see FamilyEditorTopComponent
      */
     static String CTL_FamilyEditorAction() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_FamilyEditorAction");
     }
     /**
-     * @return <i>Next Of Kin Editor</i>
+     * @return <i>Family Editor</i>
      * @see FamilyEditorTopComponent
      */
     static String CTL_FamilyEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_FamilyEditorTopComponent");
+    }
+    /**
+     * @return <i>Location Editor</i>
+     * @see LocationEditorTopComponent
+     */
+    static String CTL_LocationEditorAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_LocationEditorAction");
+    }
+    /**
+     * @return <i>Location Editor</i>
+     * @see LocationEditorTopComponent
+     */
+    static String CTL_LocationEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_LocationEditorTopComponent");
     }
     /**
      * @return <i>Contact Editor</i>
@@ -330,6 +344,13 @@ class Bundle {
      */
     static String HINT_FamilyEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_FamilyEditorTopComponent");
+    }
+    /**
+     * @return <i>This is a Location Editor window</i>
+     * @see LocationEditorTopComponent
+     */
+    static String HINT_LocationEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_LocationEditorTopComponent");
     }
     /**
      * @return <i>This is a Contact Editor window</i>

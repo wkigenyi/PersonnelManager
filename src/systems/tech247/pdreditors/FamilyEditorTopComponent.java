@@ -49,8 +49,8 @@ import systems.tech247.pdr.UtilityPDR;
         preferredID = "FamilyEditorTopComponent"
 )
 @Messages({
-    "CTL_FamilyEditorAction=Next Of Kin Editor",
-    "CTL_FamilyEditorTopComponent=Next Of Kin Editor",
+    "CTL_FamilyEditorAction=Family Editor",
+    "CTL_FamilyEditorTopComponent=Family Editor",
     "HINT_FamilyEditorTopComponent="
 })
 public final class FamilyEditorTopComponent extends TopComponent {

@@ -5,10 +5,8 @@
  */
 package systems.tech247.pdr;
 
-import java.awt.event.ActionEvent;
 import systems.tech247.util.QueryEmployee;
 import java.util.List;
-import javax.swing.AbstractAction;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import systems.tech247.hr.Employees;

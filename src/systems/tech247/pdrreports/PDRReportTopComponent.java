@@ -25,16 +25,16 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Description(
         preferredID = "PDRReportTopComponent",
-        //iconBase="SET/PATH/TO/ICON/HERE", 
+        iconBase = "systems/tech247/util/icons/document.png", 
         persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdrreports.PDRReportTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_PDRReportAction",
-        preferredID = "PDRReportTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_PDRReportAction",
+//        preferredID = "PDRReportTopComponent"
+//)
 @Messages({
     "CTL_PDRReportAction=PDRReport",
     "CTL_PDRReportTopComponent=Reports",

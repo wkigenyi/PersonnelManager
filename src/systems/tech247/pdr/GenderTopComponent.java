@@ -30,15 +30,15 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "GenderTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
-@TopComponent.Registration(mode = "explorer", openAtStartup = false)
+@TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.GenderTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_GenderAction",
-        preferredID = "GenderTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_GenderAction",
+//        preferredID = "GenderTopComponent"
+//)
 @Messages({
     "CTL_GenderAction=Gender",
     "GenderTopComponent=Gender",
@@ -50,8 +50,11 @@ public final class GenderTopComponent extends TopComponent implements ExplorerMa
     InputOutput io = IOProvider.getDefault().getIO("Gender", true);
     OutputWriter ow = io.getOut();
      
-   
-    public GenderTopComponent() {
+    public GenderTopComponent(){
+        this("");
+    }
+    
+    public GenderTopComponent(String view) {
         initComponents();
         setName(Bundle.GenderTopComponent());
         setToolTipText(Bundle.HINT_GenderTopComponent());
@@ -62,6 +65,11 @@ public final class GenderTopComponent extends TopComponent implements ExplorerMa
         
         viewPanel.setLayout(new BorderLayout());
         viewPanel.add(ov);
+        
+        if(!view.equals("")){
+            ov.addPropertyColumn("number", "Number Of Employees");
+        }
+        
         associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
        
         
@@ -88,7 +96,7 @@ public final class GenderTopComponent extends TopComponent implements ExplorerMa
         );
         viewPanelLayout.setVerticalGroup(
             viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 254, Short.MAX_VALUE)
+            .addGap(0, 274, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -102,8 +110,8 @@ public final class GenderTopComponent extends TopComponent implements ExplorerMa
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(viewPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );

@@ -5,6 +5,8 @@
  */
 package systems.tech247.pdreditors;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
@@ -64,7 +66,8 @@ import systems.tech247.pdr.UtilityPDR;
 public final class AwardEditorTopComponent extends TopComponent implements LookupListener {
     
     //Lookup for the Currency
-    Lookup.Result<Currencies> rslt = WindowManager.getDefault().findTopComponent("CurrenciesTopComponent").getLookup().lookupResult(Currencies.class);   
+    TopComponent tc = WindowManager.getDefault().findTopComponent("CurrenciesTopComponent");
+    Lookup.Result<Currencies> rslt = tc.getLookup().lookupResult(Currencies.class);   
     
     
     
@@ -270,6 +273,33 @@ public final class AwardEditorTopComponent extends TopComponent implements Looku
                     
                 }
                 modify();
+            }
+        });
+        
+        jtCurrency.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                DialogDisplayer.getDefault().notify(new DialogDescriptor(tc, "Select A Currency"));
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
         });
         

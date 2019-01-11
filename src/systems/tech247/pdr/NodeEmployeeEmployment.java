@@ -6,12 +6,16 @@
 package systems.tech247.pdr;
 
 import java.beans.IntrospectionException;
+import java.lang.reflect.InvocationTargetException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.nodes.PropertySupport;
+import org.openide.nodes.Sheet;
+import org.openide.nodes.Sheet.Set;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
@@ -85,6 +89,72 @@ Lookup.Result<String> rslt;
             
         }
     }
+
+    @Override
+    protected Sheet createSheet() {
+        Sheet sheet = Sheet.createDefault();
+        Set set = Sheet.createPropertiesSet();
+        final SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
+        final Employment emp = getLookup().lookup(Employment.class);
+        
+        Property from = new PropertySupport("from", String.class, "FROM", "FROM", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return sdf.format(emp.getCFrom());
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        Property to = new PropertySupport("to", String.class, "TO", "TO", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return sdf.format(emp.getCTo());
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        Property contact = new PropertySupport("contact", String.class, "CONTACT", "CONTACT", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return emp.getPhone();
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        Property designation = new PropertySupport("designation", String.class, "CONTACT", "CONTACT", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return emp.getDesig();
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        
+        set.put(to);
+        set.put(from);
+        set.put(designation);
+        set.put(contact);
+        sheet.put(set);
+        return sheet; //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 
     
 

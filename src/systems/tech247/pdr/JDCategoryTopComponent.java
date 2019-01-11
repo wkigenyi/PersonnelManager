@@ -29,15 +29,15 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "JDCategoryTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.JDCategoryTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_JDCategoriesAction",
-        preferredID = "JDCategoryTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_JDCategoriesAction",
+//        preferredID = "JDCategoryTopComponent"
+//)
 @Messages({
     "CTL_JDCategoriesAction=JD Categories",
     "CTL_JDCategoryTopComponent=JD Categories Window",
@@ -133,7 +133,8 @@ public final class JDCategoryTopComponent extends TopComponent implements Explor
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtSearchTribe, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)))
+                        .addComponent(jtSearchTribe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 138, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

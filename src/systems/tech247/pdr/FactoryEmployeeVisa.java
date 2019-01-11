@@ -47,14 +47,14 @@ public class FactoryEmployeeVisa extends ChildFactory<Object> implements LookupL
 
     @Override
     protected boolean createKeys(List<Object> list) {
-        list.add(new AddTool(new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                TopComponent tc  = new VisaEditorTopComponent(emp);
-                tc.open();
-                tc.requestActive();
-            }
-        }));
+//        list.add(new AddTool(new AbstractAction() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                TopComponent tc  = new VisaEditorTopComponent(emp);
+//                tc.open();
+//                tc.requestActive();
+//            }
+//        }));
         list.addAll(new DataAccess().searchVisa(emp));
         
         

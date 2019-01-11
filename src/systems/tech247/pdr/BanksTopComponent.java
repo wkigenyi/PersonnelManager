@@ -38,11 +38,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.BanksTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_BanksAction",
-        preferredID = "BanksTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_BanksAction",
+//        preferredID = "BanksTopComponent"
+//)
 @Messages({
     "CTL_BanksAction=Banks",
     "CTL_BanksTopComponent=Banks",
@@ -148,7 +148,8 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtBankSearch)))
+                        .addComponent(jtBankSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

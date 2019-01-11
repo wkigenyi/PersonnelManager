@@ -33,11 +33,11 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.TribesTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_TribesAction",
-        preferredID = "TribesTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_TribesAction",
+//        preferredID = "TribesTopComponent"
+//)
 @Messages({
     "CTL_TribesAction=Tribes",
     "CTL_TribesTopComponent=Tribes Window",
@@ -148,7 +148,8 @@ public final class TribesTopComponent extends TopComponent implements ExplorerMa
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtSearchTribe, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)))
+                        .addComponent(jtSearchTribe, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 165, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

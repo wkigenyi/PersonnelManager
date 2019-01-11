@@ -27,15 +27,15 @@ import org.openide.util.NbBundle.Messages;
 @TopComponent.Description(
         preferredID = "OUTypesTopComponent",
         iconBase = "systems/tech247/util/icons/settings.png",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+        persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.OUTypesTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_OUTypesAction",
-        preferredID = "OUTypesTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_OUTypesAction",
+//        preferredID = "OUTypesTopComponent"
+//)
 @Messages({
     "CTL_OUTypesAction=Organization Unit Types",
     "CTL_OUTypesTopComponent=Organization Unit Types",

@@ -48,16 +48,16 @@ import systems.tech247.util.QueryEmployee;
 )
 @TopComponent.Description(
         preferredID = "EmployeeListTopComponent",
-        //iconBase="SET/PATH/TO/ICON/HERE", 
+        iconBase = "systems/tech247/util/icons/position.png", 
         persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false /*, roles = {"Personnel"}*/)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeListTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeListAction",
-        preferredID = "EmployeeListTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeListAction",
+//        preferredID = "EmployeeListTopComponent"
+//)
 @Messages({
     "CTL_EmployeeListAction=EmployeeList",
     "CTL_EmployeeListTopComponent=Employee List",
@@ -81,15 +81,7 @@ public final class EmployeeListTopComponent extends TopComponent implements Expl
         btv.setRootVisible(false);
         vPanel.add(btv);
         ic.add(btv);
-        //The right to create employees
-        ic.add(new CapCreatable() {
-            @Override
-            public void create() {
-                EmployeePersonalInfoEditorTopComponent newEditor = new EmployeePersonalInfoEditorTopComponent();
-                newEditor.open();
-                newEditor.requestActive();
-            }
-        });
+        
         
         //make the items available in the lookup
         associateLookup(new ProxyLookup(

@@ -38,11 +38,11 @@ import systems.tech247.util.CapCreatable;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.PositionsTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_PositionsAction",
-        preferredID = "PositionsTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_PositionsAction",
+//        preferredID = "PositionsTopComponent"
+//)
 @Messages({
     "CTL_PositionsAction=Positions",
     "CTL_PositionsTopComponent=Positions",
@@ -157,7 +157,8 @@ public final class PositionsTopComponent extends TopComponent implements Explore
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtPositionSearch)))
+                        .addComponent(jtPositionSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

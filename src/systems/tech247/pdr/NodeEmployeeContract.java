@@ -5,6 +5,7 @@
  */
 package systems.tech247.pdr;
 
+import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;
 import java.text.SimpleDateFormat;
 import org.openide.nodes.AbstractNode;
@@ -27,16 +28,18 @@ import systems.tech247.util.CapEditable;
  * @author Admin
  */
 public class NodeEmployeeContract extends AbstractNode{
-    InstanceContent content = new InstanceContent();
-    public NodeEmployeeContract(Contracts cont){
+    
+    public NodeEmployeeContract(Contracts cont) throws IntrospectionException{
         this(cont,new InstanceContent());
     }
     
-    private NodeEmployeeContract(final Contracts cont,InstanceContent ic){
+    private NodeEmployeeContract(final Contracts cont,InstanceContent ic) throws IntrospectionException{
         super(Children.LEAF,new AbstractLookup(ic));
         Employees e = cont.getEmployeeId();
-        this.content = ic;
-        content.add(new CapEditable() {
+        
+        
+        ic.add(cont);
+        ic.add(new CapEditable() {
             @Override
             public void edit() {
                 TopComponent tc = new ContractEditorTopComponent(cont, null);
@@ -44,7 +47,7 @@ public class NodeEmployeeContract extends AbstractNode{
                 tc.requestActive();
             }
         });
-        content.add(new CapDeletable() {
+        ic.add(new CapDeletable() {
             @Override
             public void delete() {
                 //Implement Delete

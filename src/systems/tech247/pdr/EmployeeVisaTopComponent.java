@@ -8,15 +8,20 @@ package systems.tech247.pdr;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
 import org.openide.nodes.AbstractNode;
 import org.openide.nodes.Children;
+import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
+import org.openide.util.lookup.AbstractLookup;
+import org.openide.util.lookup.InstanceContent;
+import org.openide.util.lookup.ProxyLookup;
 import systems.tech247.hr.Employees;
+import systems.tech247.pdreditors.VisaEditorTopComponent;
+import systems.tech247.util.CapCreatable;
 
 /**
  * Top component which displays something.
@@ -32,11 +37,11 @@ import systems.tech247.hr.Employees;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdr.EmployeeVisaTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmployeeVisaAction",
-        preferredID = "EmployeeVisaTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmployeeVisaAction",
+//        preferredID = "EmployeeVisaTopComponent"
+//)
 @Messages({
     "CTL_EmployeeVisaAction=Employee Visas",
     "CTL_EmployeeVisaTopComponent=Employee Visas",
@@ -45,20 +50,35 @@ import systems.tech247.hr.Employees;
 public final class EmployeeVisaTopComponent extends TopComponent implements ExplorerManager.Provider  {
     ExplorerManager em = new ExplorerManager();
     Employees emp;
+    InstanceContent content = new InstanceContent();
+    Lookup lkp = new AbstractLookup(content);
     public EmployeeVisaTopComponent(){
         this(null);
     }
     
-    public EmployeeVisaTopComponent(Employees emp) {
+    public EmployeeVisaTopComponent( final Employees emp) {
         initComponents();
         setName(Bundle.CTL_EmployeeVisaTopComponent()+"->"+emp.getSurName()+" "+emp.getOtherNames());
         setToolTipText(Bundle.HINT_EmployeeVisaTopComponent());
-        associateLookup(ExplorerUtils.createLookup(em, getActionMap()));
+        content.add(new CapCreatable() {
+            @Override
+            public void create() {
+                TopComponent tc = new VisaEditorTopComponent(emp);
+                tc.open();
+                tc.requestActive();
+            }
+        });
+        associateLookup(new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         this.emp = emp;
         OutlineView ov = new OutlineView("Vizas");
         ov.getOutline().setRootVisible(false);
         setLayout(new BorderLayout());
         add(ov);
+        ov.addPropertyColumn("from", "FROM");
+        ov.addPropertyColumn("to", "TO");
+        ov.addPropertyColumn("amount", "Amount");
+        ov.addPropertyColumn("currency", "CURRENCY");
+        ov.addPropertyColumn("receipt", "Receipt No");
     }
 
     /**

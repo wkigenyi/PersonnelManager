@@ -31,11 +31,11 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = false)
 @ActionID(category = "PDR", id = "systems.tech247.pdr.ContractTypesTopComponent")
-@ActionReference(path = "Menu/PDR" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ContractTypesAction",
-        preferredID = "ContractTypesTopComponent"
-)
+//@ActionReference(path = "Menu/PDR" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_ContractTypesAction",
+//        preferredID = "ContractTypesTopComponent"
+//)
 @Messages({
     "CTL_ContractTypesAction=Contract Types",
     "CTL_ContractTypesTopComponent=Ctypes Window",
