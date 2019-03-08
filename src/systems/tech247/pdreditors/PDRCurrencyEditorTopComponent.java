@@ -42,11 +42,11 @@ import systems.tech247.pdr.UtilityPDR;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.PDRCurrencyEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_PDRCurrencyEditorAction",
-        preferredID = "PDRCurrencyEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_PDRCurrencyEditorAction",
+//        preferredID = "PDRCurrencyEditorTopComponent"
+//)
 @Messages({
     "CTL_PDRCurrencyEditorAction=PDRCurrencyEditor",
     "CTL_PDRCurrencyEditorTopComponent=Currency Editor",
@@ -267,7 +267,7 @@ public final class PDRCurrencyEditorTopComponent extends TopComponent {
                         .addComponent(jtCurrencyName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jtCurrencyCode, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jftExchangeRate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jftExchangeRate, jtCurrencyCode, jtCurrencyName});

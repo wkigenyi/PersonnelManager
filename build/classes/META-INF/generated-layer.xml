@@ -2,68 +2,893 @@
 <!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
                             "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
 <filesystem>
-    <folder name="Menu">
-        <folder name="Window">
-            <file name="systems-tech247-pdreditors-AwardEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.AwardEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-AwardEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ContactEditorTopComponent.shadow">
+    <folder name="Services">
+        <folder name="JavaHelp">
+            <file name="systems-tech247-pdr-docs.xml">
+                <!--systems.tech247.pdr.docs-->
+                <attr intvalue="3200" name="position"/><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE helpsetref PUBLIC "-//NetBeans//DTD JavaHelp Help Set Reference 1.0//EN" "http://www.netbeans.org/dtds/helpsetref-1_0.dtd">
+<helpsetref url="nbdocs:/systems/tech247/pdr/docs/pdr-hs.xml" merge="true"/>
+]]></file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="AssetsTopComponent.settings">
+                <!--systems.tech247.pdr.AssetsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.AssetsTopComponent"/>
+</settings>
+]]></file>
+            <file name="BanksTopComponent.settings">
+                <!--systems.tech247.pdr.BanksTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.BanksTopComponent"/>
+</settings>
+]]></file>
+            <file name="CompanyStructureTopComponent.settings">
+                <!--systems.tech247.pdr.CompanyStructureTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.CompanyStructureTopComponent"/>
+</settings>
+]]></file>
+            <file name="CompanyTopComponent.settings">
+                <!--systems.tech247.pdr.CompanyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.CompanyTopComponent"/>
+</settings>
+]]></file>
+            <file name="ContactTypesTopComponent.settings">
+                <!--systems.tech247.pdr.ContactTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.ContactTypesTopComponent"/>
+</settings>
+]]></file>
+            <file name="ContractTypesTopComponent.settings">
+                <!--systems.tech247.pdr.ContractTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.ContractTypesTopComponent"/>
+</settings>
+]]></file>
+            <file name="CountryTopComponent.settings">
+                <!--systems.tech247.pdr.CountryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.CountryTopComponent"/>
+</settings>
+]]></file>
+            <file name="CtypesTopComponent.settings">
+                <!--systems.tech247.pdr.CtypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.CtypesTopComponent"/>
+</settings>
+]]></file>
+            <file name="CurrenciesTopComponent.settings">
+                <!--systems.tech247.pdr.CurrenciesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.CurrenciesTopComponent"/>
+</settings>
+]]></file>
+            <file name="DepartmentsTopComponent.settings">
+                <!--systems.tech247.pdr.DepartmentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.DepartmentsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeAwardsTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeAwardsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeAwardsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeBankAccountsTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeBankAccountsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeContactsTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeContactsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeContactsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeContractsTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeContractsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeContractsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeEducationTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeEducationTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeEducationTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeEmploymentHistoryTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeFamilyTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeFamilyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeFamilyTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeListTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeListTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmlployeeManafestTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeManifestTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeNOKTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeNOKTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeProfTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeProfTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeProfTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeRefereesTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeRefereeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeRefereeTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeTypeTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeTypeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeTypeTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeVisaTopComponent.settings">
+                <!--systems.tech247.pdr.EmployeeVisaTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeVisaTopComponent"/>
+</settings>
+]]></file>
+            <file name="GenderTopComponent.settings">
+                <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.GenderTopComponent"/>
+</settings>
+]]></file>
+            <file name="JDCategoryTopComponent.settings">
+                <!--systems.tech247.pdr.JDCategoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.JDCategoryTopComponent"/>
+</settings>
+]]></file>
+            <file name="LocationsTopComponent.settings">
+                <!--systems.tech247.pdr.LocationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.LocationsTopComponent"/>
+</settings>
+]]></file>
+            <file name="MaritalTopComponent.settings">
+                <!--systems.tech247.pdr.MaritalTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.MaritalTopComponent"/>
+</settings>
+]]></file>
+            <file name="NationsTopComponent.settings">
+                <!--systems.tech247.pdr.NationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.NationsTopComponent"/>
+</settings>
+]]></file>
+            <file name="OUTypesTopComponent.settings">
+                <!--systems.tech247.pdr.OUTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.OUTypesTopComponent"/>
+</settings>
+]]></file>
+            <file name="PersonnelDashboardTopComponent.settings">
+                <!--systems.tech247.pdr.PersonnelDashboardTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.PersonnelDashboardTopComponent"/>
+</settings>
+]]></file>
+            <file name="PersonnelSelectorTopComponent.settings">
+                <!--systems.tech247.pdr.PersonnelSelectorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.PersonnelSelectorTopComponent"/>
+</settings>
+]]></file>
+            <file name="PositionsTopComponent.settings">
+                <!--systems.tech247.pdr.PositionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.PositionsTopComponent"/>
+</settings>
+]]></file>
+            <file name="ReligionsTopComponent.settings">
+                <!--systems.tech247.pdr.ReligionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.ReligionsTopComponent"/>
+</settings>
+]]></file>
+            <file name="TribesTopComponent.settings">
+                <!--systems.tech247.pdr.TribesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.TribesTopComponent"/>
+</settings>
+]]></file>
+            <file name="AccountEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.AccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.AccountEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="AwardEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.AwardEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.AwardEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="ContactEditorTopComponent.settings">
                 <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-ContactEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ContractEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.ContractEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-ContractEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-DisengagementEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.DisengagementEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-DisengagementEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-EducationEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.EducationEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-EducationEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-EmploymentEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.EmploymentEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-EmploymentEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-FamilyEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.FamilyEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-FamilyEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-LocationEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-LocationEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-NOKEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.NOKEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-NOKEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-NextOfKinEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-NextOfKinEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-PDRCurrencyEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-PDRCurrencyEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ProbationEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.ProbationEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-ProbationEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ProfEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.ProfEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-ProfEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-RefereeEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.RefereeEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-RefereeEditorTopComponent.instance"/>
-            </file>
-            <file name="systems-tech247-pdreditors-VisaEditorTopComponent.shadow">
-                <!--systems.tech247.pdreditors.VisaEditorTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/systems-tech247-pdreditors-VisaEditorTopComponent.instance"/>
-            </file>
+                <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.NOKEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="ContractEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.ContractEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.ContractEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="DisengagementEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.DisengagementEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.DisengagementEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="EducationEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.EducationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EducationEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeCheckListTopComponent.settings">
+                <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EmployeeCheckListTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeDisabilityTopComponent.settings">
+                <!--systems.tech247.pdreditors.EmployeeDisabilityTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EmployeeDisabilityTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmploymentDetailsTopComponent.settings">
+                <!--systems.tech247.pdreditors.EmploymentDetailsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EmploymentDetailsTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmploymentEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.EmploymentEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EmploymentEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="FamilyEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.FamilyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.FamilyEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="LocationEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.LocationEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="NextOfKinEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.NextOfKinEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="PDRCurrencyEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.PDRCurrencyEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="ProbationEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.ProbationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.ProbationEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="ProfEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.ProfEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.ProfEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="RefereeEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.RefereeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.RefereeEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="VisaEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.VisaEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.VisaEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="PDRReportTopComponent.settings">
+                <!--systems.tech247.pdrreports.PDRReportTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdrreports.PDRReportTopComponent"/>
+</settings>
+]]></file>
+            <file name="PDRsetupTopComponent.settings">
+                <!--systems.tech247.pdrsetup.PDRsetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdrsetup.PDRsetupTopComponent"/>
+</settings>
+]]></file>
+            <file name="SetupTopComponent.settings">
+                <!--systems.tech247.pdrsetup.SetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdrsetup.SetupTopComponent"/>
+</settings>
+]]></file>
+        </folder>
+        <folder name="Modes">
+            <folder name="explorer">
+                <file name="AssetsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.AssetsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="AssetsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="BanksTopComponent.wstcref">
+                    <!--systems.tech247.pdr.BanksTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="BanksTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="CompanyTopComponent.wstcref">
+                    <!--systems.tech247.pdr.CompanyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="CompanyTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ContactTypesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.ContactTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ContactTypesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ContractTypesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.ContractTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ContractTypesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="CountryTopComponent.wstcref">
+                    <!--systems.tech247.pdr.CountryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="CountryTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="CtypesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.CtypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="CtypesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="DepartmentsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.DepartmentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="DepartmentsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeListTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeListTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="JDCategoryTopComponent.wstcref">
+                    <!--systems.tech247.pdr.JDCategoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="JDCategoryTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="LocationsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.LocationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="LocationsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="MaritalTopComponent.wstcref">
+                    <!--systems.tech247.pdr.MaritalTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="MaritalTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="NationsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.NationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="NationsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="OUTypesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.OUTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="OUTypesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="PositionsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.PositionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PositionsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ReligionsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.ReligionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ReligionsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="TribesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.TribesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="TribesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="PDRReportTopComponent.wstcref">
+                    <!--systems.tech247.pdrreports.PDRReportTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PDRReportTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="PDRsetupTopComponent.wstcref">
+                    <!--systems.tech247.pdrsetup.PDRsetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PDRsetupTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="editor">
+                <file name="CompanyStructureTopComponent.wstcref">
+                    <!--systems.tech247.pdr.CompanyStructureTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="CompanyStructureTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="CurrenciesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.CurrenciesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="CurrenciesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeAwardsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeAwardsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeAwardsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeBankAccountsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeBankAccountsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeContactsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeContactsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeContactsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeContractsTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeContractsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeContractsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeEducationTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeEducationTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeEducationTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeEmploymentHistoryTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeEmploymentHistoryTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeFamilyTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeFamilyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeFamilyTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmlployeeManafestTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmlployeeManafestTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeNOKTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeNOKTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeProfTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeProfTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeProfTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeRefereesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeRefereeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeRefereesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeTypeTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeTypeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeTypeTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeVisaTopComponent.wstcref">
+                    <!--systems.tech247.pdr.EmployeeVisaTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeVisaTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="GenderTopComponent.wstcref">
+                    <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="GenderTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="PersonnelSelectorTopComponent.wstcref">
+                    <!--systems.tech247.pdr.PersonnelSelectorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PersonnelSelectorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="AccountEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.AccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="AccountEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="AwardEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.AwardEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="AwardEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ContactEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
+                    <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ContactEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ContractEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.ContractEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ContractEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="DisengagementEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.DisengagementEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="DisengagementEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EducationEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EducationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EducationEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeCheckListTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeCheckListTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeDisabilityTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EmployeeDisabilityTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeDisabilityTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmploymentDetailsTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EmploymentDetailsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmploymentDetailsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmploymentEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EmploymentEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmploymentEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="FamilyEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.FamilyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="FamilyEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="LocationEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="LocationEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="NextOfKinEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="NextOfKinEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="PDRCurrencyEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PDRCurrencyEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ProbationEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.ProbationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ProbationEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="ProfEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.ProfEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="ProfEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="RefereeEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.RefereeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="RefereeEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="VisaEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.VisaEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="VisaEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="SetupTopComponent.wstcref">
+                    <!--systems.tech247.pdrsetup.SetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="SetupTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="leftSlidingSide">
+                <file name="PersonnelDashboardTopComponent.wstcref">
+                    <!--systems.tech247.pdr.PersonnelDashboardTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="PersonnelDashboardTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+        </folder>
+        <folder name="Roles">
+            <folder name="Personnel">
+                <folder name="Components">
+                    <file name="EmployeeEditorTopComponent.settings">
+                        <!--systems.tech247.pdr.EmployeeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.EmployeeEditorTopComponent"/>
+</settings>
+]]></file>
+                </folder>
+                <folder name="Modes">
+                    <folder name="editor">
+                        <file name="EmployeeEditorTopComponent.wstcref">
+                            <!--systems.tech247.pdr.EmployeeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeEditorTopComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]></file>
+                    </folder>
+                </folder>
+            </folder>
         </folder>
     </folder>
     <folder name="xml">
@@ -1216,1011 +2041,6 @@
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
             </folder>
-        </folder>
-    </folder>
-    <folder name="Windows2">
-        <folder name="Components">
-            <file name="AssetsTopComponent.settings">
-                <!--systems.tech247.pdr.AssetsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.AssetsTopComponent"/>
-</settings>
-]]></file>
-            <file name="BanksTopComponent.settings">
-                <!--systems.tech247.pdr.BanksTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.BanksTopComponent"/>
-</settings>
-]]></file>
-            <file name="CompanyStructureTopComponent.settings">
-                <!--systems.tech247.pdr.CompanyStructureTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CompanyStructureTopComponent"/>
-</settings>
-]]></file>
-            <file name="CompanyTopComponent.settings">
-                <!--systems.tech247.pdr.CompanyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CompanyTopComponent"/>
-</settings>
-]]></file>
-            <file name="ContactTypesTopComponent.settings">
-                <!--systems.tech247.pdr.ContactTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.ContactTypesTopComponent"/>
-</settings>
-]]></file>
-            <file name="ContractTypesTopComponent.settings">
-                <!--systems.tech247.pdr.ContractTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.ContractTypesTopComponent"/>
-</settings>
-]]></file>
-            <file name="CountryTopComponent.settings">
-                <!--systems.tech247.pdr.CountryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CountryTopComponent"/>
-</settings>
-]]></file>
-            <file name="CtypesTopComponent.settings">
-                <!--systems.tech247.pdr.CtypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CtypesTopComponent"/>
-</settings>
-]]></file>
-            <file name="CurrenciesTopComponent.settings">
-                <!--systems.tech247.pdr.CurrenciesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.CurrenciesTopComponent"/>
-</settings>
-]]></file>
-            <file name="DepartmentsTopComponent.settings">
-                <!--systems.tech247.pdr.DepartmentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.DepartmentsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeAwardsTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeAwardsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeAwardsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeBankAccountsTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeBankAccountsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeContactsTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeContactsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeContactsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeContractsTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeContractsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeContractsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeEducationTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeEducationTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeEducationTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeEmploymentHistoryTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeFamilyTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeFamilyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeFamilyTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeListTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeListTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmlployeeManafestTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeManifestTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeNOKTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeNOKTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeProfTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeProfTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeProfTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeRefereesTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeRefereeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeRefereeTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeTypeTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeTypeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeTypeTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeVisaTopComponent.settings">
-                <!--systems.tech247.pdr.EmployeeVisaTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeVisaTopComponent"/>
-</settings>
-]]></file>
-            <file name="GenderTopComponent.settings">
-                <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.GenderTopComponent"/>
-</settings>
-]]></file>
-            <file name="JDCategoryTopComponent.settings">
-                <!--systems.tech247.pdr.JDCategoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.JDCategoryTopComponent"/>
-</settings>
-]]></file>
-            <file name="LocationsTopComponent.settings">
-                <!--systems.tech247.pdr.LocationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.LocationsTopComponent"/>
-</settings>
-]]></file>
-            <file name="MaritalTopComponent.settings">
-                <!--systems.tech247.pdr.MaritalTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.MaritalTopComponent"/>
-</settings>
-]]></file>
-            <file name="NationsTopComponent.settings">
-                <!--systems.tech247.pdr.NationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.NationsTopComponent"/>
-</settings>
-]]></file>
-            <file name="OUTypesTopComponent.settings">
-                <!--systems.tech247.pdr.OUTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.OUTypesTopComponent"/>
-</settings>
-]]></file>
-            <file name="PersonnelDashboardTopComponent.settings">
-                <!--systems.tech247.pdr.PersonnelDashboardTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.PersonnelDashboardTopComponent"/>
-</settings>
-]]></file>
-            <file name="PersonnelSelectorTopComponent.settings">
-                <!--systems.tech247.pdr.PersonnelSelectorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.PersonnelSelectorTopComponent"/>
-</settings>
-]]></file>
-            <file name="PositionsTopComponent.settings">
-                <!--systems.tech247.pdr.PositionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.PositionsTopComponent"/>
-</settings>
-]]></file>
-            <file name="ReligionsTopComponent.settings">
-                <!--systems.tech247.pdr.ReligionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.ReligionsTopComponent"/>
-</settings>
-]]></file>
-            <file name="TribesTopComponent.settings">
-                <!--systems.tech247.pdr.TribesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.TribesTopComponent"/>
-</settings>
-]]></file>
-            <file name="AccountEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.AccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.AccountEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="AwardEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.AwardEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.AwardEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="ContactEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
-                <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.NOKEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="ContractEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.ContractEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.ContractEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="EducationEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.DisengagementEditorTopComponent-->
-                <!--systems.tech247.pdreditors.EducationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.EducationEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeCheckListTopComponent.settings">
-                <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.EmployeeCheckListTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmployeeDisabilityTopComponent.settings">
-                <!--systems.tech247.pdreditors.EmployeeDisabilityTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.EmployeeDisabilityTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmploymentDetailsTopComponent.settings">
-                <!--systems.tech247.pdreditors.EmploymentDetailsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.EmploymentDetailsTopComponent"/>
-</settings>
-]]></file>
-            <file name="EmploymentEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.EmploymentEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.EmploymentEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="FamilyEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.FamilyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.FamilyEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="LocationEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.LocationEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="NextOfKinEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.NextOfKinEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="PDRCurrencyEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.PDRCurrencyEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="ProbationEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.ProbationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.ProbationEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="ProfEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.ProfEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.ProfEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="RefereeEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.RefereeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.RefereeEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="VisaEditorTopComponent.settings">
-                <!--systems.tech247.pdreditors.VisaEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdreditors.VisaEditorTopComponent"/>
-</settings>
-]]></file>
-            <file name="PDRReportTopComponent.settings">
-                <!--systems.tech247.pdrreports.PDRReportTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdrreports.PDRReportTopComponent"/>
-</settings>
-]]></file>
-            <file name="PDRsetupTopComponent.settings">
-                <!--systems.tech247.pdrsetup.PDRsetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdrsetup.PDRsetupTopComponent"/>
-</settings>
-]]></file>
-            <file name="SetupTopComponent.settings">
-                <!--systems.tech247.pdrsetup.SetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdrsetup.SetupTopComponent"/>
-</settings>
-]]></file>
-        </folder>
-        <folder name="Modes">
-            <folder name="explorer">
-                <file name="AssetsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.AssetsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="AssetsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="BanksTopComponent.wstcref">
-                    <!--systems.tech247.pdr.BanksTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="BanksTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="CompanyTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CompanyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CompanyTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ContactTypesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.ContactTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ContactTypesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ContractTypesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.ContractTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ContractTypesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="CountryTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CountryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CountryTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="CtypesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CtypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CtypesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="DepartmentsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.DepartmentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="DepartmentsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeListTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeListTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="JDCategoryTopComponent.wstcref">
-                    <!--systems.tech247.pdr.JDCategoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="JDCategoryTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="LocationsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.LocationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="LocationsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="MaritalTopComponent.wstcref">
-                    <!--systems.tech247.pdr.MaritalTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="MaritalTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="NationsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.NationsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="NationsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="OUTypesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.OUTypesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="OUTypesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="PositionsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.PositionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PositionsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ReligionsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.ReligionsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ReligionsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="TribesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.TribesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="TribesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="PDRReportTopComponent.wstcref">
-                    <!--systems.tech247.pdrreports.PDRReportTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PDRReportTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="PDRsetupTopComponent.wstcref">
-                    <!--systems.tech247.pdrsetup.PDRsetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PDRsetupTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-            </folder>
-            <folder name="editor">
-                <file name="CompanyStructureTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CompanyStructureTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CompanyStructureTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="CurrenciesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.CurrenciesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="CurrenciesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeAwardsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeAwardsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeAwardsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeBankAccountsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeBankAccountsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeBankAccountsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeContactsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeContactsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeContactsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeContractsTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeContractsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeContractsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeEducationTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeEducationTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeEducationTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeEmploymentHistoryTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeEmploymentHistoryTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeEmploymentHistoryTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeFamilyTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeFamilyTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeFamilyTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmlployeeManafestTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeManifestTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmlployeeManafestTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeNOKTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeNOKTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeNOKTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeProfTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeProfTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeProfTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeRefereesTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeRefereeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeRefereesTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeTypeTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeTypeTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeTypeTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeVisaTopComponent.wstcref">
-                    <!--systems.tech247.pdr.EmployeeVisaTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeVisaTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="GenderTopComponent.wstcref">
-                    <!--systems.tech247.pdr.GenderTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="GenderTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="PersonnelSelectorTopComponent.wstcref">
-                    <!--systems.tech247.pdr.PersonnelSelectorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PersonnelSelectorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="AccountEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.AccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="AccountEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="AwardEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.AwardEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="AwardEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ContactEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
-                    <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ContactEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ContractEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.ContractEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ContractEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EducationEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.DisengagementEditorTopComponent-->
-                    <!--systems.tech247.pdreditors.EducationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EducationEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeCheckListTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeCheckListTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmployeeDisabilityTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.EmployeeDisabilityTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeDisabilityTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmploymentDetailsTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.EmploymentDetailsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmploymentDetailsTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="EmploymentEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.EmploymentEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmploymentEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="FamilyEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.FamilyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="FamilyEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="LocationEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.LocationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="LocationEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="NextOfKinEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="NextOfKinEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="PDRCurrencyEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PDRCurrencyEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ProbationEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.ProbationEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ProbationEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="ProfEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.ProfEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="ProfEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="RefereeEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.RefereeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="RefereeEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="VisaEditorTopComponent.wstcref">
-                    <!--systems.tech247.pdreditors.VisaEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="VisaEditorTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-                <file name="SetupTopComponent.wstcref">
-                    <!--systems.tech247.pdrsetup.SetupTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="SetupTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-            </folder>
-            <folder name="leftSlidingSide">
-                <file name="PersonnelDashboardTopComponent.wstcref">
-                    <!--systems.tech247.pdr.PersonnelDashboardTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="PersonnelDashboardTopComponent"/>
-  <state opened="false"/>
-</tc-ref>
-]]></file>
-            </folder>
-        </folder>
-        <folder name="Roles">
-            <folder name="Personnel">
-                <folder name="Components">
-                    <file name="EmployeeEditorTopComponent.settings">
-                        <!--systems.tech247.pdr.EmployeeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="systems.tech247.pdr.EmployeeEditorTopComponent"/>
-</settings>
-]]></file>
-                </folder>
-                <folder name="Modes">
-                    <folder name="editor">
-                        <file name="EmployeeEditorTopComponent.wstcref">
-                            <!--systems.tech247.pdr.EmployeeEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
-<tc-ref version="2.0">
-  <tc-id id="EmployeeEditorTopComponent"/>
-  <state opened="true"/>
-</tc-ref>
-]]></file>
-                    </folder>
-                </folder>
-            </folder>
-        </folder>
-    </folder>
-    <folder name="Actions">
-        <folder name="Window">
-            <file name="systems-tech247-pdreditors-AwardEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.AwardEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.AwardEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="AwardEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_AwardEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ContactEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.ContactEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="ContactEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_ContactEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ContractEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.ContractEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.ContractEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="ContractEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_ContractEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-DisengagementEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.DisengagementEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.DisengagementEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="DisengagementEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_DisengagementEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-EducationEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.EducationEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.EducationEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="EducationEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_EducationEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-EmploymentEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.EmploymentEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.EmploymentEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="EmploymentEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_EmploymentEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-FamilyEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.FamilyEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.FamilyEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="FamilyEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_FamilyEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-LocationEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.LocationEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.LocationEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="LocationEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_LocationEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-NOKEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.NOKEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.NOKEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="NOKEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_NOKEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-NextOfKinEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.NextOfKinEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.NextOfKinEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="NextOfEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_NextOfKinEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-PDRCurrencyEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.PDRCurrencyEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.PDRCurrencyEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="PDRCurrencyEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_PDRCurrencyEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ProbationEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.ProbationEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.ProbationEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="ProbationEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_ProbationEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-ProfEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.ProfEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.ProfEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="ProfEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_ProfEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-RefereeEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.RefereeEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.RefereeEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="RefereeEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_RefereeEditorAction" name="displayName"/>
-            </file>
-            <file name="systems-tech247-pdreditors-VisaEditorTopComponent.instance">
-                <!--systems.tech247.pdreditors.VisaEditorTopComponent-->
-                <attr
-                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
-                <attr name="component" newvalue="systems.tech247.pdreditors.VisaEditorTopComponent"/>
-                <attr name="preferredID" stringvalue="VisaEditorTopComponent"/>
-                <attr
-                    bundlevalue="systems.tech247.pdreditors.Bundle#CTL_VisaEditorAction" name="displayName"/>
-            </file>
         </folder>
     </folder>
 </filesystem>

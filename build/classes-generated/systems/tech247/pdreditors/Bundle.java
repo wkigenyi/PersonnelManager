@@ -59,14 +59,14 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_ContractEditorTopComponent");
     }
     /**
-     * @return <i>Education Editor</i>
+     * @return <i> Disengagement</i>
      * @see DisengagementEditorTopComponent
      */
     static String CTL_DisengagementEditorAction() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_DisengagementEditorAction");
     }
     /**
-     * @return <i>Education Editor</i>
+     * @return <i> Disengagement</i>
      * @see DisengagementEditorTopComponent
      */
     static String CTL_DisengagementEditorTopComponent() {

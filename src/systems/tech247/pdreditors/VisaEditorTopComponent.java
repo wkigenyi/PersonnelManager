@@ -51,11 +51,11 @@ import systems.tech247.pdr.NodeVisaRefreshEvent;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.VisaEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_VisaEditorAction",
-        preferredID = "VisaEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_VisaEditorAction",
+//        preferredID = "VisaEditorTopComponent"
+//)
 @Messages({
     "CTL_VisaEditorAction=Visa Editor",
     "CTL_VisaEditorTopComponent=Visa Editor",

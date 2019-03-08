@@ -36,11 +36,11 @@ import systems.tech247.hr.Employees;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.ProbationEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ProbationEditorAction",
-        preferredID = "ProbationEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_ProbationEditorAction",
+//        preferredID = "ProbationEditorTopComponent"
+//)
 @Messages({
     "CTL_ProbationEditorAction=Probation",
     "CTL_ProbationEditorTopComponent=Probation",

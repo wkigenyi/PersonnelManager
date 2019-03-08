@@ -51,11 +51,11 @@ import systems.tech247.pdr.NodeContactRefreshEvent;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.ContactEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ContactEditorAction",
-        preferredID = "ContactEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_ContactEditorAction",
+//        preferredID = "ContactEditorTopComponent"
+//)
 @Messages({
     "CTL_ContactEditorAction=Contact Editor",
     "CTL_ContactEditorTopComponent=Contact Editor",

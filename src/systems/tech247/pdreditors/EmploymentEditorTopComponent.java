@@ -43,11 +43,11 @@ import systems.tech247.pdr.UtilityPDR;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.EmploymentEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_EmploymentEditorAction",
-        preferredID = "EmploymentEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_EmploymentEditorAction",
+//        preferredID = "EmploymentEditorTopComponent"
+//)
 @Messages({
     "CTL_EmploymentEditorAction=Employment Editor",
     "CTL_EmploymentEditorTopComponent=Employment Editor",

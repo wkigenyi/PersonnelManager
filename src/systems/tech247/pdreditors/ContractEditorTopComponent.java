@@ -21,7 +21,6 @@ import org.netbeans.spi.actions.AbstractSavable;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.awt.StatusDisplayer;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
@@ -53,11 +52,11 @@ import systems.tech247.pdr.NodeContractRefreshEvent;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.ContractEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_ContractEditorAction",
-        preferredID = "ContractEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_ContractEditorAction",
+//        preferredID = "ContractEditorTopComponent"
+//)
 @Messages({
     "CTL_ContractEditorAction=Contract Editor",
     "CTL_ContractEditorTopComponent=Contract Editor",

@@ -81,6 +81,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     Boolean isExpat  = false;
     Employees updatable;
     DataAccess da = new DataAccess();
+    Boolean isOfRetirementAge;
+    Boolean requiresClockin;
     EntityManager entityManager = DataAccess.getEntityManager();
     
     TopComponent currencyTc = WindowManager.getDefault().findTopComponent("CurrenciesTopComponent");
@@ -474,6 +476,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         jcbExpertriate = new javax.swing.JCheckBox();
         jLabel12 = new javax.swing.JLabel();
         jtPayroll = new javax.swing.JTextField();
+        jcbRetirement = new javax.swing.JCheckBox();
+        jcbRequiresClockin = new javax.swing.JCheckBox();
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jLabel1.text")); // NOI18N
 
@@ -526,6 +530,20 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
 
         jtPayroll.setText(org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jtPayroll.text")); // NOI18N
 
+        org.openide.awt.Mnemonics.setLocalizedText(jcbRetirement, org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jcbRetirement.text")); // NOI18N
+        jcbRetirement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbRetirementActionPerformed(evt);
+            }
+        });
+
+        org.openide.awt.Mnemonics.setLocalizedText(jcbRequiresClockin, org.openide.util.NbBundle.getMessage(EmploymentDetailsTopComponent.class, "EmploymentDetailsTopComponent.jcbRequiresClockin.text")); // NOI18N
+        jcbRequiresClockin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbRequiresClockinActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -547,19 +565,23 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jcbExpertriate)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jtEmployeeID, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jdcJoiningDate, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                        .addComponent(jdcEmploymentValidity, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                        .addComponent(jtPosition, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jtDepartment, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jtLocation, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jtCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jftBasic, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                        .addComponent(jtCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                        .addComponent(jftHousing)
-                        .addComponent(jtPayroll)))
-                .addContainerGap(101, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtEmployeeID, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jdcJoiningDate, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                            .addComponent(jdcEmploymentValidity, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                            .addComponent(jtPosition, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jtDepartment, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jtLocation, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jtCurrency, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jftBasic, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                            .addComponent(jtCategory, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                            .addComponent(jftHousing)
+                            .addComponent(jtPayroll))
+                        .addGap(18, 18, 18)
+                        .addComponent(jcbRequiresClockin))
+                    .addComponent(jcbRetirement))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jdcEmploymentValidity, jdcJoiningDate, jftBasic, jtCategory, jtCurrency, jtDepartment, jtEmployeeID, jtLocation, jtPosition});
@@ -570,7 +592,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jtEmployeeID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtEmployeeID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcbRequiresClockin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -613,7 +636,9 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                     .addComponent(jftHousing, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jcbExpertriate)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jcbRetirement)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -622,6 +647,18 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         updatable.setExpatriate(isExpat);
         modify();
     }//GEN-LAST:event_jcbExpertriateActionPerformed
+
+    private void jcbRetirementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbRetirementActionPerformed
+        isOfRetirementAge = jcbRetirement.isSelected();
+        updatable.setHasReachedRetirement(isOfRetirementAge);
+        modify();
+    }//GEN-LAST:event_jcbRetirementActionPerformed
+
+    private void jcbRequiresClockinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbRequiresClockinActionPerformed
+        requiresClockin = jcbRequiresClockin.isSelected();
+        updatable.setRequiresClockin(requiresClockin);
+        modify();
+    }//GEN-LAST:event_jcbRequiresClockinActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -636,6 +673,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JCheckBox jcbExpertriate;
+    private javax.swing.JCheckBox jcbRequiresClockin;
+    private javax.swing.JCheckBox jcbRetirement;
     private com.toedter.calendar.JDateChooser jdcEmploymentValidity;
     private com.toedter.calendar.JDateChooser jdcJoiningDate;
     private javax.swing.JFormattedTextField jftBasic;
@@ -749,6 +788,17 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 setName(e.getSurName()+" "+e.getOtherNames()+ " > Employment Details");
                 jtEmployeeID.setText(e.getEmpCode());
                 
+                try{
+                    jcbRetirement.setSelected(e.getHasReachedRetirement());
+                }catch(NullPointerException ex){
+                    
+                }
+                
+                try{
+                    jcbRequiresClockin.setSelected(e.getRequiresClockin());
+                }catch(NullPointerException ex){
+                    
+                }
                 
                 try{
                 jtCategory.setText( e.getCategoryID().getCategoryName());

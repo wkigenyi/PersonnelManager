@@ -8,26 +8,21 @@ package systems.tech247.pdreditors;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Date;
-import javax.persistence.Query;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.actions.AbstractSavable;
+import org.openide.DialogDisplayer;
+import org.openide.NotifyDescriptor;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.awt.StatusDisplayer;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
-import systems.tech247.dbaccess.DataAccess;
 import static systems.tech247.dbaccess.DataAccess.entityManager;
-import systems.tech247.hr.Edu;
 import systems.tech247.hr.Employees;
-import systems.tech247.pdr.NodeEducationRefreshEvent;
-import systems.tech247.pdr.UtilityPDR;
 
 /**
  * Top component which displays something.
@@ -37,20 +32,20 @@ import systems.tech247.pdr.UtilityPDR;
         autostore = false
 )
 @TopComponent.Description(
-        preferredID = "EducationEditorTopComponent",
+        preferredID = "DisengagementEditorTopComponent",
         //iconBase="SET/PATH/TO/ICON/HERE", 
         persistenceType = TopComponent.PERSISTENCE_NEVER
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.DisengagementEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_DisengagementEditorAction",
-        preferredID = "DisengagementEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_DisengagementEditorAction",
+//        preferredID = "DisengagementEditorTopComponent"
+//)
 @Messages({
-    "CTL_DisengagementEditorAction=Education Editor",
-    "CTL_DisengagementEditorTopComponent=Education Editor",
+    "CTL_DisengagementEditorAction= Disengagement",
+    "CTL_DisengagementEditorTopComponent= Disengagement",
     "HINT_DisengagementEditorTopComponent="
 })
 public final class DisengagementEditorTopComponent extends TopComponent{
@@ -70,12 +65,12 @@ public final class DisengagementEditorTopComponent extends TopComponent{
     
     //Employment Details
     String insitute = "";
-    Date from;
-    Date to;
-    String course = "";
+    Date from = new Date();
+    
+    
     String disengamentRef ="";
     
-    String comments = "";
+    String reasons = "";
     
     
     
@@ -111,9 +106,9 @@ public final class DisengagementEditorTopComponent extends TopComponent{
             @Override
             public void insertUpdate(DocumentEvent e) {
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                comments = jtReason.getText();
+                reasons = jtReason.getText();
                 try{
-                    updateable.setDisEngagementReason(comments);
+                    updateable.setDisEngagementReason(reasons);
                 }catch(NullPointerException ex){
                     
                 }
@@ -123,9 +118,9 @@ public final class DisengagementEditorTopComponent extends TopComponent{
             @Override
             public void removeUpdate(DocumentEvent e) {
                 //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-                comments = jtReason.getText();
+                reasons = jtReason.getText();
                 try{
-                    updateable.setDisEngagementReason(comments);
+                    updateable.setDisEngagementReason(reasons);
                 }catch(NullPointerException ex){
                     
                 }
@@ -134,9 +129,9 @@ public final class DisengagementEditorTopComponent extends TopComponent{
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                comments = jtReason.getText();
+                reasons = jtReason.getText();
                 try{
-                    updateable.setDisEngagementReason(comments);
+                    updateable.setDisEngagementReason(reasons);
                 }catch(NullPointerException ex){
                     
                 }
@@ -371,8 +366,6 @@ public final class DisengagementEditorTopComponent extends TopComponent{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jcbDisengagement)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(jdcDisengagementDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -384,6 +377,8 @@ public final class DisengagementEditorTopComponent extends TopComponent{
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jcbDisengagement)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -392,11 +387,23 @@ public final class DisengagementEditorTopComponent extends TopComponent{
         boolean disengage = jcbDisengagement.isSelected();
         updateable.setIsDisengaged(disengage);
         if(disengage){
+            if("".equals(disengamentRef)){
+                StatusDisplayer.getDefault().setStatusText("Specify The Disengament Reason");
+            }else{
+                Object result = DialogDisplayer.getDefault().notify(new NotifyDescriptor.Confirmation("Disengage "+updateable.getSurName()+" "+updateable.getOtherNames()));
+                if(result == NotifyDescriptor.YES_OPTION){
+                    updateable.setCategoryID(null);
+                    updateable.setPayrollid(null);
+                    updateable.setOrganizationUnitID(null);
+                    updateable.setCurrencyID(null);
+                    updateable.setBasicPay(null);
+                    modify();
+                }
             
-            updateable.setCategoryID(null);
-            updateable.setPayrollid(null);
-            updateable.setOrganizationUnitID(null);
-            //updateable.setCurrencyID(null);
+            }
+            
+            
+            
         }else{
             
         }

@@ -49,11 +49,11 @@ import systems.tech247.pdr.NodeContactRefreshEvent;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.LocationEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_LocationEditorAction",
-        preferredID = "LocationEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_LocationEditorAction",
+//        preferredID = "LocationEditorTopComponent"
+//)
 @Messages({
     "CTL_LocationEditorAction=Location Editor",
     "CTL_LocationEditorTopComponent=Location Editor",

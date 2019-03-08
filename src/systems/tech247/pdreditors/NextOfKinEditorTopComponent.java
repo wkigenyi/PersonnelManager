@@ -5,8 +5,6 @@
  */
 package systems.tech247.pdreditors;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.Arrays;
 import javax.persistence.Query;
@@ -15,7 +13,6 @@ import javax.swing.event.DocumentListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.actions.AbstractSavable;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.awt.StatusDisplayer;
 import org.openide.util.Lookup;
 import org.openide.windows.TopComponent;
@@ -26,7 +23,6 @@ import systems.tech247.dbaccess.DataAccess;
 import static systems.tech247.dbaccess.DataAccess.entityManager;
 import systems.tech247.hr.Employees;
 import systems.tech247.hr.Kin;
-import systems.tech247.pdr.NodeContactRefreshEvent;
 import systems.tech247.pdr.NodeNOKRefreshEvent;
 import systems.tech247.pdr.UtilityPDR;
 
@@ -44,11 +40,11 @@ import systems.tech247.pdr.UtilityPDR;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.NextOfKinEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_NextOfKinEditorAction",
-        preferredID = "NextOfEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_NextOfKinEditorAction",
+//        preferredID = "NextOfEditorTopComponent"
+//)
 @Messages({
     "CTL_NextOfKinEditorAction=Next Of Kin Editor",
     "CTL_NextOfKinEditorTopComponent=Next Of Kin Editor",

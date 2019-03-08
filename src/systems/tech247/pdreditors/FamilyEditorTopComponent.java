@@ -43,11 +43,11 @@ import systems.tech247.pdr.UtilityPDR;
 )
 @TopComponent.Registration(mode = "editor", openAtStartup = false)
 @ActionID(category = "Window", id = "systems.tech247.pdreditors.FamilyEditorTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
-@TopComponent.OpenActionRegistration(
-        displayName = "#CTL_FamilyEditorAction",
-        preferredID = "FamilyEditorTopComponent"
-)
+//@ActionReference(path = "Menu/Window" /*, position = 333 */)
+//@TopComponent.OpenActionRegistration(
+//        displayName = "#CTL_FamilyEditorAction",
+//        preferredID = "FamilyEditorTopComponent"
+//)
 @Messages({
     "CTL_FamilyEditorAction=Family Editor",
     "CTL_FamilyEditorTopComponent=Family Editor",
