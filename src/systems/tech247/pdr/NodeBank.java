@@ -5,7 +5,10 @@
  */
 package systems.tech247.pdr;
 
+import java.awt.event.ActionEvent;
 import java.lang.reflect.InvocationTargetException;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
 import org.openide.awt.StatusDisplayer;
@@ -15,11 +18,11 @@ import org.openide.nodes.PropertySupport;
 import org.openide.nodes.Sheet;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
+import org.openide.windows.TopComponent;
 import systems.tech247.hr.BankBranches;
 import systems.tech247.hr.Banks;
-import systems.tech247.pdreditors.PDRBankBranchEditor;
-import systems.tech247.pdreditors.PDRBankEditor;
-import systems.tech247.util.CapCreatable;
+import systems.tech247.pdreditors.BankBranchEditorTopComponent;
+import systems.tech247.pdreditors.BankEditorTopComponent;
 import systems.tech247.util.CapDeletable;
 import systems.tech247.util.CapEditable;
 
@@ -36,28 +39,19 @@ public class NodeBank extends AbstractNode{
         }
         
         private NodeBank (InstanceContent ic, final Banks bank,boolean edit){
-            super(Children.create(new FactoryBankBranches(bank,edit), true), new AbstractLookup(ic));
+            super(Children.LEAF, new AbstractLookup(ic));
             ic.add(bank);
             
                 ic.add(new CapEditable() {
                     @Override
                     public void edit() {
-                        NotifyDescriptor nd = new NotifyDescriptor(new PDRBankEditor(bank), "Edit Bank", NotifyDescriptor.OK_CANCEL_OPTION,
-                        NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
-                        //nd.setNoDefaultClose(true);  
-                        DialogDisplayer.getDefault().notifyLater(nd);
+                        TopComponent tc = new BankEditorTopComponent(bank);
+                        tc.open();
+                        tc.requestActive();
                     }
                 });
                 
-                ic.add(new CapCreatable() {
-                    @Override
-                    public void create() {
-                        NotifyDescriptor nd = new NotifyDescriptor(new PDRBankBranchEditor(bank), "Add New Branch", NotifyDescriptor.OK_CANCEL_OPTION,
-                NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
-        //nd.setNoDefaultClose(true);  
-        DialogDisplayer.getDefault().notifyLater(nd);
-                    }
-                });
+                
                 
                 ic.add(new CapDeletable() {
                     @Override
@@ -100,6 +94,27 @@ public class NodeBank extends AbstractNode{
         sheet.put(set);
         return sheet; //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public Action[] getActions(boolean context) {
+        final Banks bank = getLookup().lookup(Banks.class);
+        return new Action[]{
+            new AbstractAction("Add A New Branch") {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    NotifyDescriptor nd = new NotifyDescriptor(
+                                new BankBranchEditorTopComponent(bank), 
+                                "Edit Bank", 
+                                NotifyDescriptor.OK_CANCEL_OPTION,
+                                NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
+                                //nd.setNoDefaultClose(true);  
+                        DialogDisplayer.getDefault().notify(nd);
+                }
+            }
+        }; 
+    }
+    
+    
         
         
     

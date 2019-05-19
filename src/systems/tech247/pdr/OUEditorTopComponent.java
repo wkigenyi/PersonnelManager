@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.Date;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.actions.AbstractSavable;
 import org.openide.awt.StatusDisplayer;
@@ -66,6 +68,7 @@ public final class OUEditorTopComponent extends TopComponent{
     byte[] imageAsBytes = null;
     Boolean autoFilling = true;
     String tin = null;
+    String fcode = "";
     
     
     EntityManager entityManager = DataAccess.getEntityManager();
@@ -198,47 +201,49 @@ public final class OUEditorTopComponent extends TopComponent{
             }
         });
         
-        
-        
-        
-        
-        
-        
-        
-        jtEmail.addKeyListener(new KeyListener() {
+        jtFinancial.getDocument().addDocumentListener(new DocumentListener() {
             @Override
-            public void keyTyped(KeyEvent e) {
-               
-                
+            public void insertUpdate(DocumentEvent e) {
+                fcode = jtFinancial.getText();
+                try{
+                    updatable.setLASCNo(fcode);
+                }catch(NullPointerException ex){
                     
-                    
-                
+                }
+                modify();
             }
 
             @Override
-            public void keyPressed(KeyEvent e) {
-              
-                        String email = jtEmail.getText();
-                        try{
-                        updatable.setEMail(email);
-                        }catch(NullPointerException ex){
-                            
-                        }
-                        modify();
+            public void removeUpdate(DocumentEvent e) {
+                fcode = jtFinancial.getText();
+                try{
+                    updatable.setLASCNo(fcode);
+                }catch(NullPointerException ex){
                     
+                }
+                modify();
             }
 
             @Override
-            public void keyReleased(KeyEvent e) {
-                String email = jtEmail.getText();
-                        try{
-                        updatable.setEMail(email);
-                        }catch(NullPointerException ex){
-                            
-                        }
-                        modify();
+            public void changedUpdate(DocumentEvent e) {
+                fcode = jtFinancial.getText();
+                try{
+                    updatable.setLASCNo(fcode);
+                }catch(NullPointerException ex){
+                    
+                }
+                modify();
             }
         });
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -385,6 +390,9 @@ public final class OUEditorTopComponent extends TopComponent{
                 
                 jtDepartmentName.setText(departmentName);
                 departmentCode = e.getOrganizationUnitCode();
+                jtDepartmentCode.setText(departmentCode);
+                fcode = e.getLASCNo();
+                jtFinancial.setText(fcode);
                 
                 
                 
@@ -393,9 +401,7 @@ public final class OUEditorTopComponent extends TopComponent{
                 
                 
                 
-                jtFax.setText(e.getFax());
                 
-                jtEmail.setText(e.getEMail());
                 
                 //Set the photo   
              
@@ -421,26 +427,8 @@ public final class OUEditorTopComponent extends TopComponent{
         jtDepartmentName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jtDepartmentCode = new javax.swing.JTextField();
-        jtNSSFNo = new javax.swing.JTextField();
+        jtFinancial = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jtNHIFNo = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jtPhysicalAddress = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jtPostalAddress = new javax.swing.JTextField();
-        jtTelephone1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jtTelephone2 = new javax.swing.JTextField();
-        jtTelephone3 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jtEmail = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jtWeb = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jtFax = new javax.swing.JTextField();
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel1.text")); // NOI18N
 
@@ -450,45 +438,9 @@ public final class OUEditorTopComponent extends TopComponent{
 
         jtDepartmentCode.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtDepartmentCode.text")); // NOI18N
 
-        jtNSSFNo.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtNSSFNo.text")); // NOI18N
+        jtFinancial.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtFinancial.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel3.text")); // NOI18N
-
-        jtNHIFNo.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtNHIFNo.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel4.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel5.text")); // NOI18N
-
-        jtPhysicalAddress.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtPhysicalAddress.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel7.text")); // NOI18N
-
-        jtPostalAddress.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtPostalAddress.text")); // NOI18N
-
-        jtTelephone1.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtTelephone1.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel8.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel9, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel9.text")); // NOI18N
-
-        jtTelephone2.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtTelephone2.text")); // NOI18N
-
-        jtTelephone3.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtTelephone3.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel10, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel10.text")); // NOI18N
-
-        jtEmail.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtEmail.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel11, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel11.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel13, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel13.text")); // NOI18N
-
-        jtWeb.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtWeb.text")); // NOI18N
-
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel14, org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jLabel14.text")); // NOI18N
-
-        jtFax.setText(org.openide.util.NbBundle.getMessage(OUEditorTopComponent.class, "OUEditorTopComponent.jtFax.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -499,30 +451,12 @@ public final class OUEditorTopComponent extends TopComponent{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jtDepartmentName)
                     .addComponent(jtDepartmentCode, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtNSSFNo, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtNHIFNo, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtPhysicalAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtPostalAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtTelephone1, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtTelephone2, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtTelephone3, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtWeb, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jtFax, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+                    .addComponent(jtFinancial, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -539,72 +473,18 @@ public final class OUEditorTopComponent extends TopComponent{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jtNSSFNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jtNHIFNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jtPhysicalAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jtPostalAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jtTelephone1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jtTelephone2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jtTelephone3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(jtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jtWeb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jtFax, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jtFinancial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jtDepartmentCode;
     private javax.swing.JTextField jtDepartmentName;
-    private javax.swing.JTextField jtEmail;
-    private javax.swing.JTextField jtFax;
-    private javax.swing.JTextField jtNHIFNo;
-    private javax.swing.JTextField jtNSSFNo;
-    private javax.swing.JTextField jtPhysicalAddress;
-    private javax.swing.JTextField jtPostalAddress;
-    private javax.swing.JTextField jtTelephone1;
-    private javax.swing.JTextField jtTelephone2;
-    private javax.swing.JTextField jtTelephone3;
-    private javax.swing.JTextField jtWeb;
+    private javax.swing.JTextField jtFinancial;
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {

@@ -14,10 +14,10 @@ import org.netbeans.api.progress.ProgressHandleFactory;
 import org.openide.util.Lookup;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
-import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.BankBranches;
 import systems.tech247.hr.Banks;
 import systems.tech247.api.ReloadableQueryCapability;
+import systems.tech247.dbaccess.DataAccess;
 
 /**
  *
@@ -45,14 +45,25 @@ public class QueryBankBranches implements Lookup.Provider {
                 getList().removeAll(list);
                 ProgressHandle ph = ProgressHandleFactory.createHandle("Loading..");
                 ph.start();
-                DataAccess da = new DataAccess();
-                Banks b = da.getEntityManager().find(Banks.class, bank.getBankID());
-                Collection<BankBranches> list = b.getBankBranchesCollection();
-                for (BankBranches e: list){
+                //DataAccess da = new DataAccess();
+                //Banks b = da.getEntityManager().find(Banks.class, bank.getBankID());
+                
+                if(bank == null){
+                    List<BankBranches> list = DataAccess.getBankBranches();
+                    for(BankBranches b: list){
+                        getList().add(b);
+                    }
+                }else{
+                    //Branches For A Specific Bank
+                    Collection<BankBranches> list = bank.getBankBranchesCollection();
+                    for (BankBranches e: list){
                     
                         getList().add(e);
                     
                 }
+                    
+                }
+                
                 ph.finish();
             }
         });

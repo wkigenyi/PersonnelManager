@@ -68,6 +68,21 @@ public class NodeSetupDepartment extends AbstractNode{
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
         };
+        
+        Property code = new PropertySupport("code", String.class, "Financial Code", "Financial Code", true, false) {
+            @Override
+            public Object getValue() throws IllegalAccessException, InvocationTargetException {
+                return dept.getLASCNo();
+            }
+            
+            @Override
+            public void setValue(Object val) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        
+        
+        set.put(code);
         set.put(number);
         sheet.put(set);
         return sheet; //To change body of generated methods, choose Tools | Templates.

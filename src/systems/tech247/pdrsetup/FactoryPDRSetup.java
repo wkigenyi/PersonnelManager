@@ -15,6 +15,7 @@ import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
+import systems.tech247.pdr.BankBranchesTopComponent;
 import systems.tech247.pdr.BanksTopComponent;
 import systems.tech247.pdr.CompanyStructureTopComponent;
 import systems.tech247.pdr.ContactTypesTopComponent;
@@ -132,6 +133,19 @@ public class FactoryPDRSetup extends ChildFactory<SetupItem> {
                 tc.requestActive();
             }
         },"systems/tech247/util/icons/bank.png"));
+        
+        toPopulate.add(new SetupItem("Bank Branches",new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TopComponent tc = new BankBranchesTopComponent();
+                tc.open();
+                tc.requestActive();
+            }
+        },"systems/tech247/util/icons/bankBranch.png"));
+        
+        
+        
+        
         toPopulate.add(new SetupItem("Currencies",new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -181,6 +195,15 @@ public class FactoryPDRSetup extends ChildFactory<SetupItem> {
             @Override
             public void actionPerformed(ActionEvent e) {
                 TopComponent tc = new EmployeeManifestTopComponent();
+                tc.open();
+                tc.requestActive();
+            }
+        }));
+        
+        toPopulate.add(new SetupItem("Import Bank Accounts",new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TopComponent tc = WindowManager.getDefault().findTopComponent("ImportBankAccountsTopComponent");
                 tc.open();
                 tc.requestActive();
             }

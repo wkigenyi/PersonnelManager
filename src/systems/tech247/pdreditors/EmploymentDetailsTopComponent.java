@@ -35,6 +35,7 @@ import systems.tech247.hr.JobPositions;
 import systems.tech247.hr.Locations;
 import systems.tech247.hr.OrganizationUnits;
 import systems.tech247.hr.TblPayroll;
+import systems.tech247.util.NotifyUtil;
 import systems.tech247.view.CategorySelectable;
 
 /**
@@ -317,7 +318,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 if(evt.getSource()==jdcJoiningDate && "date".equals(evt.getPropertyName())){
                     employmentDate = jdcJoiningDate.getDate();
                     updatable.setDateOfEmployment(employmentDate);
-                    modify();
+                    modify(2);
                 }
             }
         });
@@ -336,7 +337,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                     emplomentValidDate = jdcEmploymentValidity.getDate();
                     
                     updatable.setEmploymentValidThro(emplomentValidDate);
-                    modify();
+                    modify(3);
                 }
             }
         });
@@ -351,7 +352,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                  try{
                      basicPay = new BigDecimal(basicPayString);
                      updatable.setBasicPay(basicPay);
-                    modify();
+                     
+                    modify(4);
                  }catch(Exception ex){
                      
                  }
@@ -363,7 +365,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                  try{
                      basicPay = new BigDecimal(basicPayString);
                      updatable.setBasicPay(basicPay);
-                    modify();
+                     
+                    modify(5);
                  }catch(Exception ex){
                      
                  }
@@ -375,7 +378,8 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                  try{
                      basicPay = new BigDecimal(basicPayString);
                      updatable.setBasicPay(basicPay);
-                    modify();
+                     
+                    modify(7);
                  }catch(Exception ex){
                      
                  }
@@ -388,8 +392,15 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 housingString = jftHousing.getText();
                  try{
                      housing = new BigDecimal(housingString);
-                     updatable.setHouseAllowance(housing);
-                    modify();
+                     if(housing.compareTo(BigDecimal.ZERO)==0){
+                         
+                     }else{
+                         
+                         updatable.setHouseAllowance(housing);
+                            modify(8);
+                         
+                     }
+                     
                  }catch(Exception ex){
                      
                  }
@@ -401,7 +412,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                  try{
                      housing = new BigDecimal(housingString);
                      updatable.setHouseAllowance(housing);
-                    modify();
+                    modify(9);
                  }catch(Exception ex){
                      
                  }
@@ -413,7 +424,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                  try{
                      housing = new BigDecimal(housingString);
                      updatable.setHouseAllowance(housing);
-                    modify();
+                    modify(10);
                  }catch(Exception ex){
                      
                  }
@@ -425,21 +436,21 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
             public void insertUpdate(DocumentEvent e) {
                 empCode = jtEmployeeID.getText();
                 updatable.setEmpCode(empCode);
-                modify();
+                modify(11);
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
                 empCode = jtEmployeeID.getText();
                 updatable.setEmpCode(empCode);
-                modify();
+                modify(12);
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
                 empCode = jtEmployeeID.getText();
                 updatable.setEmpCode(empCode);
-                modify();
+                modify(13);
             }
         });
 
@@ -645,19 +656,19 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
     private void jcbExpertriateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbExpertriateActionPerformed
         isExpat = jcbExpertriate.isSelected();
         updatable.setExpatriate(isExpat);
-        modify();
+        modify(14);
     }//GEN-LAST:event_jcbExpertriateActionPerformed
 
     private void jcbRetirementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbRetirementActionPerformed
         isOfRetirementAge = jcbRetirement.isSelected();
         updatable.setHasReachedRetirement(isOfRetirementAge);
-        modify();
+        modify(1);
     }//GEN-LAST:event_jcbRetirementActionPerformed
 
     private void jcbRequiresClockinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbRequiresClockinActionPerformed
         requiresClockin = jcbRequiresClockin.isSelected();
         updatable.setRequiresClockin(requiresClockin);
-        modify();
+        modify(15);
     }//GEN-LAST:event_jcbRequiresClockinActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -694,24 +705,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
 
     @Override
     public void componentClosed() {
-        currencyRslt.removeLookupListener(this);
-        currencyRslt=null;
-        
-        locationRslt.removeLookupListener(this);
-        locationRslt = null;
-        
-        
-        positionRslt.removeLookupListener(this);
-        positionRslt=null;
-        
-        departmentRslt.removeLookupListener(this);
-        departmentRslt = null;
-        
-        categoryRslt.removeLookupListener(this);
-        categoryRslt = null;
-        
-        payrollRslt.removeLookupListener(this);
-        payrollRslt = null;
+        reset();
     }
 
     void writeProperties(java.util.Properties p) {
@@ -737,7 +731,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 jtDepartment.setText(((OrganizationUnits) e).getOrganizationUnitName());
                 ouID = (OrganizationUnits)e;
                 updatable.setOrganizationUnitID(ouID);
-                modify();
+                modify(16);
             }
             
             if(e instanceof JobPositions){
@@ -745,7 +739,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 jtPosition.setText(((JobPositions) e).getPositionName());
                 jobID = (JobPositions)e;
                 updatable.setPositionID(jobID);
-                modify();
+                modify(17);
             }
             
             if(e instanceof Currencies){
@@ -753,7 +747,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 jtCurrency.setText(((Currencies) e).getCurrencyName());
                 currencyID = (Currencies)e;
                 updatable.setCurrencyID(currencyID);
-                modify();
+                modify(18);
             }
             
             if(e instanceof TblPayroll){
@@ -762,7 +756,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 jtPayroll.setText(payrollID.getPayrollName());
                 
                 updatable.setPayrollid(payrollID);
-                modify();
+                modify(22);
             }
             
             if(e instanceof Locations){
@@ -770,7 +764,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 stationID = (Locations)e;
                 jtLocation.setText(stationID.getLocationName());
                 updatable.setLocationID(stationID);
-                modify();
+                modify(20);
             }
             
             if(e instanceof CategorySelectable){
@@ -778,7 +772,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 catID = ((CategorySelectable)e).getCat();
                 jtCategory.setText(catID.getCategoryName());
                 updatable.setCategoryID(catID);
-                modify();
+                modify(19);
             }
         }
     }
@@ -874,9 +868,9 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 
     }
     
-    void modify(){
+    void modify(int i){
         
-        
+                //NotifyUtil.info("What is causing modify?", "Modify "+i, false);
                 if(getLookup().lookup(EmpSavable.class)==null){
                             ic.add(new EmpSavable());
                 }
@@ -910,6 +904,7 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
                 entityManager.getTransaction().begin();
                 entityManager.getTransaction().commit();
                 
+                tc().close();
                     
                 
             
@@ -929,4 +924,29 @@ public final class EmploymentDetailsTopComponent extends TopComponent implements
         }
         
     }
+    
+    
+    void reset(){
+        basicPayString = "";
+        jftBasic.setText("");
+                currencyRslt.removeLookupListener(this);
+        currencyRslt=null;
+        
+        locationRslt.removeLookupListener(this);
+        locationRslt = null;
+        
+        
+        positionRslt.removeLookupListener(this);
+        positionRslt=null;
+        
+        departmentRslt.removeLookupListener(this);
+        departmentRslt = null;
+        
+        categoryRslt.removeLookupListener(this);
+        categoryRslt = null;
+        
+        payrollRslt.removeLookupListener(this);
+        payrollRslt = null;
+    }
+    
 }

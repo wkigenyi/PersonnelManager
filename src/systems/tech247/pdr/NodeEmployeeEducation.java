@@ -5,6 +5,7 @@
  */
 package systems.tech247.pdr;
 
+import systems.tech247.api.NodeRefreshEvent;
 import java.beans.IntrospectionException;
 import java.lang.reflect.InvocationTargetException;
 import java.text.SimpleDateFormat;
@@ -58,7 +59,7 @@ Lookup.Result<String> rslt;
                 query.executeUpdate();
                 em.getTransaction().commit();
                 //send notification that the view should be freshed ..via lookup
-                UtilityPDR.pdrIC.add(new NodeEducationRefreshEvent());
+                UtilityPDR.pdrIC.add(new NodeRefreshEvent());
                 
             }
         });

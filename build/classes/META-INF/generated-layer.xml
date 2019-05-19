@@ -21,6 +21,13 @@
   <instance class="systems.tech247.pdr.AssetsTopComponent"/>
 </settings>
 ]]></file>
+            <file name="BankBranchesTopComponent.settings">
+                <!--systems.tech247.pdr.BankBranchesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdr.BankBranchesTopComponent"/>
+</settings>
+]]></file>
             <file name="BanksTopComponent.settings">
                 <!--systems.tech247.pdr.BanksTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
@@ -273,6 +280,20 @@
   <instance class="systems.tech247.pdreditors.AwardEditorTopComponent"/>
 </settings>
 ]]></file>
+            <file name="BankBranchEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.BankBranchEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.BankBranchEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="BankEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.BankEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.BankEditorTopComponent"/>
+</settings>
+]]></file>
             <file name="ContactEditorTopComponent.settings">
                 <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
                 <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
@@ -300,6 +321,13 @@
 <!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
 <settings version="1.0">
   <instance class="systems.tech247.pdreditors.EducationEditorTopComponent"/>
+</settings>
+]]></file>
+            <file name="EmployeeBankAccountEditorTopComponent.settings">
+                <!--systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent"/>
 </settings>
 ]]></file>
             <file name="EmployeeCheckListTopComponent.settings">
@@ -564,6 +592,14 @@
 ]]></file>
             </folder>
             <folder name="editor">
+                <file name="BankBranchesTopComponent.wstcref">
+                    <!--systems.tech247.pdr.BankBranchesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="BankBranchesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
                 <file name="CompanyStructureTopComponent.wstcref">
                     <!--systems.tech247.pdr.CompanyStructureTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
@@ -716,6 +752,22 @@
   <state opened="false"/>
 </tc-ref>
 ]]></file>
+                <file name="BankBranchEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.BankBranchEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="BankBranchEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="BankEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.BankEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="BankEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
                 <file name="ContactEditorTopComponent.wstcref">
                     <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
                     <!--systems.tech247.pdreditors.NOKEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
@@ -746,6 +798,14 @@
 <!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
 <tc-ref version="2.0">
   <tc-id id="EducationEditorTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+                <file name="EmployeeBankAccountEditorTopComponent.wstcref">
+                    <!--systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="EmployeeBankAccountEditorTopComponent"/>
   <state opened="false"/>
 </tc-ref>
 ]]></file>
@@ -898,6 +958,12 @@
                     <!--systems.tech247.pdr.AssetsTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//Assets//EN"/>
                 </file>
+                <file name="BankBranches" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdr.BankBranchesTopComponent-->
+                    <!--systems.tech247.pdreditors.BankBranchEditorTopComponent-->
+                    <!--systems.tech247.pdreditors.BankEditorTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//BankBranches//EN"/>
+                </file>
                 <file name="Banks" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.BanksTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//Banks//EN"/>
@@ -906,11 +972,9 @@
                     <!--systems.tech247.pdr.CategoryTypeEditorTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//CategoryTypeEditor//EN"/>
                 </file>
-                <file name="EmployeePersonalInfoEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                <file name="CompanyEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.CompanyEditorTopComponent-->
-                    <!--systems.tech247.pdr.EmployeePersonalInfoEditorTopComponent-->
-                    <!--systems.tech247.pdr.OUEditorTopComponent-->
-                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//EmployeePersonalInfoEditor//EN"/>
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//CompanyEditor//EN"/>
                 </file>
                 <file name="CompanyStructure" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.CompanyStructureTopComponent-->
@@ -992,6 +1056,11 @@
                 <file name="EmployeeNOK" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.EmployeeNOKTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//EmployeeNOK//EN"/>
+                </file>
+                <file name="EmployeePersonalInfoEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdr.EmployeePersonalInfoEditorTopComponent-->
+                    <!--systems.tech247.pdr.OUEditorTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdr//EmployeePersonalInfoEditor//EN"/>
                 </file>
                 <file name="EmployeeProf" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdr.EmployeeProfTopComponent-->
@@ -1086,6 +1155,10 @@
                     <!--systems.tech247.pdreditors.EducationEditorTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdreditors//EducationEditor//EN"/>
                 </file>
+                <file name="EmployeeBankAccountEditor" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdreditors//EmployeeBankAccountEditor//EN"/>
+                </file>
                 <file name="EmployeeCheckList" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
                     <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent-->
                     <attr name="hint.originalPublicID" stringvalue="-//systems.tech247.pdreditors//EmployeeCheckList//EN"/>
@@ -1156,6 +1229,10 @@
                             <!--systems.tech247.pdr.AssetsTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/Assets.instance"/>
                         </file>
+                        <file name="BankBranchesTopComponent">
+                            <!--systems.tech247.pdr.BankBranchesTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/BankBranches.instance"/>
+                        </file>
                         <file name="BanksTopComponent">
                             <!--systems.tech247.pdr.BanksTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/Banks.instance"/>
@@ -1166,7 +1243,7 @@
                         </file>
                         <file name="CompanyEditorTopComponent">
                             <!--systems.tech247.pdr.CompanyEditorTopComponent-->
-                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/EmployeePersonalInfoEditor.instance"/>
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/CompanyEditor.instance"/>
                         </file>
                         <file name="CompanyStructureTopComponent">
                             <!--systems.tech247.pdr.CompanyStructureTopComponent-->
@@ -1338,6 +1415,14 @@
                             <!--systems.tech247.pdreditors.AwardEditorTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/AwardEditor.instance"/>
                         </file>
+                        <file name="BankBranchEditorTopComponent">
+                            <!--systems.tech247.pdreditors.BankBranchEditorTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/BankBranches.instance"/>
+                        </file>
+                        <file name="BankEditorTopComponent">
+                            <!--systems.tech247.pdreditors.BankEditorTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdr/BankBranches.instance"/>
+                        </file>
                         <file name="ContactEditorTopComponent">
                             <!--systems.tech247.pdreditors.ContactEditorTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/ContactEditor.instance"/>
@@ -1353,6 +1438,10 @@
                         <file name="EducationEditorTopComponent">
                             <!--systems.tech247.pdreditors.EducationEditorTopComponent-->
                             <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/EducationEditor.instance"/>
+                        </file>
+                        <file name="EmployeeBankAccountEditorTopComponent">
+                            <!--systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//systems_tech247_pdreditors/EmployeeBankAccountEditor.instance"/>
                         </file>
                         <file name="EmployeeCheckListTopComponent">
                             <!--systems.tech247.pdreditors.EmployeeCheckListTopComponent-->
@@ -1438,6 +1527,18 @@
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.AssetsTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
+                <file name="BankBranches.instance">
+                    <!--systems.tech247.pdr.BankBranchesTopComponent-->
+                    <!--systems.tech247.pdreditors.BankBranchEditorTopComponent-->
+                    <!--systems.tech247.pdreditors.BankEditorTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdreditors.BankEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdreditors.BankEditorTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
                 <file name="Banks.instance">
                     <!--systems.tech247.pdr.BanksTopComponent-->
                     <attr
@@ -1458,16 +1559,14 @@
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.CategoryTypeEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
-                <file name="EmployeePersonalInfoEditor.instance">
+                <file name="CompanyEditor.instance">
                     <!--systems.tech247.pdr.CompanyEditorTopComponent-->
-                    <!--systems.tech247.pdr.EmployeePersonalInfoEditorTopComponent-->
-                    <!--systems.tech247.pdr.OUEditorTopComponent-->
                     <attr
                         methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
                     <attr
                         methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
-                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.OUEditorTopComponent"/>
-                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.OUEditorTopComponent"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.CompanyEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.CompanyEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
                 <file name="CompanyStructure.instance">
@@ -1669,6 +1768,17 @@
                         methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
                     <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.EmployeeNOKTopComponent"/>
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.EmployeeNOKTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="EmployeePersonalInfoEditor.instance">
+                    <!--systems.tech247.pdr.EmployeePersonalInfoEditorTopComponent-->
+                    <!--systems.tech247.pdr.OUEditorTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdr.OUEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdr.OUEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
                 <file name="EmployeeProf.instance">
@@ -1894,6 +2004,16 @@
                         methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
                     <attr name="settings.instanceClass" stringvalue="systems.tech247.pdreditors.EducationEditorTopComponent"/>
                     <attr name="settings.instanceOf" stringvalue="systems.tech247.pdreditors.EducationEditorTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="EmployeeBankAccountEditor.instance">
+                    <!--systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent"/>
                     <attr boolvalue="true" name="xmlproperties.preventStoring"/>
                 </file>
                 <file name="EmployeeCheckList.instance">

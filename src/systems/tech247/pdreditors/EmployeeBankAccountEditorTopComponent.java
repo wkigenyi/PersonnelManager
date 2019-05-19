@@ -7,15 +7,20 @@ package systems.tech247.pdreditors;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.swing.JButton;
+import org.netbeans.api.settings.ConvertAsProperties;
+import org.netbeans.spi.actions.AbstractSavable;
 import org.openide.DialogDescriptor;
 import org.openide.DialogDisplayer;
 import org.openide.awt.StatusDisplayer;
 import org.openide.util.Lookup;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
+import org.openide.util.NbBundle;
+import org.openide.util.lookup.InstanceContent;
 import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
 import systems.tech247.dbaccess.DataAccess;
@@ -29,10 +34,33 @@ import systems.tech247.pdr.UtilityPDR;
  *
  * @author Admin
  */
-public class EmployeeBankAccountEditor extends javax.swing.JPanel implements LookupListener{
+@ConvertAsProperties(
+        dtd = "-//systems.tech247.pdreditors//EmployeeBankAccountEditor//EN",
+        autostore = false
+)
+@TopComponent.Description(
+        preferredID = "EmployeeBankAccountEditorTopComponent",
+        //iconBase="SET/PATH/TO/ICON/HERE", 
+        persistenceType = TopComponent.PERSISTENCE_NEVER
+)
+@TopComponent.Registration(mode = "editor", openAtStartup = false)
+
+
+@NbBundle.Messages({
+    "CTL_EmployeeBankAccountEditorAction=Bank Account Editor",
+    "CTL_EmployeeBankAccountEditorTopComponent=Bank Account Editor",
+    "HINT_EmployeeBankAccountEditorTopComponent=Bank Account Editor"
+})
+
+
+
+
+
+
+public class EmployeeBankAccountEditorTopComponent extends TopComponent implements LookupListener{
 
     
-    
+    InstanceContent ic = new InstanceContent();
     DataAccess da = new DataAccess();
     EmployeeBankAccounts account;
     Employees employeeID;
@@ -46,25 +74,30 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
     String swiftCode = null;
     Boolean isMain = false;
     Boolean isDeleted  = false;
-    EntityManager entityManager = da.getEntityManager();
+    
     TopComponent empTc = WindowManager.getDefault().findTopComponent("EmployeesTopComponent");
     Lookup.Result<Employees> empRslt = empTc.getLookup().lookupResult(Employees.class);
-    TopComponent bankTc = WindowManager.getDefault().findTopComponent("BanksTopComponent");
+    TopComponent bankTc = WindowManager.getDefault().findTopComponent("BankBranchesTopComponent");
     Lookup.Result<BankBranches> bankRslt = bankTc.getLookup().lookupResult(BankBranches.class);
    
     /**
      * Creates new form PersonalInfoPanel
      */
-    public EmployeeBankAccountEditor(EmployeeBankAccounts acc){
+    public EmployeeBankAccountEditorTopComponent(){
+        
+    }
+    
+    
+    public EmployeeBankAccountEditorTopComponent(EmployeeBankAccounts acc){
         this(acc.getEmployeeID(),acc);
     }
     
-    public EmployeeBankAccountEditor(Employees emp){
+    public EmployeeBankAccountEditorTopComponent(Employees emp){
         this(emp,null);
     }
     
     
- public EmployeeBankAccountEditor(Employees empID,EmployeeBankAccounts acc) {
+ public EmployeeBankAccountEditorTopComponent(Employees empID,EmployeeBankAccounts acc) {
         initComponents();
         //Start transaction
         account= acc;
@@ -184,6 +217,29 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
         
         
     }
+ 
+ 
+ @Override
+    public void componentOpened() {
+        // TODO add custom code on component opening
+    }
+
+    @Override
+    public void componentClosed() {
+
+    }
+
+    void writeProperties(java.util.Properties p) {
+        // better to version settings since initial version as advocated at
+        // http://wiki.apidesign.org/wiki/PropertyFiles
+        p.setProperty("version", "1.0");
+        // TODO store your settings
+    }
+
+    void readProperties(java.util.Properties p) {
+        String version = p.getProperty("version");
+        // TODO read your settings according to their version
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -211,35 +267,35 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jLabel3.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jLabel1.text")); // NOI18N
 
-        jtAccountName.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jtAccountName.text")); // NOI18N
+        jtAccountName.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jtAccountName.text")); // NOI18N
 
         jtBank.setBackground(new java.awt.Color(0, 204, 0));
-        jtBank.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jtBank.text")); // NOI18N
+        jtBank.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jtBank.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jcbIsMain, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jcbIsMain.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jcbIsMain, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jcbIsMain.text")); // NOI18N
         jcbIsMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbIsMainActionPerformed(evt);
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jLabel4.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jLabel4.text")); // NOI18N
 
-        jtAccountNumber.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jtAccountNumber.text")); // NOI18N
+        jtAccountNumber.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jtAccountNumber.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jLabel5.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jLabel5.text")); // NOI18N
 
-        jtSwiftCode.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jtSwiftCode.text")); // NOI18N
+        jtSwiftCode.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jtSwiftCode.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jLabel6.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel6, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jLabel6.text")); // NOI18N
 
-        jtAccountType.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jtAccountType.text")); // NOI18N
+        jtAccountType.setText(org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jtAccountType.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jcbIsDelete, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jcbIsDelete.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jcbIsDelete, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jcbIsDelete.text")); // NOI18N
         jcbIsDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbIsDeleteActionPerformed(evt);
@@ -300,7 +356,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        org.openide.awt.Mnemonics.setLocalizedText(jbSave, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditor.class, "EmployeeBankAccountEditor.jbSave.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jbSave, org.openide.util.NbBundle.getMessage(EmployeeBankAccountEditorTopComponent.class, "EmployeeBankAccountEditorTopComponent.jbSave.text")); // NOI18N
         jbSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSaveActionPerformed(evt);
@@ -330,7 +386,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveActionPerformed
-        entityManager.getTransaction().begin();    
+        DataAccess.entityManager.getTransaction().begin();    
         
         if(account == null){ //Add New Account
             String insertSQL = "INSERT INTO [dbo].[EmployeeBankAccounts]\n" +
@@ -344,7 +400,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
 "           ,[SwiftCode])\n" +
 "     VALUES\n" +
 "           (?,?,?,?,?,?,?,?)";
-            Query query = entityManager.createNativeQuery(insertSQL);
+            Query query = DataAccess.entityManager.createNativeQuery(insertSQL);
             query.setParameter(1, employeeID.getEmployeeID());
             query.setParameter(2, branch.getBankBranchID());
             query.setParameter(3, accountName);
@@ -355,7 +411,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
             query.setParameter(8, swiftCode);
             
             query.executeUpdate();
-            entityManager.getTransaction().commit(); 
+            DataAccess.entityManager.getTransaction().commit(); 
             
             resetEditor();
             StatusDisplayer.getDefault().setStatusText("Account Added");
@@ -363,7 +419,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
             
         }else{
             
-            EmployeeBankAccounts eba = entityManager.find(EmployeeBankAccounts.class, account.getEmployeeBankAccountID());
+            EmployeeBankAccounts eba = DataAccess.entityManager.find(EmployeeBankAccounts.class, account.getEmployeeBankAccountID());
             
             if(null != swiftCode){
                 eba.setSwiftCode(swiftCode);
@@ -384,7 +440,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
             eba.setIsMainAccount(isMain);
             eba.setDeleted(isDeleted);
             
-            entityManager.getTransaction().commit();
+            DataAccess.entityManager.getTransaction().commit();
             StatusDisplayer.getDefault().setStatusText("Account Saved");
             UtilityPDR.loadAccounts(employeeID);
         }
@@ -448,6 +504,57 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
             
         }
     
+    private class AccountSavable extends AbstractSavable{
+        
+        AccountSavable(){
+            register();
+        }
+
+        @Override
+        protected String findDisplayName() {
+            
+                return "Account ";
+            
+        }
+        
+        EmployeeBankAccountEditorTopComponent tc(){
+            return EmployeeBankAccountEditorTopComponent.this;
+        }
+
+        @Override
+        protected void handleSave() throws IOException {
+            
+            tc().ic.remove(this);
+            unregister();
+            
+                //Creating a new Employee
+                DataAccess.entityManager.getTransaction().begin();
+                DataAccess.entityManager.getTransaction().commit();
+                tc().close();
+                    
+                
+            
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if(o instanceof AccountSavable){
+                AccountSavable e = (AccountSavable)o;
+                return tc() == e.tc();
+            }
+            return false;        }
+
+        @Override
+        public int hashCode() {
+            return tc().hashCode();
+        }
+        
+    }
+    
+    
+    
+    
+    
     
     void modify(){
         
@@ -455,6 +562,7 @@ public class EmployeeBankAccountEditor extends javax.swing.JPanel implements Loo
             
         
     }
+    
 
     
     public Lookup getLookup() {

@@ -16,7 +16,6 @@ import javax.swing.event.DocumentListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.netbeans.spi.actions.AbstractSavable;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.awt.StatusDisplayer;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
@@ -26,7 +25,7 @@ import systems.tech247.dbaccess.DataAccess;
 import static systems.tech247.dbaccess.DataAccess.entityManager;
 import systems.tech247.hr.Edu;
 import systems.tech247.hr.Employees;
-import systems.tech247.pdr.NodeEducationRefreshEvent;
+import systems.tech247.api.NodeRefreshEvent;
 import systems.tech247.pdr.UtilityPDR;
 
 /**
@@ -388,7 +387,7 @@ public final class EducationEditorTopComponent extends TopComponent{
                     
                 
             }
-            UtilityPDR.pdrIC.set(Arrays.asList(new NodeEducationRefreshEvent()), null);
+            UtilityPDR.pdrIC.set(Arrays.asList(new NodeRefreshEvent()), null);
             UtilityPDR.pdrIC.set(Arrays.asList(new String()), null);
             
             

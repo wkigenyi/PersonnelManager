@@ -53,7 +53,7 @@ import systems.tech247.hr.Prof;
 import systems.tech247.hr.Religions;
 import systems.tech247.hr.Tribes;
 import systems.tech247.pdreditors.EmployeeAwardEditor;
-import systems.tech247.pdreditors.EmployeeBankAccountEditor;
+import systems.tech247.pdreditors.EmployeeBankAccountEditorTopComponent;
 
 
 import systems.tech247.pdreditors.EmployeeEmpHEditor;
@@ -62,8 +62,8 @@ import systems.tech247.pdreditors.EmployeeNOKEditor;
 import systems.tech247.pdreditors.EmployeeProfEditor;
 
 
-import systems.tech247.pdreditors.PDRBankBranchEditor;
-import systems.tech247.pdreditors.PDRBankEditor;
+import systems.tech247.pdreditors.BankBranchEditorTopComponent;
+import systems.tech247.pdreditors.PDRBankEditorTopComponent;
 import systems.tech247.pdreditors.PDRCompanyAssetEditor;
 import systems.tech247.pdreditors.PDRContactTypeEditor;
 import systems.tech247.pdreditors.PDRContractTypeEditor;
@@ -913,7 +913,7 @@ public class UtilityPDR implements Lookup.Provider {
             instanceContent.add(new CapCreatable() {
                 @Override
                 public void create() {     
-                    NotifyDescriptor nd = new NotifyDescriptor(new EmployeeBankAccountEditor(emp), "New Account", NotifyDescriptor.OK_CANCEL_OPTION,
+                    NotifyDescriptor nd = new NotifyDescriptor(new EmployeeBankAccountEditorTopComponent(emp), "New Account", NotifyDescriptor.OK_CANCEL_OPTION,
                     NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                     //nd.setNoDefaultClose(true);  
                     DialogDisplayer.getDefault().notifyLater(nd);
@@ -970,7 +970,7 @@ public class UtilityPDR implements Lookup.Provider {
                     instanceContent.add(new CapEditable() {
                         @Override
                         public void edit() {
-                            NotifyDescriptor nd = new NotifyDescriptor(new EmployeeBankAccountEditor(emp), "Bank Account Editor", NotifyDescriptor.OK_CANCEL_OPTION,
+                            NotifyDescriptor nd = new NotifyDescriptor(new EmployeeBankAccountEditorTopComponent(emp), "Bank Account Editor", NotifyDescriptor.OK_CANCEL_OPTION,
                             NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                             //nd.setNoDefaultClose(true);  
                             DialogDisplayer.getDefault().notifyLater(nd);
@@ -1988,7 +1988,7 @@ public class UtilityPDR implements Lookup.Provider {
             instanceContent.add(new CapCreatable() {
                 @Override
                 public void create() {     
-                    NotifyDescriptor nd = new NotifyDescriptor(new PDRBankEditor(), "New Bank", NotifyDescriptor.OK_CANCEL_OPTION,
+                    NotifyDescriptor nd = new NotifyDescriptor(new PDRBankEditorTopComponent(), "New Bank", NotifyDescriptor.OK_CANCEL_OPTION,
                     NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                     //nd.setNoDefaultClose(true);  
                     DialogDisplayer.getDefault().notifyLater(nd);
@@ -2045,7 +2045,7 @@ public class UtilityPDR implements Lookup.Provider {
                     instanceContent.add(new CapEditable() {
                         @Override
                         public void edit() {
-                            NotifyDescriptor nd = new NotifyDescriptor(new PDRBankEditor(emp), "Edit Bank", NotifyDescriptor.OK_CANCEL_OPTION,
+                            NotifyDescriptor nd = new NotifyDescriptor(new PDRBankEditorTopComponent(emp), "Edit Bank", NotifyDescriptor.OK_CANCEL_OPTION,
                             NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                             //nd.setNoDefaultClose(true);  
                             DialogDisplayer.getDefault().notifyLater(nd);
@@ -2062,7 +2062,7 @@ public class UtilityPDR implements Lookup.Provider {
                     instanceContent.add(new CapCreatable() {
                         @Override
                         public void create() {
-                            NotifyDescriptor nd = new NotifyDescriptor(new PDRBankBranchEditor(emp), "New Branch", NotifyDescriptor.OK_CANCEL_OPTION,
+                            NotifyDescriptor nd = new NotifyDescriptor(new BankBranchEditorTopComponent(emp), "New Branch", NotifyDescriptor.OK_CANCEL_OPTION,
                             NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                             //nd.setNoDefaultClose(true);  
                             DialogDisplayer.getDefault().notifyLater(nd);
@@ -2121,7 +2121,7 @@ public class UtilityPDR implements Lookup.Provider {
                     instanceContent.add(new CapEditable() {
                         @Override
                         public void edit() {
-                            NotifyDescriptor nd = new NotifyDescriptor(new PDRBankBranchEditor(emp), "Edit Bank", NotifyDescriptor.OK_CANCEL_OPTION,
+                            NotifyDescriptor nd = new NotifyDescriptor(new BankBranchEditorTopComponent(emp), "Edit Bank", NotifyDescriptor.OK_CANCEL_OPTION,
                             NotifyDescriptor.PLAIN_MESSAGE, new Object[]{}, null);
                             //nd.setNoDefaultClose(true);  
                             DialogDisplayer.getDefault().notifyLater(nd);

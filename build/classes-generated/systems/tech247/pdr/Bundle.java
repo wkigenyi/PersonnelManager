@@ -17,6 +17,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_AssetsTopComponent");
     }
     /**
+     * @return <i>Bank Branches</i>
+     * @see BankBranchesTopComponent
+     */
+    static String CTL_BankBranchesAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankBranchesAction");
+    }
+    /**
+     * @return <i>Bank Branches</i>
+     * @see BankBranchesTopComponent
+     */
+    static String CTL_BankBranchesTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankBranchesTopComponent");
+    }
+    /**
      * @return <i>Banks</i>
      * @see BanksTopComponent
      */
@@ -52,7 +66,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_CompanyEditorAction");
     }
     /**
-     * @return <i>New Company</i>
+     * @return <i> Company Editor</i>
      * @see CompanyEditorTopComponent
      */
     static String CTL_CompanyEditorTopComponent() {
@@ -582,6 +596,13 @@ class Bundle {
      */
     static String HINT_AssetsTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_AssetsTopComponent");
+    }
+    /**
+     * @return 
+     * @see BankBranchesTopComponent
+     */
+    static String HINT_BankBranchesTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_BankBranchesTopComponent");
     }
     /**
      * @return <i> </i>

@@ -15,7 +15,6 @@ import org.openide.windows.TopComponent;
 import org.openide.windows.WindowManager;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.Banks;
-import systems.tech247.pdr.QueryBanks;
 import systems.tech247.pdr.UtilityPDR;
 
 
@@ -23,7 +22,7 @@ import systems.tech247.pdr.UtilityPDR;
  *
  * @author Admin
  */
-public class PDRBankEditor extends javax.swing.JPanel{
+public class PDRBankEditorTopComponent extends javax.swing.JPanel{
 
     
     
@@ -45,14 +44,14 @@ public class PDRBankEditor extends javax.swing.JPanel{
     /**
      * Creates new form PersonalInfoPanel
      */
-    public PDRBankEditor(){
+    public PDRBankEditorTopComponent(){
         this(null);
     }
     
     
     
     
- public PDRBankEditor(Banks bank) {
+ public PDRBankEditorTopComponent(Banks bank) {
         initComponents();
         //Start transaction
         
@@ -161,15 +160,15 @@ public class PDRBankEditor extends javax.swing.JPanel{
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jLabel1.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jLabel1.text")); // NOI18N
 
-        jtBankName.setText(org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jtBankName.text")); // NOI18N
+        jtBankName.setText(org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jtBankName.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jLabel2.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jLabel2.text")); // NOI18N
 
-        jtBankCode.setText(org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jtBankCode.text")); // NOI18N
+        jtBankCode.setText(org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jtBankCode.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jLabel3.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jLabel3.text")); // NOI18N
 
         jTBankComments.setColumns(20);
         jTBankComments.setRows(5);
@@ -212,7 +211,7 @@ public class PDRBankEditor extends javax.swing.JPanel{
                 .addContainerGap())
         );
 
-        org.openide.awt.Mnemonics.setLocalizedText(jbSave, org.openide.util.NbBundle.getMessage(PDRBankEditor.class, "PDRBankEditor.jbSave.text")); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jbSave, org.openide.util.NbBundle.getMessage(PDRBankEditorTopComponent.class, "PDRBankEditorTopComponent.jbSave.text")); // NOI18N
         jbSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSaveActionPerformed(evt);

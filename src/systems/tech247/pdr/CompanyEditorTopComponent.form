@@ -36,7 +36,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jtCompanyName" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jtPinNo" alignment="0" pref="160" max="32767" attributes="0"/>
+                      <Component id="jtPropertyCode" alignment="0" pref="160" max="32767" attributes="0"/>
                       <Component id="jtNSSFNo" alignment="0" pref="160" max="32767" attributes="0"/>
                       <Component id="jtNHIFNo" alignment="0" pref="160" max="32767" attributes="0"/>
                       <Component id="jtPhysicalAddress" alignment="0" pref="160" max="32767" attributes="0"/>
@@ -72,7 +72,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtPinNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtPropertyCode" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -159,10 +159,10 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jtPinNo">
+    <Component class="javax.swing.JTextField" name="jtPropertyCode">
       <Properties>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-          <ResourceString bundle="systems/tech247/pdr/Bundle.properties" key="CompanyEditorTopComponent.jtPinNo.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+          <ResourceString bundle="systems/tech247/pdr/Bundle.properties" key="CompanyEditorTopComponent.jtPropertyCode.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
       </Properties>
     </Component>

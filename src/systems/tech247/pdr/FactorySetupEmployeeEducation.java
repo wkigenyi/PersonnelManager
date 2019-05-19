@@ -5,6 +5,7 @@
  */
 package systems.tech247.pdr;
 
+import systems.tech247.api.NodeRefreshEvent;
 import java.beans.IntrospectionException;
 import java.util.Collection;
 import java.util.List;
@@ -30,13 +31,13 @@ import systems.tech247.util.NodeAddTool;
  */
 public class FactorySetupEmployeeEducation extends ChildFactory<Object> implements LookupListener {
     
-    Result<NodeEducationRefreshEvent> result;
+    Result<NodeRefreshEvent> result;
     private static final Logger logger = Logger.getLogger(FactorySetupEmployeeEducation.class.getName());
     Employees emp;
     
     public FactorySetupEmployeeEducation(Employees emp){
         this.emp = emp;
-        this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeEducationRefreshEvent.class);
+        this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeRefreshEvent.class);
         result.addLookupListener(this);
     }
     
@@ -81,7 +82,7 @@ public class FactorySetupEmployeeEducation extends ChildFactory<Object> implemen
         Lookup.Result r = (Lookup.Result) le.getSource();
         Collection c = r.allInstances();
         for (Object object : c){
-            if (object instanceof NodeEducationRefreshEvent){
+            if (object instanceof NodeRefreshEvent){
                 refresh(true);
             }
             

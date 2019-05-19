@@ -5,12 +5,10 @@
  */
 package systems.tech247.pdr;
 
-import java.awt.event.ActionEvent;
 import java.beans.IntrospectionException;
 import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
-import javax.swing.AbstractAction;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
@@ -18,13 +16,9 @@ import org.openide.util.Lookup;
 import org.openide.util.Lookup.Result;
 import org.openide.util.LookupEvent;
 import org.openide.util.LookupListener;
-import org.openide.util.lookup.InstanceContent;
-import org.openide.windows.TopComponent;
 import systems.tech247.dbaccess.DataAccess;
 import systems.tech247.hr.EmployeeBankAccounts;
 import systems.tech247.hr.Employees;
-import systems.tech247.hr.Visa;
-import systems.tech247.pdreditors.AccountEditorTopComponent;
 import systems.tech247.util.AddTool;
 import systems.tech247.util.NodeAddTool;
 
@@ -38,8 +32,13 @@ public class FactoryEmployeeBankAccounts extends ChildFactory<Object> implements
     private static final Logger logger = Logger.getLogger(FactoryEmployeeBankAccounts.class.getName());
     Employees emp;
     
+    public FactoryEmployeeBankAccounts(){
+        this(null);
+    }
+    
     public FactoryEmployeeBankAccounts(Employees emp){
         this.emp = emp;
+        
         this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeRefreshBankAccountEvent.class);
         result.addLookupListener(this);
     }
@@ -56,7 +55,12 @@ public class FactoryEmployeeBankAccounts extends ChildFactory<Object> implements
 //                tc.requestActive();
 //            }
 //        }));
-        list.addAll(new DataAccess().searchBankAccounts(emp));
+        
+            
+        
+            list.addAll( DataAccess.searchBankAccounts(emp));
+        
+        
         
         
         return true;

@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
@@ -22,6 +21,7 @@ import org.openide.util.NbBundle.Messages;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
 import org.openide.util.lookup.ProxyLookup;
+import systems.tech247.pdreditors.BankEditorTopComponent;
 import systems.tech247.util.CapCreatable;
 
 /**
@@ -55,6 +55,7 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
     String sqlString = "";
     String searchString;
     QueryBanks query = new QueryBanks();
+    CapCreatable enableadd;
     InstanceContent content = new InstanceContent();
     Lookup lkp = new AbstractLookup(content);
     public BanksTopComponent() {
@@ -75,12 +76,18 @@ public final class BanksTopComponent extends TopComponent implements ExplorerMan
         if(!view.equals("")){
             ov.addPropertyColumn("number", "Number Of Employees");
         }
-        content.add(new CapCreatable() {
+        
+        enableadd = new CapCreatable() {
             @Override
             public void create() {
-                //TopComponent tc = new 
+                TopComponent tc = new BankEditorTopComponent();
+                tc.open();
+                tc.requestActive();
             }
-        });
+        };
+                
+        content.add(enableadd);
+        
         associateLookup( new ProxyLookup(ExplorerUtils.createLookup(em, getActionMap()),lkp));
         
         jtBankSearch.addKeyListener(new KeyListener() {

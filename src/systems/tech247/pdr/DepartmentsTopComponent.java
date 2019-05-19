@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
 import org.openide.explorer.view.OutlineView;
@@ -78,6 +77,7 @@ public final class DepartmentsTopComponent extends TopComponent implements Explo
         
         if(!view.equals("")){
             ov.addPropertyColumn("number", "Number Of Employees");
+            ov.addPropertyColumn("code", "Financials Code");
         }
         
         content.add(new CapCreatable() {

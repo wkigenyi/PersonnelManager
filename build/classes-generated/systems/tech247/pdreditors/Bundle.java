@@ -31,6 +31,34 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_AwardEditorTopComponent");
     }
     /**
+     * @return <i>Bank Branches</i>
+     * @see BankBranchEditorTopComponent
+     */
+    static String CTL_BankBranchEditorAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankBranchEditorAction");
+    }
+    /**
+     * @return <i>Bank Branches</i>
+     * @see BankBranchEditorTopComponent
+     */
+    static String CTL_BankBranchEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankBranchEditorTopComponent");
+    }
+    /**
+     * @return <i>Bank Branches</i>
+     * @see BankEditorTopComponent
+     */
+    static String CTL_BankEditorAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankEditorAction");
+    }
+    /**
+     * @return <i>Bank Branches</i>
+     * @see BankEditorTopComponent
+     */
+    static String CTL_BankEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_BankEditorTopComponent");
+    }
+    /**
      * @return <i>Contact Editor</i>
      * @see ContactEditorTopComponent
      */
@@ -85,6 +113,20 @@ class Bundle {
      */
     static String CTL_EducationEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EducationEditorTopComponent");
+    }
+    /**
+     * @return <i>Bank Account Editor</i>
+     * @see EmployeeBankAccountEditorTopComponent
+     */
+    static String CTL_EmployeeBankAccountEditorAction() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeBankAccountEditorAction");
+    }
+    /**
+     * @return <i>Bank Account Editor</i>
+     * @see EmployeeBankAccountEditorTopComponent
+     */
+    static String CTL_EmployeeBankAccountEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_EmployeeBankAccountEditorTopComponent");
     }
     /**
      * @return <i>Check List</i>
@@ -283,6 +325,20 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_AwardEditorTopComponent");
     }
     /**
+     * @return 
+     * @see BankBranchEditorTopComponent
+     */
+    static String HINT_BankBranchEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_BankBranchEditorTopComponent");
+    }
+    /**
+     * @return 
+     * @see BankEditorTopComponent
+     */
+    static String HINT_BankEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_BankEditorTopComponent");
+    }
+    /**
      * @return <i>This is a Contact Editor window</i>
      * @see ContactEditorTopComponent
      */
@@ -309,6 +365,13 @@ class Bundle {
      */
     static String HINT_EducationEditorTopComponent() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EducationEditorTopComponent");
+    }
+    /**
+     * @return <i>Bank Account Editor</i>
+     * @see EmployeeBankAccountEditorTopComponent
+     */
+    static String HINT_EmployeeBankAccountEditorTopComponent() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "HINT_EmployeeBankAccountEditorTopComponent");
     }
     /**
      * @return <i>Check List</i>

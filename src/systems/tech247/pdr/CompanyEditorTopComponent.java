@@ -35,11 +35,11 @@ import systems.tech247.hr.Tribes;
  * Top component which displays something.
  */
 @ConvertAsProperties(
-        dtd = "-//systems.tech247.pdr//EmployeePersonalInfoEditor//EN",
+        dtd = "-//systems.tech247.pdr//CompanyEditor//EN",
         autostore = false
 )
 @TopComponent.Description(
-        preferredID = "EmployeePersonalInfoEditorTopComponent",
+        preferredID = "CompanyEditorTopComponent",
         iconBase="systems/tech247/util/icons/company.png", 
         persistenceType = TopComponent.PERSISTENCE_NEVER
 )
@@ -48,7 +48,7 @@ import systems.tech247.hr.Tribes;
 
 @Messages({
     "CTL_CompanyEditorAction=Company Editor",
-    "CTL_CompanyEditorTopComponent=New Company",
+    "CTL_CompanyEditorTopComponent= Company Editor",
     "HINT_CompanyEditorTopComponent= Company Editor"
 })
 public final class CompanyEditorTopComponent extends TopComponent{
@@ -74,6 +74,7 @@ public final class CompanyEditorTopComponent extends TopComponent{
     byte[] imageAsBytes = null;
     Boolean autoFilling = true;
     String tin = null;
+    String propertyCode = null;
     
     
     EntityManager entityManager = DataAccess.getEntityManager();
@@ -140,12 +141,12 @@ public final class CompanyEditorTopComponent extends TopComponent{
         
         
         
-        jtPinNo.getDocument().addDocumentListener(new DocumentListener() {
+        jtPropertyCode.getDocument().addDocumentListener(new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
-                tin = jtPinNo.getText();
+                propertyCode = jtPropertyCode.getText();
                         try{
-                            updatable.setPINNumber(tin);
+                            updatable.setPropertyCode(propertyCode);
                         }catch(Exception ex){
                             
                         }
@@ -154,9 +155,9 @@ public final class CompanyEditorTopComponent extends TopComponent{
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                tin = jtPinNo.getText();
+                propertyCode = jtPropertyCode.getText();
                         try{
-                            updatable.setPINNumber(tin);
+                            updatable.setPropertyCode(propertyCode);
                         }catch(Exception ex){
                             
                         }
@@ -165,9 +166,9 @@ public final class CompanyEditorTopComponent extends TopComponent{
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                tin = jtPinNo.getText();
+                propertyCode = jtPropertyCode.getText();
                         try{
-                            updatable.setPINNumber(tin);
+                            updatable.setPropertyCode(propertyCode);
                         }catch(Exception ex){
                             
                         }
@@ -612,7 +613,11 @@ public final class CompanyEditorTopComponent extends TopComponent{
     void fillEmployee(CompanyDetails e){
         try{
                 setName(e.getCompanyName());
-                jtPinNo.setText(e.getPINNumber());
+                try{
+                jtPropertyCode.setText(e.getPropertyCode());
+                }catch(Exception ex){
+                    
+                }
                 companyName = e.getCompanyName();
                 
                 
@@ -692,7 +697,7 @@ public final class CompanyEditorTopComponent extends TopComponent{
         jLabel1 = new javax.swing.JLabel();
         jtCompanyName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jtPinNo = new javax.swing.JTextField();
+        jtPropertyCode = new javax.swing.JTextField();
         jtNSSFNo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jtNHIFNo = new javax.swing.JTextField();
@@ -724,7 +729,7 @@ public final class CompanyEditorTopComponent extends TopComponent{
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(CompanyEditorTopComponent.class, "CompanyEditorTopComponent.jLabel2.text")); // NOI18N
 
-        jtPinNo.setText(org.openide.util.NbBundle.getMessage(CompanyEditorTopComponent.class, "CompanyEditorTopComponent.jtPinNo.text")); // NOI18N
+        jtPropertyCode.setText(org.openide.util.NbBundle.getMessage(CompanyEditorTopComponent.class, "CompanyEditorTopComponent.jtPropertyCode.text")); // NOI18N
 
         jtNSSFNo.setText(org.openide.util.NbBundle.getMessage(CompanyEditorTopComponent.class, "CompanyEditorTopComponent.jtNSSFNo.text")); // NOI18N
 
@@ -820,7 +825,7 @@ public final class CompanyEditorTopComponent extends TopComponent{
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jtCompanyName)
-                        .addComponent(jtPinNo, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                        .addComponent(jtPropertyCode, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                         .addComponent(jtNSSFNo, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                         .addComponent(jtNHIFNo, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                         .addComponent(jtPhysicalAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
@@ -850,7 +855,7 @@ public final class CompanyEditorTopComponent extends TopComponent{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jtPinNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jtPropertyCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
@@ -963,8 +968,8 @@ public final class CompanyEditorTopComponent extends TopComponent{
     private javax.swing.JTextField jtNHIFNo;
     private javax.swing.JTextField jtNSSFNo;
     private javax.swing.JTextField jtPhysicalAddress;
-    private javax.swing.JTextField jtPinNo;
     private javax.swing.JTextField jtPostalAddress;
+    private javax.swing.JTextField jtPropertyCode;
     private javax.swing.JTextField jtTelephone1;
     private javax.swing.JTextField jtTelephone2;
     private javax.swing.JTextField jtTelephone3;

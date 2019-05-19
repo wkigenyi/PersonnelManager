@@ -10,7 +10,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.ExplorerUtils;
@@ -79,6 +78,7 @@ public final class PersonnelSelectorTopComponent extends TopComponent implements
         ov.addPropertyColumn("fname", "Other Names");
         ov.addPropertyColumn("department", "Department");
         ov.addPropertyColumn("category", "Category");
+        ov.addPropertyColumn("payroll", "Payroll");
         ov.addPropertyColumn("isSelected", "Select");
         
         ov.getOutline().setRootVisible(false);

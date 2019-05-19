@@ -5,24 +5,19 @@
  */
 package systems.tech247.pdr;
 
+import systems.tech247.api.NodeRefreshEvent;
 import java.awt.event.ActionEvent;
+import java.util.Collection;
 import java.util.List;
 import javax.swing.AbstractAction;
-import org.openide.DialogDisplayer;
-import org.openide.NotifyDescriptor;
-import org.openide.awt.StatusDisplayer;
-import org.openide.nodes.AbstractNode;
 import org.openide.nodes.ChildFactory;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
-import org.openide.util.lookup.AbstractLookup;
-import org.openide.util.lookup.InstanceContent;
+import org.openide.util.Lookup;
+import org.openide.util.LookupEvent;
+import org.openide.util.LookupListener;
 import systems.tech247.hr.BankBranches;
 import systems.tech247.hr.Banks;
-import systems.tech247.pdreditors.PDRBankBranchEditor;
 import systems.tech247.util.AddTool;
-import systems.tech247.util.CapDeletable;
-import systems.tech247.util.CapEditable;
 import systems.tech247.util.NodeAddTool;
 
 import systems.tech247.api.ReloadableQueryCapability;
@@ -31,15 +26,26 @@ import systems.tech247.api.ReloadableQueryCapability;
  *
  * @author Wilfred
  */
-public class FactoryBankBranches extends ChildFactory<Object>{
+public class FactoryBankBranches extends ChildFactory<Object> implements LookupListener{
 
     QueryBankBranches query;
     Boolean edit;
+    Lookup.Result<NodeRefreshEvent> result;
     
     public FactoryBankBranches(Banks bank, Boolean edit){
         this.query = new QueryBankBranches(bank);
         this.edit = edit;
+        this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeRefreshEvent.class);
+        result.addLookupListener(this);
     }
+    
+    public FactoryBankBranches(){
+        this.edit = false;
+        this.query = new QueryBankBranches(null);
+        this.result = UtilityPDR.getInstance().getLookup().lookupResult(NodeRefreshEvent.class);
+        result.addLookupListener(this);
+    }
+    
     
     @Override
     protected boolean createKeys(List<Object> list) {
@@ -73,13 +79,25 @@ public class FactoryBankBranches extends ChildFactory<Object>{
     @Override
     protected Node createNodeForKey(Object key){
         if(key instanceof BankBranches){
-            return new BranchNode((BankBranches)key,edit);
+            return new NodeBankBranch((BankBranches)key,edit);
         }else{
             return new NodeAddTool((AddTool)key);
         }
        
         
        
+    }
+
+    @Override
+    public void resultChanged(LookupEvent le) {
+        Lookup.Result r = (Lookup.Result) le.getSource();
+        Collection c = r.allInstances();
+        for (Object object : c){
+            if (object instanceof NodeRefreshEvent){
+                refresh(true);
+            }
+            
+        }
     }
     
     

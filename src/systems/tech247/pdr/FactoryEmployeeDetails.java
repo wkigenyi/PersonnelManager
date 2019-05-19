@@ -12,7 +12,6 @@ import java.util.List;
 import javax.swing.AbstractAction;
 import org.openide.awt.StatusDisplayer;
 import org.openide.nodes.ChildFactory;
-import org.openide.nodes.Children;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 import org.openide.windows.TopComponent;

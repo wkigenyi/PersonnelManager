@@ -13,6 +13,8 @@ import javax.swing.AbstractAction;
 import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
+import org.openide.windows.TopComponent;
+import systems.tech247.pdr.EmployeeBankAccountsTopComponent;
 
 /**
  *
@@ -45,6 +47,15 @@ public class FactoryPDRReports extends ChildFactory<SetupItem> {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+            }
+        },"systems/tech247/util/icons/capex.png"));
+        
+        toPopulate.add(new SetupItem("All Employee Bank Accounts",new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TopComponent tc = new EmployeeBankAccountsTopComponent();
+                tc.open();
+                tc.requestActive();
             }
         },"systems/tech247/util/icons/capex.png"));
         

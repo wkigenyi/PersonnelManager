@@ -61,11 +61,11 @@ import systems.tech247.pdr.NodeRefreshBankAccountEvent;
 })
 public final class AccountEditorTopComponent extends TopComponent implements LookupListener {
     
-    TopComponent tc = WindowManager.getDefault().findTopComponent("BanksTopComponent");
+    TopComponent tc = WindowManager.getDefault().findTopComponent("BankBranchesTopComponent");
     
     
     //Lookup for the Contact Type
-    Lookup.Result<BankBranches> rslt = WindowManager.getDefault().findTopComponent("BanksTopComponent").getLookup().lookupResult(BankBranches.class);
+    Lookup.Result<BankBranches> rslt = tc.getLookup().lookupResult(BankBranches.class);
     
     
     
@@ -329,40 +329,11 @@ public final class AccountEditorTopComponent extends TopComponent implements Loo
             
             tc().ic.remove(this);
             unregister();
-            //New Employee
-            if(null==application){
-               
-                
-                
-                        String insertSQL = "INSERT INTO [dbo].[EmployeeBankAccounts]\n" +
-"           ([EmployeeID]\n" +
-"           ,[BankBranchID]\n" +
-"           ,[AccountName]\n" +
-"           ,[AccountNumber]\n" +
-"           ,[AccountType]\n" +
-"           ,[IsMainAccount]\n" +
-"           ,[Deleted]\n" +
-"           ,[SwiftCode])\n" +
-"     VALUES\n" +
-"           (?,?,?,?,?,?,?,?)";
-            Query query = entityManager.createNativeQuery(insertSQL);
-            query.setParameter(1, emp.getEmployeeID());
-            query.setParameter(2, branchID);
-            query.setParameter(3, accountName);
-            query.setParameter(4, accountNumber);
-            query.setParameter(6,isMain );
-            query.setParameter(7, 0);
-            query.setParameter(8, swiftCode);
-            
-            
-            
-
-            
-            entityManager.getTransaction().begin();
-            query.executeUpdate();
-            entityManager.getTransaction().commit();
+            //New Account
+            if(null==application){            
+                DataAccess.saveEmployeeBankAccount(emp.getEmployeeID(), (int)branchID, accountName, accountNumber, true);
             }else{
-                //Crea
+                //Updating
                 entityManager.getTransaction().begin();
                 entityManager.getTransaction().commit();
                 
