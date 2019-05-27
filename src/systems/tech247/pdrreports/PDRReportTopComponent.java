@@ -8,7 +8,6 @@ package systems.tech247.pdrreports;
 import java.awt.BorderLayout;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.explorer.ExplorerManager;
 import org.openide.explorer.view.BeanTreeView;
 import org.openide.nodes.AbstractNode;
@@ -46,7 +45,12 @@ public final class PDRReportTopComponent extends TopComponent implements Explore
         initComponents();
         setName(Bundle.CTL_PDRReportTopComponent());
         setToolTipText(Bundle.HINT_PDRReportTopComponent());
+        putClientProperty(TopComponent.PROP_UNDOCKING_DISABLED, Boolean.TRUE);
         putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_DND_COPY_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_DRAGGING_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_MAXIMIZATION_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_SLIDING_DISABLED, Boolean.TRUE);
         BeanTreeView btv = new BeanTreeView();
         
         btv.setRootVisible(false);

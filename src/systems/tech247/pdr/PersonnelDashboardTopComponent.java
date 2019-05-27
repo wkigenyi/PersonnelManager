@@ -7,7 +7,6 @@ package systems.tech247.pdr;
 
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
-import org.openide.awt.ActionReference;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 import org.openide.windows.TopComponentGroup;
@@ -48,6 +47,12 @@ public final class PersonnelDashboardTopComponent extends TopComponent {
         initComponents();
         setName(Bundle.CTL_PersonnelDashboardTopComponent());
         setToolTipText(Bundle.HINT_PersonnelDashboardTopComponent());
+        putClientProperty(TopComponent.PROP_UNDOCKING_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_CLOSING_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_DND_COPY_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_DRAGGING_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_MAXIMIZATION_DISABLED, Boolean.TRUE);
+        putClientProperty(TopComponent.PROP_SLIDING_DISABLED, Boolean.TRUE);
 
     }
 
